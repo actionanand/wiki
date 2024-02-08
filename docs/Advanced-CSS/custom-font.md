@@ -70,5 +70,4 @@ the order will be as below:
 ```
 
 ### Summary
-
-![image](https://github.com/actionanand/css-uhost/assets/46064269/74c29804-e812-47ac-b5c8-17450bc1ca9a)
+![image](https://github.com/actionanand/wiki/assets/46064269/ff626aab-3cfe-4afc-9429-fb742cef65a8)
