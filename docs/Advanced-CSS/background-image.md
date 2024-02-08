@@ -92,6 +92,32 @@ import TabItem from '@theme/TabItem';
 3. [Filters - mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 4. [Styling SVG - mdn](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS)
 
-### Summary 
-![image](https://github.com/actionanand/wiki/assets/46064269/b50b6dfd-6d73-4d29-a07b-ceb65d191987)
+### CSS Filter
 
+```css
+img {
+  /* <filter-function> values */
+  filter: blur(5px);
+  filter: brightness(0.4);
+  filter: contrast(200%);
+  filter: drop-shadow(16px 16px 20px blue);
+  filter: grayscale(50%);
+  filter: hue-rotate(90deg);
+  filter: invert(75%);
+  filter: opacity(25%);
+  filter: saturate(30%);
+  filter: sepia(60%);
+
+  /* Multiple filters */
+  filter: contrast(175%) brightness(3%);
+  filter: grayscale(80%) blur(5px);
+  filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue);
+
+  /* Use no filter */
+  filter: none;
+}
+```
+
+* [A complete guide to using CSS filters with SVGs - Log Rocket](https://blog.logrocket.com/complete-guide-using-css-filters-svgs/)
+* [CSS Filters](https://web.dev/learn/css/filters)
+* [CSS Filter - mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
