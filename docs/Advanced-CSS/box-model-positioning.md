@@ -69,3 +69,8 @@ import TabItem from '@theme/TabItem';
 
 1. [Working With CSS Float And Clear Properties](https://blog.openreplay.com/working-with-css-float-and-clear-properties/)
 2. [More on float - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
+
+:::tip
+* In CSS, floating elements automatically have a `display: block;` applied to them. Floating elements behave similarly to blocks, and you can set a specific height and width.
+* When floating block-level elements, they wrap around their content instead of taking up all available width. This means they behave more like `inline-block` elements, even though their display property remains as block in CSS.
+:::
