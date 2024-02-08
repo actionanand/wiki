@@ -27,3 +27,28 @@ CSS Specificity digest
 :::info
 The universal selector `*` has no specificity value (0, 0, 0, 0);
 :::
+
+## Text align and Vertical align
+
+:::tip
+The `text-align` property in CSS is used to align the inner content of a `block` element.
+
+:::
+
+* **Content** is used here as as term instead of **text**, because while `text-align` certainly affects **text**, it affects all `inline` or `inline-block` elements in **that container**(container will be `block` element such as paragraphs `<p>...</p>`, divs `<div>...</div>`, sections `<section>...</section>`, articles `<article>...</article>`, and so on..).
+
+* This alignment affects the **horizontal axis** only. So the `text-align` property is different from the `vertical-align` property which we use to set the vertical alignment of an element.
+
+:::tip
+You can also use the `vertical-align` property to center `inline`, `inline-block`, or **table cell** elements vertically.
+:::
+
+*  One of the many applications for this approach is to vertically align an image with text or to vertically align the content of a table cell.
+
+```css
+.element {
+  display: inline-block;
+  vertical-align: middle;
+}
+```
+* This method(`vertical-align`) **not working with the block element**, could be a deal breaker

@@ -9,8 +9,6 @@ import TabItem from '@theme/TabItem';
 
 ### The Background Property
 
-
-:::note[Background Property]
 <Tabs>
   <TabItem value="background" label="Background">
     ```css title="main.css" {2,3-8}
@@ -52,10 +50,9 @@ import TabItem from '@theme/TabItem';
     ```
   </TabItem>
 </Tabs>
-:::
 
 ### Linear & Radial gradient - Example
-:::note[Gradient example]
+
 <Tabs>
   <TabItem value="linear" label="Linear Gradient">
   ```css
@@ -82,7 +79,7 @@ import TabItem from '@theme/TabItem';
   ```
   </TabItem>
 </Tabs>
-:::
+
 
 :::warning
 * **Linear and Radial Gradient** will be considered as **Image** in background property. 
