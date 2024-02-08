@@ -13,7 +13,7 @@ sidebar_position: 2
 ### Combinators - General Sibling
 ![general-sibling](./img/general-sibling.png)
 
-### Combinators - child
+### Combinators - Child
 ![combinator-child](./img/combinator-child.png)
 
 ### Combinators - Descendant
