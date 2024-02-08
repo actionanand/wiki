@@ -5,7 +5,7 @@ sidebar_position: 6
 # Responsive Website
 
 ### Responsive Design Strategies
-![image](https://github.com/actionanand/css-uhost/assets/46064269/ed1e61bd-ad57-445d-b9e6-9211b5148994)
+![image](https://github.com/actionanand/wiki/assets/46064269/c1f6c65a-0596-482f-9b4e-92f60714b3df)
 
 ```css
   @media (min-width: 60rem) {
@@ -21,7 +21,7 @@ sidebar_position: 6
 ```
 
 ### Selecting our Breakpoints: A Good Approach
-![image](https://github.com/actionanand/css-uhost/assets/46064269/6b9f5373-d29a-40a0-977d-05a5058227a7)
+![image](https://github.com/actionanand/wiki/assets/46064269/0607a50e-8bb4-4cb8-b2e7-e98d2ed096c4)
 
 ![image](https://github.com/actionanand/css-uhost/assets/46064269/2b9ebf94-0aba-420f-af92-65d10f5d4582)
 
