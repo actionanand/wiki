@@ -53,3 +53,20 @@ You can also use the `vertical-align` property to center `inline`, `inline-block
 ```
 * This method(`vertical-align`) **not working with the block element**, could be a deal breaker
 * [15 ways to implement vertical alignment with CSS - Log Rocket](https://blog.logrocket.com/15-ways-implement-vertical-alignment-css/)
+
+## Box Shadow
+
+```css
+.package {
+  box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+```
+
+1. [box-shadow - CSS-Tricks](https://css-tricks.com/almanac/properties/b/box-shadow/)
+2. [Box Shadow - Generator](https://box-shadow.dev/)
+
+## GitHub Repo
+
+* [CSS uHost - GitHub](https://github.com/actionanand/css-uhost)
+* [CSS uHost - Demo](https://actionanand.github.io/css-uhost/)

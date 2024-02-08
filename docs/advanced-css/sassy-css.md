@@ -2,126 +2,136 @@
 sidebar_position: 13
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Sassy CSS
 
-`SASS` -> Systematically Awesome Style Sheets
-`SCSS` -> Sassy Cascading Style Sheets
+* `SASS` -> Systematically Awesome Style Sheets
+* `SCSS` -> Sassy Cascading Style Sheets
 
 ### Nested Properties
 
-SCSS code
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
+    $full-width: 100%;
 
-```scss
-  $full-width: 100%;
-
-  .mobile-nav__items {
-    width: 90%;
-    height: $full-width;
-    display: flex;
-    flex: {
-      direction: column;
-      wrap: nowrap;
+    .mobile-nav__items {
+      width: 90%;
+      height: $full-width;
+      display: flex;
+      flex: {
+        direction: column;
+        wrap: nowrap;
+      }
     }
-  }
-```
-
-CSS Code
-
-```css
-  .mobile-nav__items {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-```
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
+    .mobile-nav__items {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  ```
+  </TabItem>
+</Tabs>
 
 ### Lists & Maps
 
-SCSS Code
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
+    $border-size: 1.5px;
 
-```scss
-  $border-size: 1.5px;
+    // map
+    $color: (green-dark: #0e4f1f, red-bright: #ff1b68);
 
-  // map
-  $color: (green-dark: #0e4f1f, red-bright: #ff1b68);
-
-  // List
-  $border-default: $border-size solid map-get($color, green-dark);
+    // List
+    $border-default: $border-size solid map-get($color, green-dark);
 
 
-  .button {
-    background: map-get($color, red-bright);
-    color: white;
-    font: inherit;
-    border: $border-size solid map-get($color, green-dark);
-    padding: .5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-```
-
-CSS Code
-
-```css
-  .button {
-    background: #ff1b68;
-    color: white;
-    font: inherit;
-    border: 1.5px solid #0e4f1f;
-    padding: 0.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-```
+    .button {
+      background: map-get($color, red-bright);
+      color: white;
+      font: inherit;
+      border: $border-size solid map-get($color, green-dark);
+      padding: .5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
+    .button {
+      background: #ff1b68;
+      color: white;
+      font: inherit;
+      border: 1.5px solid #0e4f1f;
+      padding: 0.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  ```
+  </TabItem>
+</Tabs>
 
 ### Built-in functions
 
-```scss
-  // SCSS
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
   .background {
     $dark-green: #0e4f1f;
     background: lighten($dark-green, 72%);
   }
-
-  // CSS
-
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
   .background {
     background: #d5f8de;
   }
-```
+  ```
+  </TabItem>
+</Tabs>
 
 * [SCSS/SASS built-in functions - github](https://gist.github.com/AllThingsSmitty/3bcc79da563df756be46)
 * [SASS built-in modules](https://sass-lang.com/documentation/modules/)
 
 ### Arithmetic operations in SASS/SCSS
 
-SCSS
-
-```scss
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
   $border-size: 1rem;
 
   .maths {
-    border-radius:$border-size * 3;
+    border-radius: $border-size * 3;
   }
-```
-
-CSS
-
-```css
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
   .maths {
     border-radius: 3rem;
   }
-```
+  ```
+  </TabItem>
+</Tabs>
 
 ### Media query in SASS/SCSS
 
-SCSS
-
-```scss
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
   .container {
     display: flex;
     flex-direction: row;
@@ -132,30 +142,32 @@ SCSS
       font-size: 10px;
     }
   }
-```
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
+  .container {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+  }
 
-CSS
+  @media (min-width: 40rem) {
+    .container {
+      flex-direction: column;
+      font-size: 10px;
+    }
+  }
+  ```
+  </TabItem>
+</Tabs>
 
-```css
-.container {
-  display: flex;
-  flex-direction: row;
-  font-size: 15px;
-}
-
-@media (min-width: 40rem) {
-	.container {
-		flex-direction: column;
-		font-size: 10px;
-	}
-}
-```
 
 ### Inheritance in SCSS/SASS
 
-SCSS
-
-```scss
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
   $color: (green-dark: #0e4f1f, red-bright: #ff1b68);
   $border-size: 1.5px;
 
@@ -174,11 +186,10 @@ SCSS
     @extend .sass-section;
     height: 70px;
   }
-```
-
-CSS
-
-```css
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
   .sass-section, .box1, .box2 {
     font-family: 'Montserrat', sans-serif;
     border: 1.5px solid #0e4f1f;
@@ -207,13 +218,16 @@ CSS
     width: 50px;
     height: 70px;
   }
-```
+  ```
+  </TabItem>
+</Tabs>
+
 
 ### Mixins
 
-SCSS
-
-```scss
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
   $dark-green: #0e4f1f;
 
   // mixin without arguments
@@ -245,11 +259,10 @@ SCSS
       font-size: 10px;
     }
   }
-```
-
-CSS
-
-```css
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -269,7 +282,10 @@ CSS
       font-size: 10px;
     }
   }
-```
+  ```
+  </TabItem>
+</Tabs>
+
 
 1. [CSS `@import` Rule](https://www.w3schools.com/cssref/pr_import_rule.php)
 2. [Using SASS partials](https://dev.to/sarah_chima/using-sass-partials-7mh)
