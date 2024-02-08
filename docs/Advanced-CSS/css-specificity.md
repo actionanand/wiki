@@ -22,6 +22,8 @@ CSS Specificity digest
 ![image](https://github.com/actionanand/wiki/assets/46064269/dec1de55-d85f-4ea9-b11b-8725d19902c1)
 ![image](https://github.com/actionanand/css-uhost/assets/46064269/73fe75ef-1b50-40f4-af07-ef5a1c9f4e5c)
 
+* [Specificity in detail](https://web.dev/learn/css/specificity)
+
 :::info
 The universal selector `*` has no specificity value (0, 0, 0, 0);
 :::

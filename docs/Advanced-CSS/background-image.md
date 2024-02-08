@@ -11,7 +11,6 @@ import TabItem from '@theme/TabItem';
 
 
 :::note[Background Property]
-
 <Tabs>
   <TabItem value="background" label="Background">
     ```css title="main.css" {2,3-8}
@@ -53,7 +52,41 @@ import TabItem from '@theme/TabItem';
     ```
   </TabItem>
 </Tabs>
+:::
 
+### Linear & Radial gradient - Example
+:::note[Gradient example]
+<Tabs>
+  <TabItem value="linear" label="Linear Gradient">
+  ```css
+  .background {
+    background-image: linear-gradient(to bottom left, green, red);
+    background-image: linear-gradient(180deg, green, red, #fa923f, transparent);
+    background-image: linear-gradient(73deg, green 30%, red 60%, #fa923f, transparent); 
+  }
+  ```
+  </TabItem>
+  <TabItem value="radial" label="Radial Gradient">
+  ```css
+  .background {
+    background-image: radial-gradient(red, rgb(49, 108, 49), purple);
+    background-image: radial-gradient(circle, red, green, purple);
+    background-image: radial-gradient(circle at top left, red, green, purple);
+    background-image: radial-gradient(circle at 20% 40%, red, green, purple);
+    background-image: radial-gradient(circle 10rem, red, green, purple);
+    background-image: radial-gradient(ellipse 27rem 10rem, red, green, purple);
+    background-image: radial-gradient(ellipse closest-side at 20% 50%, red 25%, green 30%, purple);
+    background-image: radial-gradient(ellipse farthest-side at 20% 50%, red, green, purple);
+    background-image: radial-gradient(ellipse closest-corner at 20% 50%, red, green, purple); 
+  }
+  ```
+  </TabItem>
+</Tabs>
+:::
+
+:::warning
+* **Linear and Radial Gradient** will be considered as **Image** in background property. 
+* Background property can have more than one Images (Gradient included), but there should be only one color.
 :::
 
 1. [The background Property - mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
