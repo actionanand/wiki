@@ -8,6 +8,7 @@ import TabItem from '@theme/TabItem';
 # Background and Image
 
 ### The Background Property
+![image](https://github.com/actionanand/wiki/assets/46064269/509f5172-d6b3-4229-b05a-2bf9691e6188)
 
 <Tabs>
   <TabItem value="background" label="Background">
@@ -92,3 +93,5 @@ import TabItem from '@theme/TabItem';
 4. [Styling SVG - mdn](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS)
 
 ### Summary 
+![image](https://github.com/actionanand/wiki/assets/46064269/b50b6dfd-6d73-4d29-a07b-ceb65d191987)
+
