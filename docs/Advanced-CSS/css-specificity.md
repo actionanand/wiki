@@ -9,8 +9,7 @@ CSS Specificity digest
 ## CSS Intro
 
 ### What Happens to CSS when we load up a web page?
-
-![image](https://github.com/actionanand/css-uhost/assets/46064269/61e5afe5-1704-427f-ad7c-33bf514466be)
+![image](https://github.com/actionanand/wiki/assets/46064269/ae077af4-f713-4292-a0b2-3d586c7e7d05)
 
 ### Quick Review: CSS Terminology
 
