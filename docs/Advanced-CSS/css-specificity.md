@@ -52,3 +52,4 @@ You can also use the `vertical-align` property to center `inline`, `inline-block
 }
 ```
 * This method(`vertical-align`) **not working with the block element**, could be a deal breaker
+* [15 ways to implement vertical alignment with CSS - Log Rocket](https://blog.logrocket.com/15-ways-implement-vertical-alignment-css/)
