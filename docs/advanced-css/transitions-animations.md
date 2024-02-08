@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Transitions & Animations
 
-* Simple animation
+### Simple animation
 
 ```css
   .modal {
@@ -64,3 +64,8 @@ The above line Can be translated to: "Play the **wiggle keyframe** set (animatio
 9. [MDN article on CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 
 * [List of "transitionable" Properties](https://www.w3.org/TR/css-transitions-1/#animatable-properties)
+
+## GitHub Repo
+
+* [CSS Animation - GitHub](https://github.com/actionanand/css-3d-transform-lab)
+* [CSS Animation - Demo](https://actionanand.github.io/css-3d-transform-lab/)
