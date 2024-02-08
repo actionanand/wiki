@@ -5,7 +5,7 @@ sidebar_position: 7
 # Styling Form
 
 ### Advanced Attribute Selectors
-![image](https://github.com/actionanand/css-uhost/assets/46064269/bb83ab5d-2ce2-47e1-ba1d-d6bd01583519)
+![image](https://github.com/actionanand/wiki/assets/46064269/58ad9b40-f025-4cab-8b5c-d6e137712e86)
 
 * [CSS `-webkit-appearance` - Quackit](https://www.quackit.com/css/properties/webkit/css_-webkit-appearance.cfm)
 * [CSS appearance - mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance)
