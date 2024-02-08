@@ -59,7 +59,7 @@ import TabItem from '@theme/TabItem';
 ### Box Types: inline, block-level and inline-block
 ![image](https://github.com/actionanand/wiki/assets/46064269/d1b72eee-8c45-4c42-95ee-3d5e37a44b83)
 
-### Positioning Schemes: Normal flow, Absolute positioning and Floats
+## Positioning Schemes: Normal flow, Absolute positioning and Floats
 ![image](https://github.com/actionanand/wiki/assets/46064269/ef46fe56-e673-4322-9340-4349fc4b23ad)
 
 1. [When Using `!important` is The Right Choice](https://css-tricks.com/when-using-important-is-the-right-choice/)
