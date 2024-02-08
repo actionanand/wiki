@@ -12,8 +12,10 @@ import TabItem from '@theme/TabItem';
 * [Demo - CSS Position Lab](https://actionanand.github.io/css-position-lab/)
 
 ## The Box Model
+![image](https://github.com/actionanand/wiki/assets/46064269/02cce7c0-d647-4e04-b6b6-bfb5cb317a78)
 
 ### The Box Model with `box-sizing: border-box;`
+![image](https://github.com/actionanand/wiki/assets/46064269/5cf5b5c0-0216-4fde-903d-9181670fd234)
 
 1. [Positioning theory](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 2. [More about the "position" property](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
@@ -38,8 +40,8 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 :::
 
-
-![image](https://github.com/actionanand/css-uhost/assets/46064269/9f2c2b2d-024c-450c-b889-ccf44bc0b042)
+### Shorthand Properties
+![image](https://github.com/actionanand/wiki/assets/46064269/5b8444e2-2880-4be4-8255-943657a4c193)
 
 ### "display: none" vs "visibility: hidden"
 
@@ -53,6 +55,12 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 :::
+
+### Box Types: inline, block-level and inline-block
+![image](https://github.com/actionanand/wiki/assets/46064269/d1b72eee-8c45-4c42-95ee-3d5e37a44b83)
+
+### Positioning Schemes: Normal flow, Absolute positioning and Floats
+![image](https://github.com/actionanand/wiki/assets/46064269/ef46fe56-e673-4322-9340-4349fc4b23ad)
 
 1. [When Using `!important` is The Right Choice](https://css-tricks.com/when-using-important-is-the-right-choice/)
 2. [The `:not()`  pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
