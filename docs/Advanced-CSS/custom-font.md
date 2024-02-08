@@ -16,12 +16,11 @@ the order will be as below:
 * `font-size` and `font-family` should be there in the short-hand
 
 ### Generic Families & Font Families
-
-![image](https://github.com/actionanand/css-uhost/assets/46064269/3a056466-7b0e-4b84-8e46-db0ef211f587)
+![image](https://github.com/actionanand/wiki/assets/46064269/0fa4fcef-5d5b-41f8-a4e7-147dfefec0fe)
 
 ### Font Display
+![image](https://github.com/actionanand/wiki/assets/46064269/b6a3784a-36b1-4e7d-b064-641264d4dc73)
 
-![image](https://github.com/actionanand/css-uhost/assets/46064269/6803a4ef-74cc-4686-bf84-75e935522d9f)
 
 |              | **Block Period**    | **Swap Period**     | **Outcome**                                                                                         |
 |--------------|---------------------|---------------------|-----------------------------------------------------------------------------------------------------|
