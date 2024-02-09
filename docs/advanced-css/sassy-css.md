@@ -1,11 +1,12 @@
 ---
 sidebar_position: 13
+sidebar_label: 'Sassy CSS'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Sassy CSS
+# SASS and SCSS (Sassy CSS)
 
 * `SASS` -> Systematically Awesome Style Sheets
 * `SCSS` -> Sassy Cascading Style Sheets

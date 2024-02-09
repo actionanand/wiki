@@ -2,6 +2,8 @@
 slug: js-regex-helper
 title: JS Regex Helper
 authors: anand-tech
+id: js-regex
+description: Regex - short Regular Expression
 tags: [regex]
 ---
 

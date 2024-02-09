@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+sidebar_label: 'Box Model & Positioning el.'
 ---
 
 import Tabs from '@theme/Tabs';
