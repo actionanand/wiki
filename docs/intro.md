@@ -4,44 +4,77 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+This is my rogh work!
 
-## Getting Started
+### My VS Code settings
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```json title='settings.json'
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs":"active",
+  "editor.fontFamily": "Dank Mono",
+  // "editor.fontFamily": "Fira Code",
+  // "editor.fontFamily": "Fira Code iScript",
+  "editor.fontLigatures":  true,
+  "editor.fontSize": 14,
+  // "workbench.colorTheme": "Dark++ Italic",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "storage.modifier", //static keyword
+          "storage.type", //class keyword
+          "support.class.builtin",
+          "keyword.control",
+          "constant.language",
+          "entity.other.attribute-name",
+          "string.quoted.single",
+          "entity.name.method",
+          "entity.name.tag"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+        }
+      }
+    ]
+  },
+  
+  "diffEditor.ignoreTrimWhitespace": false,
+  "git.ignoreWindowsGit27Warning": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.env.linux": {}
+}
 ```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

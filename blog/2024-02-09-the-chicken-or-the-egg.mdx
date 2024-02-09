@@ -1,0 +1,44 @@
+---
+slug: the-chicken-or-the-egg
+title: Which came first?
+authors: [anand, anand-tech]
+tags: [js, riddle, puzzle]
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
+
+:::tip
+Which came first, *the chicken* or *the egg*?
+
+<Tabs>
+  <TabItem value="js" label="JS">
+  ```js
+  const question = ['🥚','🐔'];
+  const answer = question.sort();
+  console.log(answer[0] + ' was first!');
+  ```
+  </TabItem>
+  <TabItem value="react" label="React">
+  ```jsx
+  <button onClick={
+    () => {
+      const question = ['🥚','🐔'];
+      const answer = question.sort();
+      return alert(answer[0] + ' was first!');
+    } 
+  }>Click me!</button>
+  ```
+  </TabItem>
+</Tabs>
+
+<button onClick={
+  () => {
+    const question = ['🥚','🐔'];
+    const answer = question.sort();
+    return alert(answer[0] + ' was first!');
+  } 
+}>Click me!</button>
+
+:::
