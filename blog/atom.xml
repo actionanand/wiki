@@ -8,6 +8,309 @@
     <subtitle>AR's Wiki Blog</subtitle>
     <icon>https://actionanand.github.io/wiki/img/favicon.ico</icon>
     <entry>
+        <title type="html"><![CDATA[JS Regex Helper]]></title>
+        <id>https://actionanand.github.io/wiki/blog/js-regex-helper</id>
+        <link href="https://actionanand.github.io/wiki/blog/js-regex-helper"/>
+        <updated>2024-02-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A regular expression, also known as regex or regexp, is a sequence of characters that define a search pattern. It can be used to search, edit, or manipulate text and data.]]></summary>
+        <content type="html"><![CDATA[<p>A <strong>regular expression</strong>, also known as <strong>regex</strong> or <strong>regexp</strong>, is a sequence of characters that define a search pattern. It can be used to search, edit, or manipulate text and data.</p>
+<p>In JavaScript, regular expressions are created using the <strong>RegExp object</strong>. The RegExp object has a number of methods that can be used to search for and manipulate strings.</p>
+<p>Here are some examples of regular expressions in JavaScript:</p>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Find all occurrences of the letter "a" in a string</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> regex </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex" style="color:#36acaa">a</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-flags" style="color:#36acaa">g</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> string </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"This is a string."</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> matches </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> regex</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">exec</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">string</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Replace all occurrences of the letter "a" with the letter "e" in a string</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> regex </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex" style="color:#36acaa">a</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-flags" style="color:#36acaa">g</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> string </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"This is a string."</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> newString </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> string</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">replace</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">regex</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"e"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Check if a string contains a particular pattern</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> regex </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex anchor function" style="color:#d73a49">^</span><span class="token regex regex-source language-regex" style="color:#36acaa">abc</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-flags" style="color:#36acaa">g</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> string </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"abc123"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> match </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> regex</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">string</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Regex</strong> short Regular Expression</p>
+<ol>
+<li>
+<p>General view</p>
+<ul>
+<li>Expressions need to be surrounded by forward slashes - Eg. <code>/expression/</code></li>
+</ul>
+</li>
+<li>
+<p>Modes or Flags in regex</p>
+<ul>
+<li>
+<p>Standard - <code>/expression/</code></p>
+</li>
+<li>
+<p>Case-insensitive - <code>/expression/i</code></p>
+<ul>
+<li>With this flag the search is case-insensitive: no difference between <strong>A</strong> and <strong>a</strong></li>
+</ul>
+</li>
+<li>
+<p>Dot-matches-all - <code>/expression/s</code></p>
+<ul>
+<li>
+<p>Enables <strong>dotall</strong> mode, that allows a dot <code>.</code> to match newline character <code>\n</code></p>
+</li>
+<li>
+<p>By default, a dot doesn’t match the newline character <code>\n</code>.</p>
+</li>
+<li>
+<p>For instance, the regexp <code>A.B</code> matches A, and then B with any character between them, except a newline <code>\n</code></p>
+</li>
+</ul>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'A\nB'</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">match</span><span class="token punctuation" style="color:#393A34">(</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex" style="color:#36acaa">A</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">.</span><span class="token regex regex-source language-regex" style="color:#36acaa">B</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// null (no match)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>
+<p>There are many situations when we’d like a dot to mean literally <strong>any character</strong>, newline included.</p>
+</li>
+<li>
+<p>That’s what flag <code>s</code> does. If a regexp has it, then a dot <code>.</code> matches literally any character:</p>
+</li>
+</ul>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'A\nB'</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">match</span><span class="token punctuation" style="color:#393A34">(</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex" style="color:#36acaa">A</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">.</span><span class="token regex regex-source language-regex" style="color:#36acaa">B</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-flags" style="color:#36acaa">s</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// A\nB (match!)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p>Multiline - <code>/expression/m</code></p>
+</li>
+<li>
+<p>Global - <code>/expression/g</code></p>
+<ul>
+<li>With this flag the search looks for all matches, without it – only the first match is returned</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Metacharacters: They're characters with special meaning the most common metacharacters we use in expressions are <code>. + - * $ {} () [] ! : = ^ | </code></p>
+<ul>
+<li>
+<p>Escaping Metacharacters:</p>
+<ul>
+<li>
+<p>Sometmes we need to escape our symbols if they look the same as the text we want to find,</p>
+</li>
+<li>
+<p>for example, As you can see here <code>/4.500/ </code> these match will cause issues if we need to find <code>4.500</code> since the dot its the wildecard but what we need is the literal dot, we need to do something like the below.</p>
+</li>
+<li>
+<p><code>/4\.500/</code> we use a back slash here to escape the wildcard making it a literal character now, meaning its just a dot.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Range sets</p>
+<ul>
+<li>
+<p><code>[A-Z]</code> matches any uppercase character from A to Z</p>
+</li>
+<li>
+<p><code>[a-z]</code> matches any lowercase character from A to Z</p>
+</li>
+<li>
+<p><code>[0-9]</code> matches any digit character from 0 to 9</p>
+</li>
+<li>
+<p><code>[A-Za-z0-9]</code> we can also combine them</p>
+</li>
+<li>
+<p><code>/au[acdt]o/</code> matches <code>auto</code> - third character should be either one from the set <code>[acdt]</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Negative sets</p>
+<ul>
+<li><code>[^abc]</code> match anything except <code>abc</code> or what is after the caret inside the brackets. We are still matching one character here, not group of all character.</li>
+</ul>
+</li>
+<li>
+<p>Shorthand for sets</p>
+<table><thead><tr><th style="text-align:center"><strong>Code</strong></th><th style="text-align:left"><strong>Description</strong></th><th style="text-align:left"><strong>Equivalent</strong></th></tr></thead><tbody><tr><td style="text-align:center">\d</td><td style="text-align:left">Digit</td><td style="text-align:left">[0-9]</td></tr><tr><td style="text-align:center">\D</td><td style="text-align:left">Non digit</td><td style="text-align:left">[^0-9]</td></tr><tr><td style="text-align:center">\s</td><td style="text-align:left">Any tab carriage return or new line</td><td style="text-align:left">[ \t\r\n]</td></tr><tr><td style="text-align:center">\S</td><td style="text-align:left">No whitespace of any kind</td><td style="text-align:left">[^ \t\r\n]</td></tr><tr><td style="text-align:center">\w</td><td style="text-align:left">Word characters including underscore &amp; digits, NO Hyphen(-)</td><td style="text-align:left">[_A-Za-z0-9]</td></tr><tr><td style="text-align:center">\W</td><td style="text-align:left">No word characters</td><td style="text-align:left">[ ^_A-Za-z0-9]</td></tr></tbody></table>
+<ul>
+<li>
+<p><code>/\w\w\w/</code> matches 123, abc, and _1Z (i.e, 3 word characters)</p>
+</li>
+<li>
+<p><code>/\d\d\d/</code> matches 123 bot not car (i.e, 3 digits)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Repetition Metacharacters</p>
+<table><thead><tr><th style="text-align:center">Quantifier</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:center"><code>\*</code></td><td style="text-align:left">Matches the previous element zero or more times.</td></tr><tr><td style="text-align:center"><code>+</code></td><td style="text-align:left">Matches the previous element one or more times.</td></tr><tr><td style="text-align:center"><code>?</code></td><td style="text-align:left">Matches the previous element zero or one time.</td></tr><tr><td style="text-align:center"><code>{n}</code></td><td style="text-align:left">Matches the previous element exactly n times.</td></tr><tr><td style="text-align:center"><code>{n,}</code></td><td style="text-align:left">Matches the previous element at least n times.</td></tr><tr><td style="text-align:center"><code>{n,m}</code></td><td style="text-align:left">Matches the previous element at least n times, but no more than m times.</td></tr></tbody></table>
+<ul>
+<li>
+<p><code>/cars*/</code> - matches car, cars and carsssssssssss and many more</p>
+</li>
+<li>
+<p><code>/\d\d\d*/</code> - matches two digits or more (remember this is starts from zero to more)</p>
+</li>
+<li>
+<p><code>/cars+/</code> - does not match car since it needs to be more more than 1 character ,E.G, cars or carsssssssssss</p>
+</li>
+<li>
+<p><code>/\d\d\d+/</code> - matches three digits or more (remember this is starts from 1 to more)</p>
+</li>
+<li>
+<p><code>/cars?/</code> - the (s) its optional meaning it matches car and cars not carssssssss</p>
+<ul>
+<li><code>/\d{1}/</code> - matches 1 single digits</li>
+<li><code>/\d{1,}/</code> - matches 1 or more digits</li>
+<li><code>/\d{1,2}/</code> - matches 1 to 2 digits</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Greedy Expression vs Lazy</p>
+<ul>
+<li>Greedy <code>\w+\d+\w+</code> it maches <code>file1_export</code> from <code>file1_export.sql</code> since it tries to math as much as possible</li>
+<li>Lazy <code>\w+\d+\w+?</code> , this matches <code>file1_</code> from <code>file1_export.sql</code> why is gives up when it find the first word character at the end. (Notice we have a question mark at the end of the w "?" )</li>
+<li>You can use the lazy format in these quantifiers <code>_, +. {} ?</code>, you would have something likes this <code>_?, +?, {}?, ??</code></li>
+</ul>
+</li>
+<li>
+<p>Grouping &amp; Alternation</p>
+<ul>
+<li>
+<p>Grouping:</p>
+<ul>
+<li><code>/(cde)+/</code> matches <code>cde</code> and <code>cdecdecdecde</code></li>
+<li><code>/(super)?market/</code> matches <code>market</code> and <code>supermarket</code></li>
+<li><code>(super)market</code> matches <code>supermarket</code></li>
+</ul>
+</li>
+<li>
+<p>Alternation</p>
+<ul>
+<li><code>super|market</code> matches <code>super</code> or <code>market</code></li>
+<li><code>super(market|bowl)</code> matches <code>supermarket</code> or <code>superbowl</code></li>
+<li><code>\(12|ab|#%){8}\</code> this matches <code>12ab#%12ab#%12ab</code>
+The code above might seen confusing but was happening is that the sets of characters are repeating until they reach eight times in sets of two. Notice we are wrapping the symbols in parenthesis, basically groping then and then applying the quantifier.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Anchors</p>
+<table><thead><tr><th style="text-align:center">Metacharacter</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:center">^</td><td style="text-align:left">The match must start at the beginning of the string or line.</td></tr><tr><td style="text-align:center">$</td><td style="text-align:left">The match must occur at the end of the string or before \n at the end of the line or string.</td></tr><tr><td style="text-align:center">\A</td><td style="text-align:left">The match must occur at the start of the string.</td></tr><tr><td style="text-align:center">\Z</td><td style="text-align:left">The match must occur at the end of the string or before \n at the end of the string</td></tr></tbody></table>
+<ul>
+<li>
+<p><code>\A</code> and <code>\Z</code> are supported by PHP, Python, Perl, Java and .NET . Maybe other engines will start supporting it the future.</p>
+</li>
+<li>
+<p>the<code> ^</code> and <code>$</code> support <code>multiline mode</code>, meaning they can match not just then end of string but the end of lines. With <code>\A</code> and <code>\Z</code> you cannot do that.</p>
+<ul>
+<li><code>/^\./ </code> this matches the first dot on <code>.car.</code></li>
+<li><code>/\.$/</code> this matches the last dot on <code>.car. </code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Boundaries</p>
+<ul>
+<li>
+<p><code>\b\w+\b</code> matches <code>my car is black</code>, this will be default behavior without <code>\b</code> in this case, so every beginning and end of the word is matched.</p>
+</li>
+<li>
+<p><code>\B\w+\B</code> matches <code>a</code> from <code>car</code> and <code>lack</code> from <code>black</code>, so letters that are NOT the beginning or end of words are matched here.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Backreferences: Grouped expressions that are capture for later usage</p>
+<ul>
+<li>
+<p><code>/super(market)/</code> matches <code>supermarket</code> and stores <code>market</code>. So if we wanted to use this store value we would use numbers from 1-9 for example <code>\1</code>.</p>
+<ul>
+<li><code>super(market) \1</code> matches <code>supermarket market</code> -&gt; <code>\1</code> means <code>market</code> here.</li>
+<li><code>super(market) \1 super(bowl) \2</code> matches <code>supermarket market superbowl bowl</code></li>
+<li>As you can see we are using the numbers from left to right in order to use the data stored int the parenthesis.</li>
+<li>since capturing happens by default it will eat up the spaces 1-9 that we have, and can slow down our app, to turn this off we just use question mark followed by a colon in the parenthesis like so.. <code>super(?:market) </code></li>
+</ul>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> phrase </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'Anand Raja'</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> pattern </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">(</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\w</span><span class="token regex regex-source language-regex quantifier number" style="color:#36acaa">+</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">)</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\s</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">(</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\w</span><span class="token regex regex-source language-regex quantifier number" style="color:#36acaa">+</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">)</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> newPhrase </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> phrase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">replace</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">pattern</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'$1'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'First: '</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> newPhrase</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Output will be first parenthesis's data</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// First: Anand</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">newPhrase </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> phrase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">replace</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">pattern</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'$2'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'Second: '</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> newPhrase</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Output will be second parenthesis's data</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Second: Raja</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pattern </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">(?:</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\w</span><span class="token regex regex-source language-regex quantifier number" style="color:#36acaa">+</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">)</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\s</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">(</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\w</span><span class="token regex regex-source language-regex quantifier number" style="color:#36acaa">+</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">)</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">newPhrase </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> phrase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">replace</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">pattern</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'$1'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'Third: '</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> newPhrase</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Output will be second parenthesis's data as we're turning off capturing for first parenthesis</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Third: Raja</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pattern </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">(</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\w</span><span class="token regex regex-source language-regex quantifier number" style="color:#36acaa">+</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">)</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\s</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">(</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\w</span><span class="token regex regex-source language-regex quantifier number" style="color:#36acaa">+</span><span class="token regex regex-source language-regex group punctuation" style="color:#393A34">)</span><span class="token regex regex-source language-regex char-set class-name" style="color:#36acaa">\s</span><span class="token regex regex-source language-regex backreference keyword" style="color:#00009f">\1</span><span class="token regex regex-delimiter" style="color:#36acaa">/</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">phrase </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token template-string template-punctuation string" style="color:#e3116c">`</span><span class="token template-string string" style="color:#e3116c">love is love</span><span class="token template-string template-punctuation string" style="color:#e3116c">`</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// \1 denotes love</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">newPhrase </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> phrase</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">replace</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">pattern</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">'$1'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'Fourth: '</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> newPhrase</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Output will be first parenthesis's data</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// Fourth: love</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Positive &amp; Negative Lookaheads</p>
+<ul>
+<li><code>super(?=market)</code> if <code>super</code> is preceded by <code>market</code>, match it, this will match <code>super</code>
+<ul>
+<li>if <code>supermarket superbowl</code> is phrase to be checked, <code>super</code> from <code>supermarket</code> will only be matched. -&gt; meaning market should be preceded by super(i.e, super with market)</li>
+</ul>
+</li>
+<li>To do the apposite we do this, <code>super(?!market)</code>
+<ul>
+<li>if <code>supermarket superbowl</code> is phrase to be checked, <code>super</code> from <code>superbowl</code> will only be matched. -&gt; meaning market should not be there after super(i.e, super without market)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Positive &amp; Negative Lookbehind</p>
+<ul>
+<li>
+<p><code>(?&lt;=super)market</code> matches <code>market</code> in <code>supermarket</code></p>
+</li>
+<li>
+<p><code>(?&lt;!market)super</code> matches <code>super</code> in <code>supermarket</code></p>
+</li>
+<li>
+<p>Lookbehind is not supported in non-V8 browsers, such as Safari, Internet Explorer</p>
+</li>
+<li>
+<p>The syntaxes are:</p>
+<ul>
+<li>Positive lookbehind: <code>(?&lt;=Y)X</code>, matches <code>X</code>, but only if there’s <code>Y</code> before it.</li>
+<li>Negative lookbehind: <code>(?&lt;!Y)X</code>, matches <code>X</code>, but only if there’s no <code>Y</code> before it.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Examples</p>
+<ul>
+<li>Postal code to choose either 4 or 5 digits in the begining, or along with that dash and another 4 digits at the end (say <code>34216-6501</code>)</li>
+</ul>
+<div class="language-regex codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-regex codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  /</span><span class="token anchor function" style="color:#d73a49">^</span><span class="token char-set class-name">\d</span><span class="token quantifier number" style="color:#36acaa">{4,5}</span><span class="token group punctuation" style="color:#393A34">(</span><span class="token plain">-</span><span class="token char-set class-name">\d</span><span class="token quantifier number" style="color:#36acaa">{4}</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token quantifier number" style="color:#36acaa">?</span><span class="token anchor function" style="color:#d73a49">$</span><span class="token plain">/</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>Password with altest one uppercase, lowercase, and one special character from the list (!,@,$,#,-,^,%,&amp;,*) with min. 8 and max. 13 characters</li>
+</ul>
+<div class="language-regex codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-regex codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  /</span><span class="token anchor function" style="color:#d73a49">^</span><span class="token group punctuation" style="color:#393A34">(?=</span><span class="token char-set class-name">.</span><span class="token quantifier number" style="color:#36acaa">*</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">A</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">Z</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token group punctuation" style="color:#393A34">(?=</span><span class="token char-set class-name">.</span><span class="token quantifier number" style="color:#36acaa">*</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">a</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">z</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token group punctuation" style="color:#393A34">(?=</span><span class="token char-set class-name">.</span><span class="token quantifier number" style="color:#36acaa">*</span><span class="token char-set class-name">\d</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token group punctuation" style="color:#393A34">(?=</span><span class="token char-set class-name">.</span><span class="token quantifier number" style="color:#36acaa">*</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class">!@$#</span><span class="token char-class escape">\-</span><span class="token char-class special-escape escape">\^</span><span class="token char-class">%&amp;*</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token char-set class-name">\S</span><span class="token quantifier number" style="color:#36acaa">{8,13}</span><span class="token anchor function" style="color:#d73a49">$</span><span class="token plain">/</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>The below regex will match <code>27-11-1996</code> or <code>05/10/2023</code> or <code>7-1-1954</code> or <code>7-03-1954</code>. One disadvantage is year can be any 4 digits.</li>
+</ul>
+<div class="language-regex codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-regex codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  /</span><span class="token anchor function" style="color:#d73a49">^</span><span class="token group punctuation" style="color:#393A34">(</span><span class="token plain">0</span><span class="token quantifier number" style="color:#36acaa">?</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">1</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">9</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">1</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">2</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">0</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">9</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token plain">3</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">0</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">1</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class">/-</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token group punctuation" style="color:#393A34">(</span><span class="token plain">0</span><span class="token quantifier number" style="color:#36acaa">?</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">1</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">9</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token plain">1</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class range">0</span><span class="token char-class range range-punctuation operator" style="color:#393A34">-</span><span class="token char-class range">2</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class">/-</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token char-set class-name">\d</span><span class="token quantifier number" style="color:#36acaa">{4}</span><span class="token anchor function" style="color:#d73a49">$</span><span class="token plain">/</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>Select all html tags except [a, ul, li, ol]</li>
+</ul>
+<div class="language-regex codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-regex codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  /&lt;</span><span class="token group punctuation" style="color:#393A34">(?!</span><span class="token escape">\/</span><span class="token quantifier number" style="color:#36acaa">?</span><span class="token group punctuation" style="color:#393A34">(</span><span class="token plain">a</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token plain">ul</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token plain">li</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token plain">ol</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token group punctuation" style="color:#393A34">(?=</span><span class="token plain">&gt;</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token char-set class-name">\s</span><span class="token quantifier number" style="color:#36acaa">?</span><span class="token char-set class-name">.</span><span class="token quantifier number" style="color:#36acaa">*</span><span class="token plain">&gt;</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token group punctuation" style="color:#393A34">)</span><span class="token escape">\/</span><span class="token quantifier number" style="color:#36acaa">?</span><span class="token char-set class-name">.</span><span class="token quantifier number" style="color:#36acaa">*?</span><span class="token plain">&gt;/g</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>Select all anchor tags(a tag) in html</li>
+</ul>
+<div class="language-regex codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-regex codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  /&lt;a</span><span class="token char-set class-name">.</span><span class="token quantifier number" style="color:#36acaa">*?</span><span class="token plain">&gt;</span><span class="token alternation keyword" style="color:#00009f">|</span><span class="token plain">&lt;</span><span class="token escape">\/</span><span class="token plain">a&gt;/g</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>How to select all html tags</li>
+</ul>
+<div class="language-regex codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-regex codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  /&lt;</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">[</span><span class="token char-class char-class-negation operator" style="color:#393A34">^</span><span class="token char-class">&gt;</span><span class="token char-class char-class-punctuation punctuation" style="color:#393A34">]</span><span class="token quantifier number" style="color:#36acaa">*</span><span class="token plain">&gt;/g</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="usefull-online-regex-validator">Usefull online Regex validator<a href="https://actionanand.github.io/wiki/blog/js-regex-helper#usefull-online-regex-validator" class="hash-link" aria-label="Direct link to Usefull online Regex validator" title="Direct link to Usefull online Regex validator">​</a></h2>
+<ol>
+<li><a href="https://regex101.com/" target="_blank" rel="noopener noreferrer">Regex101</a></li>
+<li><a href="https://www.regexpal.com/" target="_blank" rel="noopener noreferrer">Regex Pal</a></li>
+<li><a href="https://github.com/rpayanm/regexpal" target="_blank" rel="noopener noreferrer">Regex Pal github source code</a></li>
+<li><a href="https://github.com/geongeorge/i-hate-regex" target="_blank" rel="noopener noreferrer">I hate Regex source code - Vue</a></li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a href="https://actionanand.github.io/wiki/blog/js-regex-helper#resources" class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources">​</a></h2>
+<ol>
+<li><a href="https://stackoverflow.com/questions/15491894/regex-to-validate-date-formats-dd-mm-yyyy-dd-mm-yyyy-dd-mm-yyyy-dd-mmm-yyyy" target="_blank" rel="noopener noreferrer">Regex to validate date formats dd/mm/YYYY, dd-mm-YYYY, dd.mm.YYYY, dd mmm YYYY, dd-mmm-YYYY, dd/mmm/YYYY, dd.mmm.YYYY with Leap Year Support</a></li>
+<li><a href="https://javascript.info/regexp-introduction" target="_blank" rel="noopener noreferrer">Javascript info - regex</a></li>
+<li><a href="https://github.com/ziishaned/learn-regex" target="_blank" rel="noopener noreferrer">Learn Regex - github</a></li>
+</ol>]]></content>
+        <author>
+            <name>Anand Techie</name>
+            <uri>https://github.com/AnandRaja-tech</uri>
+        </author>
+        <category label="regex" term="regex"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Which came first?]]></title>
         <id>https://actionanand.github.io/wiki/blog/the-chicken-or-the-egg</id>
         <link href="https://actionanand.github.io/wiki/blog/the-chicken-or-the-egg"/>
@@ -49,36 +352,5 @@
         </author>
         <category label="css" term="css"/>
         <category label="center-css" term="center-css"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>https://actionanand.github.io/wiki/blog/long-blog-post</id>
-        <link href="https://actionanand.github.io/wiki/blog/long-blog-post"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
-<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
-        <author>
-            <name>Anand Techie</name>
-            <uri>https://github.com/AnandRaja-tech</uri>
-        </author>
-        <category label="hello" term="hello"/>
-        <category label="docusaurus" term="docusaurus"/>
     </entry>
 </feed>
