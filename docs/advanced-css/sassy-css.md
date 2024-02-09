@@ -15,21 +15,25 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="scss" label="SCSS">
   ```scss
+    // highlight-next-line
     $full-width: 100%;
 
     .mobile-nav__items {
       width: 90%;
+      // highlight-next-line
       height: $full-width;
       display: flex;
+      // highlight-start
       flex: {
         direction: column;
         wrap: nowrap;
       }
+      // highlight-end
     }
   ```
   </TabItem>
   <TabItem value="css" label="CSS">
-  ```css
+  ```css {3,5-6}
     .mobile-nav__items {
       width: 90%;
       height: 100%;
@@ -49,17 +53,21 @@ import TabItem from '@theme/TabItem';
     $border-size: 1.5px;
 
     // map
+    // highlight-next-line
     $color: (green-dark: #0e4f1f, red-bright: #ff1b68);
 
     // List
+    // highlight-next-line
     $border-default: $border-size solid map-get($color, green-dark);
 
 
     .button {
+      // highlight-next-line
       background: map-get($color, red-bright);
       color: white;
       font: inherit;
-      border: $border-size solid map-get($color, green-dark);
+      // highlight-next-line
+      border: $border-default;
       padding: .5rem;
       border-radius: 8px;
       font-weight: bold;
@@ -68,7 +76,7 @@ import TabItem from '@theme/TabItem';
   ```
   </TabItem>
   <TabItem value="css" label="CSS">
-  ```css
+  ```css {2,5}
     .button {
       background: #ff1b68;
       color: white;
@@ -88,8 +96,10 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="scss" label="SCSS">
   ```scss
+  $dark-green: #0e4f1f;
+
   .background {
-    $dark-green: #0e4f1f;
+    // highlight-next-line
     background: lighten($dark-green, 72%);
   }
   ```
@@ -97,6 +107,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="css" label="CSS">
   ```css
   .background {
+    // highlight-next-line
     background: #d5f8de;
   }
   ```
@@ -114,6 +125,7 @@ import TabItem from '@theme/TabItem';
   $border-size: 1rem;
 
   .maths {
+    // highlight-next-line
     border-radius: $border-size * 3;
   }
   ```
@@ -121,6 +133,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="css" label="CSS">
   ```css
   .maths {
+    // highlight-next-line
     border-radius: 3rem;
   }
   ```
@@ -137,10 +150,12 @@ import TabItem from '@theme/TabItem';
     flex-direction: row;
     font-size: 15px;
 
+    // highlight-start
     @media (min-width: 40rem) {
       flex-direction: column;
       font-size: 10px;
     }
+    // highlight-end
   }
   ```
   </TabItem>
@@ -152,12 +167,14 @@ import TabItem from '@theme/TabItem';
     font-size: 15px;
   }
 
+  // highlight-start
   @media (min-width: 40rem) {
     .container {
       flex-direction: column;
       font-size: 10px;
     }
   }
+  // highlight-end
   ```
   </TabItem>
 </Tabs>
@@ -171,18 +188,22 @@ import TabItem from '@theme/TabItem';
   $color: (green-dark: #0e4f1f, red-bright: #ff1b68);
   $border-size: 1.5px;
 
+  // highlight-start
   .sass-section {
     font-family: 'Montserrat', sans-serif;
     border: $border-size solid map-get($color, green-dark);
     width: 50px;
   }
+  // highlight-end
 
   .box1 {
+    // highlight-next-line
     @extend .sass-section;
     height: 60px;
   }
 
   .box2 {
+    // highlight-next-line
     @extend .sass-section;
     height: 70px;
   }
@@ -190,11 +211,13 @@ import TabItem from '@theme/TabItem';
   </TabItem>
   <TabItem value="css" label="CSS">
   ```css
+  // highlight-start
   .sass-section, .box1, .box2 {
     font-family: 'Montserrat', sans-serif;
     border: 1.5px solid #0e4f1f;
     width: 50px;
   }
+  // highlight-end
 
   .box1 {
     height: 60px;
@@ -231,50 +254,71 @@ import TabItem from '@theme/TabItem';
   $dark-green: #0e4f1f;
 
   // mixin without arguments
+  // highlight-start
   @mixin display-flex() {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+  // highlight-end
 
   .container {
+    // highlight-next-line
     @include display-flex();
     flex-direction: column;
-  }
-
-  // mixin with arguments
-  @mixin media-min-width($width) {
-    @media (min-width: $width) {
-      border: 2px solid green;
-      @content;
-    }
-  }
-
-  body {
-    background: $dark-green;
-    font-size: 15px;
-
-    @include media-min-width(40rem) {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-    }
   }
   ```
   </TabItem>
   <TabItem value="css" label="CSS">
   ```css
   .container {
+    // highlight-start
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    // highlight-end
     flex-direction: column;
   }
+  ```
+  </TabItem>
+</Tabs>
 
+<Tabs>
+  <TabItem value="scss" label="SCSS">
+  ```scss
+  $dark-green: #0e4f1f;
+
+  // mixin with arguments
+  // highlight-start
+  @mixin media-min-width($width) {
+    @media (min-width: $width) {
+      border: 2px solid green;
+      @content;
+    }
+  }
+  // highlight-end
+
+  body {
+    background: $dark-green;
+    font-size: 15px;
+
+    // highlight-start
+    @include media-min-width(40rem) {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+    }
+    // highlight-end
+  }
+  ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+  ```css
   body {
     background: #0e4f1f;
     font-size: 15px;
   }
 
+  // highlight-start
   @media (min-width: 40rem) {
     body {
       border: 2px solid green;
@@ -282,6 +326,7 @@ import TabItem from '@theme/TabItem';
       font-size: 10px;
     }
   }
+  // highlight-end
   ```
   </TabItem>
 </Tabs>

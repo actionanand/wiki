@@ -10,7 +10,9 @@ sidebar_position: 8
 the order will be as below:
 
 ```css
-  font: font-style font-variant font-weight font-size/line-height font-family; 
+  /* 
+    font: font-style font-variant font-weight font-size/line-height font-family;  
+  */
 ```
 
 * `font-size` and `font-family` should be there in the short-hand

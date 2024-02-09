@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ```css
   .modal {
-    /* animation css - `ease-in` -> starts slower & ends faster; `ease-out` -> reverse of the prior*/
+    /* animation css - `ease-in` -> starts slower & ends faster; `ease-out` -> reverse of the prior */
     opacity: 0;
     transform: translateY(-3rem);
     transition: opacity 200ms, transform .5s;
@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 ```
 
 ```css
-transition: WHAT DURATION DELAY TIMING-FUNCTION;
+/* transition: WHAT DURATION DELAY TIMING-FUNCTION; */
 transition: opacity 200ms 1s ease-out;
 ```
 
@@ -38,9 +38,11 @@ The above line can be translated to: "Animate any changes in the `opacity`  prop
 6. [Easing Functions Cheat Sheet](https://easings.net/)
 
 ```css
-animation: NAME DURATION DELAY TIMING-FUNCTION ITERATION DIRECTION FILL-MODE PLAY-STATE;
+/* animation: NAME DURATION DELAY TIMING-FUNCTION ITERATION DIRECTION FILL-MODE PLAY-STATE; */
 animation: wiggle 200ms 1s ease-out 8 alternate forwards running;
+```
 
+```css
 @keyframes wiggle {
   from {
     transform: rotateZ(0);
