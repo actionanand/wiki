@@ -12,7 +12,7 @@
         <id>https://actionanand.github.io/wiki/blog/js-regex-helper</id>
         <link href="https://actionanand.github.io/wiki/blog/js-regex-helper"/>
         <updated>2024-02-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A regular expression, also known as regex or regexp, is a sequence of characters that define a search pattern. It can be used to search, edit, or manipulate text and data.]]></summary>
+        <summary type="html"><![CDATA[Regex - short Regular Expression]]></summary>
         <content type="html"><![CDATA[<p>A <strong>regular expression</strong>, also known as <strong>regex</strong> or <strong>regexp</strong>, is a sequence of characters that define a search pattern. It can be used to search, edit, or manipulate text and data.</p>
 <p>In JavaScript, regular expressions are created using the <strong>RegExp object</strong>. The RegExp object has a number of methods that can be used to search for and manipulate strings.</p>
 <p>Here are some examples of regular expressions in JavaScript:</p>
@@ -328,6 +328,9 @@ The code above might seen confusing but was happening is that the sets of charac
         <author>
             <name>Anand Raja</name>
             <uri>https://github.com/actionanand</uri>
+        </author>
+        <author>
+            <name>Anand Techie</name>
         </author>
         <category label="css" term="css"/>
         <category label="center-css" term="center-css"/>

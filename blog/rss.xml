@@ -13,7 +13,7 @@
             <link>https://actionanand.github.io/wiki/blog/js-regex-helper</link>
             <guid>https://actionanand.github.io/wiki/blog/js-regex-helper</guid>
             <pubDate>Fri, 09 Feb 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[A regular expression, also known as regex or regexp, is a sequence of characters that define a search pattern. It can be used to search, edit, or manipulate text and data.]]></description>
+            <description><![CDATA[Regex - short Regular Expression]]></description>
             <content:encoded><![CDATA[<p>A <strong>regular expression</strong>, also known as <strong>regex</strong> or <strong>regexp</strong>, is a sequence of characters that define a search pattern. It can be used to search, edit, or manipulate text and data.</p>
 <p>In JavaScript, regular expressions are created using the <strong>RegExp object</strong>. The RegExp object has a number of methods that can be used to search for and manipulate strings.</p>
 <p>Here are some examples of regular expressions in JavaScript:</p>
