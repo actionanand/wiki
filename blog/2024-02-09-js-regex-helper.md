@@ -277,3 +277,6 @@ Grouped expressions that are capture for later usage
 1. [Regex to validate date formats dd/mm/YYYY, dd-mm-YYYY, dd.mm.YYYY, dd mmm YYYY, dd-mmm-YYYY, dd/mmm/YYYY, dd.mmm.YYYY with Leap Year Support](https://stackoverflow.com/questions/15491894/regex-to-validate-date-formats-dd-mm-yyyy-dd-mm-yyyy-dd-mm-yyyy-dd-mmm-yyyy)
 2. [Javascript info - regex](https://javascript.info/regexp-introduction)
 3. [Learn Regex - github](https://github.com/ziishaned/learn-regex)
+4. [How to Use Regular Expressions in JavaScript – Tutorial for Beginners](https://www.freecodecamp.org/news/regular-expressions-for-beginners/)
+5. [JavaScript Regex - Programiz](https://www.programiz.com/javascript/regex)
+6. [A Guide to Regular Expressions (Regex) in JavaScript](https://builtin.com/software-engineering-perspectives/javascript-regex)
