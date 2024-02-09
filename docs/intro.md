@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-This is my rogh work!
+> This is my Rough work!
 
 ### My VS Code settings
 
