@@ -1,6 +1,6 @@
 ---
 slug: text-align-center-in-button
-title: Centering Text Inside a Button
+title: Centering a Text Inside a Button
 authors:
   name: Anand Raja
   title: Software Developer
