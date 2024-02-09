@@ -279,6 +279,9 @@ The code above might seen confusing but was happening is that the sets of charac
 <li><a href="https://stackoverflow.com/questions/15491894/regex-to-validate-date-formats-dd-mm-yyyy-dd-mm-yyyy-dd-mm-yyyy-dd-mmm-yyyy" target="_blank" rel="noopener noreferrer">Regex to validate date formats dd/mm/YYYY, dd-mm-YYYY, dd.mm.YYYY, dd mmm YYYY, dd-mmm-YYYY, dd/mmm/YYYY, dd.mmm.YYYY with Leap Year Support</a></li>
 <li><a href="https://javascript.info/regexp-introduction" target="_blank" rel="noopener noreferrer">Javascript info - regex</a></li>
 <li><a href="https://github.com/ziishaned/learn-regex" target="_blank" rel="noopener noreferrer">Learn Regex - github</a></li>
+<li><a href="https://www.freecodecamp.org/news/regular-expressions-for-beginners/" target="_blank" rel="noopener noreferrer">How to Use Regular Expressions in JavaScript – Tutorial for Beginners</a></li>
+<li><a href="https://www.programiz.com/javascript/regex" target="_blank" rel="noopener noreferrer">JavaScript Regex - Programiz</a></li>
+<li><a href="https://builtin.com/software-engineering-perspectives/javascript-regex" target="_blank" rel="noopener noreferrer">A Guide to Regular Expressions (Regex) in JavaScript</a></li>
 </ol>]]></content>
         <author>
             <name>Anand Techie</name>
