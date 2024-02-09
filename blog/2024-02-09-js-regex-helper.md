@@ -30,13 +30,13 @@ const match = regex.test(string);
 
 <!--truncate-->
 
-**Regex** short Regular Expression
+> **Regex** short Regular Expression
 
-1. General view
+### 1. General view
 
    - Expressions need to be surrounded by forward slashes - Eg. `/expression/`
 
-2. Modes or Flags in regex
+### 2. Modes or Flags in regex
 
    - Standard - `/expression/`
    - Case-insensitive - `/expression/i`
@@ -67,7 +67,9 @@ const match = regex.test(string);
    - Global - `/expression/g`
      - With this flag the search looks for all matches, without it – only the first match is returned
 
-3. Metacharacters: They're characters with special meaning the most common metacharacters we use in expressions are `. + - * $ {} () [] ! : = ^ | `
+### 3. Metacharacters
+
+* They're characters with special meaning the most common metacharacters we use in expressions are `. + - * $ {} () [] ! : = ^ | `
 
    - Escaping Metacharacters:
 
@@ -76,7 +78,7 @@ const match = regex.test(string);
 
      - `/4\.500/` we use a back slash here to escape the wildcard making it a literal character now, meaning its just a dot.
 
-4. Range sets
+### 4. Range sets
 
    - `[A-Z]` matches any uppercase character from A to Z
 
@@ -87,11 +89,11 @@ const match = regex.test(string);
    - `[A-Za-z0-9]` we can also combine them
    - `/au[acdt]o/` matches `auto` - third character should be either one from the set `[acdt]`
 
-5. Negative sets
+### 5. Negative sets
 
    - `[^abc]` match anything except `abc` or what is after the caret inside the brackets. We are still matching one character here, not group of all character.
 
-6. Shorthand for sets
+### 6. Shorthand for sets
 
    | **Code** | **Description**                                             | **Equivalent** |
    | :------: | :---------------------------------------------------------- | :------------- |
@@ -106,7 +108,7 @@ const match = regex.test(string);
 
    - `/\d\d\d/` matches 123 bot not car (i.e, 3 digits)
 
-7. Repetition Metacharacters
+### 7. Repetition Metacharacters
 
    | Quantifier | Description                                                              |
    | :--------: | :----------------------------------------------------------------------- |
@@ -127,13 +129,13 @@ const match = regex.test(string);
      - `/\d{1,}/` - matches 1 or more digits
      - `/\d{1,2}/` - matches 1 to 2 digits
 
-8. Greedy Expression vs Lazy
+### 8. Greedy Expression vs Lazy
 
    - Greedy `\w+\d+\w+` it maches `file1_export` from `file1_export.sql` since it tries to math as much as possible
    - Lazy `\w+\d+\w+?` , this matches `file1_` from `file1_export.sql` why is gives up when it find the first word character at the end. (Notice we have a question mark at the end of the w "?" )
    - You can use the lazy format in these quantifiers `_, +. {} ?`, you would have something likes this `_?, +?, {}?, ??`
 
-9. Grouping & Alternation
+### 9. Grouping & Alternation
 
    - Grouping:
 
@@ -148,7 +150,7 @@ const match = regex.test(string);
      - `\(12|ab|#%){8}\` this matches `12ab#%12ab#%12ab`
        The code above might seen confusing but was happening is that the sets of characters are repeating until they reach eight times in sets of two. Notice we are wrapping the symbols in parenthesis, basically groping then and then applying the quantifier.
 
-10. Anchors
+### 10. Anchors
 
     | Metacharacter | Description                                                                                  |
     | :-----------: | :------------------------------------------------------------------------------------------- |
@@ -163,13 +165,14 @@ const match = regex.test(string);
       - `/^\./ ` this matches the first dot on `.car.`
       - `/\.$/` this matches the last dot on `.car. `
 
-11. Boundaries
+### 11. Boundaries
 
     - `\b\w+\b` matches `my car is black`, this will be default behavior without `\b` in this case, so every beginning and end of the word is matched.
 
     - `\B\w+\B` matches `a` from `car` and `lack` from `black`, so letters that are NOT the beginning or end of words are matched here.
 
-12. Backreferences: Grouped expressions that are capture for later usage
+### 12. Backreferences 
+Grouped expressions that are capture for later usage
 
     - `/super(market)/` matches `supermarket` and stores `market`. So if we wanted to use this store value we would use numbers from 1-9 for example `\1`.
 
@@ -206,14 +209,14 @@ const match = regex.test(string);
       // Fourth: love
       ```
 
-13. Positive & Negative Lookaheads
+### 13. Positive & Negative Lookaheads
 
     - `super(?=market)` if `super` is preceded by `market`, match it, this will match `super`
       - if `supermarket superbowl` is phrase to be checked, `super` from `supermarket` will only be matched. -> meaning market should be preceded by super(i.e, super with market)
     - To do the apposite we do this, `super(?!market)`
       - if `supermarket superbowl` is phrase to be checked, `super` from `superbowl` will only be matched. -> meaning market should not be there after super(i.e, super without market)
 
-14. Positive & Negative Lookbehind
+### 14. Positive & Negative Lookbehind
 
     - `(?<=super)market` matches `market` in `supermarket`
     - `(?<!market)super` matches `super` in `supermarket`
@@ -224,7 +227,7 @@ const match = regex.test(string);
       - Positive lookbehind: `(?<=Y)X`, matches `X`, but only if there’s `Y` before it.
       - Negative lookbehind: `(?<!Y)X`, matches `X`, but only if there’s no `Y` before it.
 
-15. Examples
+### 15. Examples
 
     - Postal code to choose either 4 or 5 digits in the begining, or along with that dash and another 4 digits at the end (say `34216-6501`)
 
@@ -262,14 +265,14 @@ const match = regex.test(string);
       /<[^>]*>/g
     ```
 
-## Usefull online Regex validator
+### Usefull online Regex validator
 
 1. [Regex101](https://regex101.com/)
 2. [Regex Pal](https://www.regexpal.com/)
 3. [Regex Pal github source code](https://github.com/rpayanm/regexpal)
 4. [I hate Regex source code - Vue](https://github.com/geongeorge/i-hate-regex)
 
-## Resources
+### Resources
 
 1. [Regex to validate date formats dd/mm/YYYY, dd-mm-YYYY, dd.mm.YYYY, dd mmm YYYY, dd-mmm-YYYY, dd/mmm/YYYY, dd.mmm.YYYY with Leap Year Support](https://stackoverflow.com/questions/15491894/regex-to-validate-date-formats-dd-mm-yyyy-dd-mm-yyyy-dd-mm-yyyy-dd-mmm-yyyy)
 2. [Javascript info - regex](https://javascript.info/regexp-introduction)
