@@ -2,7 +2,6 @@
 slug: js-regex-helper
 title: JS Regex Helper
 authors: anand-tech
-id: js-regex
 description: Regex - short Regular Expression
 tags: [regex]
 ---
@@ -15,7 +14,7 @@ In JavaScript, regular expressions are created using the <Highlight color='#ff1b
 
 Here are some examples of regular expressions in JavaScript:
 
-```js
+```js showLineNumbers
 // Find all occurrences of the letter "a" in a string
 const regex = /a/g;
 const string = "This is a string.";
@@ -34,125 +33,126 @@ const match = regex.test(string);
 
 <!--truncate-->
 
+
 > <Highlight color='#25c2a0'> Regex </Highlight> short Regular Expression
 
 ### 1. General view
 
-   - Expressions need to be surrounded by forward slashes - Eg. `/expression/`
+  - Expressions need to be surrounded by forward slashes - Eg. `/expression/`
 
 ### 2. Modes or Flags in regex
 
-   - Standard - `/expression/`
-   - Case-insensitive - `/expression/i`
+  - Standard - `/expression/`
+  - Case-insensitive - `/expression/i`
 
-     - With this flag the search is case-insensitive: no difference between **A** and **a**
+    - With this flag the search is case-insensitive: no difference between **A** and **a**
 
-   - Dot-matches-all - `/expression/s`
+  - Dot-matches-all - `/expression/s`
 
-     - Enables **dotall** mode, that allows a dot `.` to match newline character `\n`
+    - Enables **dotall** mode, that allows a dot `.` to match newline character `\n`
 
-     - By default, a dot doesn’t match the newline character `\n`.
+    - By default, a dot doesn’t match the newline character `\n`.
 
-     - For instance, the regexp `A.B` matches A, and then B with any character between them, except a newline `\n`
+    - For instance, the regexp `A.B` matches A, and then B with any character between them, except a newline `\n`
 
-     ```js
-     alert('A\nB'.match(/A.B/)); // null (no match)
-     ```
+    ```js
+    alert('A\nB'.match(/A.B/)); // null (no match)
+    ```
 
-     - There are many situations when we’d like a dot to mean literally **any character**, newline included.
+    - There are many situations when we’d like a dot to mean literally **any character**, newline included.
 
-     - That’s what flag `s` does. If a regexp has it, then a dot `.` matches literally any character:
+    - That’s what flag `s` does. If a regexp has it, then a dot `.` matches literally any character:
 
-     ```js
-     alert('A\nB'.match(/A.B/s)); // A\nB (match!)
-     ```
+    ```js
+    alert('A\nB'.match(/A.B/s)); // A\nB (match!)
+    ```
 
-   - Multiline - `/expression/m`
-   - Global - `/expression/g`
-     - With this flag the search looks for all matches, without it – only the first match is returned
+  - Multiline - `/expression/m`
+  - Global - `/expression/g`
+    - With this flag the search looks for all matches, without it – only the first match is returned
 
 ### 3. Metacharacters
 
 * They're characters with special meaning the most common metacharacters we use in expressions are `. + - * $ {} () [] ! : = ^ | `
 
-   - Escaping Metacharacters:
+  - Escaping Metacharacters:
 
-     - Sometmes we need to escape our symbols if they look the same as the text we want to find,
-     - for example, As you can see here `/4.500/ ` these match will cause issues if we need to find `4.500` since the dot its the wildecard but what we need is the literal dot, we need to do something like the below.
+    - Sometmes we need to escape our symbols if they look the same as the text we want to find,
+    - for example, As you can see here `/4.500/ ` these match will cause issues if we need to find `4.500` since the dot its the wildecard but what we need is the literal dot, we need to do something like the below.
 
-     - `/4\.500/` we use a back slash here to escape the wildcard making it a literal character now, meaning its just a dot.
+    - `/4\.500/` we use a back slash here to escape the wildcard making it a literal character now, meaning its just a dot.
 
 ### 4. Range sets
 
-   - `[A-Z]` matches any uppercase character from A to Z
+  - `[A-Z]` matches any uppercase character from A to Z
 
-   - `[a-z]` matches any lowercase character from A to Z
+  - `[a-z]` matches any lowercase character from A to Z
 
-   - `[0-9]` matches any digit character from 0 to 9
+  - `[0-9]` matches any digit character from 0 to 9
 
-   - `[A-Za-z0-9]` we can also combine them
-   - `/au[acdt]o/` matches `auto` - third character should be either one from the set `[acdt]`
+  - `[A-Za-z0-9]` we can also combine them
+  - `/au[acdt]o/` matches `auto` - third character should be either one from the set `[acdt]`
 
 ### 5. Negative sets
 
-   - `[^abc]` match anything except `abc` or what is after the caret inside the brackets. We are still matching one character here, not group of all character.
+  - `[^abc]` match anything except `abc` or what is after the caret inside the brackets. We are still matching one character here, not group of all character.
 
 ### 6. Shorthand for sets
 
-   | **Code** | **Description**                                             | **Equivalent** |
-   | :------: | :---------------------------------------------------------- | :------------- |
-   |    \d    | Digit                                                       | [0-9]          |
-   |    \D    | Non digit                                                   | [^0-9]         |
-   |    \s    | Any tab carriage return or new line                         | [ \t\r\n]      |
-   |    \S    | No whitespace of any kind                                   | [^ \t\r\n]     |
-   |    \w    | Word characters including underscore & digits, NO Hyphen(-) | [_A-Za-z0-9]   |
-   |    \W    | No word characters                                          | [ ^_A-Za-z0-9] |
+  | **Code** | **Description**                                             | **Equivalent** |
+  | :------: | :---------------------------------------------------------- | :------------- |
+  |    \d    | Digit                                                       | [0-9]          |
+  |    \D    | Non digit                                                   | [^0-9]         |
+  |    \s    | Any tab carriage return or new line                         | [ \t\r\n]      |
+  |    \S    | No whitespace of any kind                                   | [^ \t\r\n]     |
+  |    \w    | Word characters including underscore & digits, NO Hyphen(-) | [_A-Za-z0-9]   |
+  |    \W    | No word characters                                          | [ ^_A-Za-z0-9] |
 
-   - `/\w\w\w/` matches 123, abc, and \_1Z (i.e, 3 word characters)
+  - `/\w\w\w/` matches 123, abc, and \_1Z (i.e, 3 word characters)
 
-   - `/\d\d\d/` matches 123 bot not car (i.e, 3 digits)
+  - `/\d\d\d/` matches 123 bot not car (i.e, 3 digits)
 
 ### 7. Repetition Metacharacters
 
-   | Quantifier | Description                                                              |
-   | :--------: | :----------------------------------------------------------------------- |
-   |     `\*`   | Matches the previous element zero or more times.                         |
-   |     `+`    | Matches the previous element one or more times.                          |
-   |     `?`    | Matches the previous element zero or one time.                           |
-   |    `{n}`   | Matches the previous element exactly n times.                            |
-   |    `{n,}`  | Matches the previous element at least n times.                           |
-   |   `{n,m}`  | Matches the previous element at least n times, but no more than m times. |
+  | Quantifier | Description                                                              |
+  | :--------: | :----------------------------------------------------------------------- |
+  |     `\*`   | Matches the previous element zero or more times.                         |
+  |     `+`    | Matches the previous element one or more times.                          |
+  |     `?`    | Matches the previous element zero or one time.                           |
+  |    `{n}`   | Matches the previous element exactly n times.                            |
+  |    `{n,}`  | Matches the previous element at least n times.                           |
+  |   `{n,m}`  | Matches the previous element at least n times, but no more than m times. |
 
-   - `/cars*/` - matches car, cars and carsssssssssss and many more
-   - `/\d\d\d*/` - matches two digits or more (remember this is starts from zero to more)
-   - `/cars+/` - does not match car since it needs to be more more than 1 character ,E.G, cars or carsssssssssss
-   - `/\d\d\d+/` - matches three digits or more (remember this is starts from 1 to more)
-   - `/cars?/` - the (s) its optional meaning it matches car and cars not carssssssss
+  - `/cars*/` - matches car, cars and carsssssssssss and many more
+  - `/\d\d\d*/` - matches two digits or more (remember this is starts from zero to more)
+  - `/cars+/` - does not match car since it needs to be more more than 1 character ,E.G, cars or carsssssssssss
+  - `/\d\d\d+/` - matches three digits or more (remember this is starts from 1 to more)
+  - `/cars?/` - the (s) its optional meaning it matches car and cars not carssssssss
 
-     - `/\d{1}/` - matches 1 single digits
-     - `/\d{1,}/` - matches 1 or more digits
-     - `/\d{1,2}/` - matches 1 to 2 digits
+    - `/\d{1}/` - matches 1 single digits
+    - `/\d{1,}/` - matches 1 or more digits
+    - `/\d{1,2}/` - matches 1 to 2 digits
 
 ### 8. Greedy Expression vs Lazy
 
-   - Greedy `\w+\d+\w+` it maches `file1_export` from `file1_export.sql` since it tries to math as much as possible
-   - Lazy `\w+\d+\w+?` , this matches `file1_` from `file1_export.sql` why is gives up when it find the first word character at the end. (Notice we have a question mark at the end of the w "?" )
-   - You can use the lazy format in these quantifiers `_, +. {} ?`, you would have something likes this `_?, +?, {}?, ??`
+  - Greedy `\w+\d+\w+` it maches `file1_export` from `file1_export.sql` since it tries to math as much as possible
+  - Lazy `\w+\d+\w+?` , this matches `file1_` from `file1_export.sql` why is gives up when it find the first word character at the end. (Notice we have a question mark at the end of the w "?" )
+  - You can use the lazy format in these quantifiers `_, +. {} ?`, you would have something likes this `_?, +?, {}?, ??`
 
 ### 9. Grouping & Alternation
 
-   - Grouping:
+  - Grouping:
 
-     - `/(cde)+/` matches `cde` and `cdecdecdecde`
-     - `/(super)?market/` matches `market` and `supermarket`
-     - `(super)market` matches `supermarket`
+    - `/(cde)+/` matches `cde` and `cdecdecdecde`
+    - `/(super)?market/` matches `market` and `supermarket`
+    - `(super)market` matches `supermarket`
 
-   - Alternation
+  - Alternation
 
-     - `super|market` matches `super` or `market`
-     - `super(market|bowl)` matches `supermarket` or `superbowl`
-     - `\(12|ab|#%){8}\` this matches `12ab#%12ab#%12ab`
-       The code above might seen confusing but was happening is that the sets of characters are repeating until they reach eight times in sets of two. Notice we are wrapping the symbols in parenthesis, basically groping then and then applying the quantifier.
+    - `super|market` matches `super` or `market`
+    - `super(market|bowl)` matches `supermarket` or `superbowl`
+    - `\(12|ab|#%){8}\` this matches `12ab#%12ab#%12ab`
+      The code above might seen confusing but was happening is that the sets of characters are repeating until they reach eight times in sets of two. Notice we are wrapping the symbols in parenthesis, basically groping then and then applying the quantifier.
 
 ### 10. Anchors
 
@@ -185,7 +185,7 @@ Grouped expressions that are capture for later usage
       - As you can see we are using the numbers from left to right in order to use the data stored int the parenthesis.
       - since capturing happens by default it will eat up the spaces 1-9 that we have, and can slow down our app, to turn this off we just use question mark followed by a colon in the parenthesis like so.. `super(?:market) `
 
-      ```js
+      ```js showLineNumbers
       let phrase = 'Anand Raja';
       let pattern = /(\w+)\s(\w+)/;
 
