@@ -8,28 +8,67 @@ import TabItem from '@theme/TabItem';
 
 # Object Chain into Array
 
-<!-- <details>
-  <summary>Toggle me!</summary>
-  <div>
-    <div>This is the detailed content</div>
-    <br/>
-    <details>
-      <summary>
-        Nested toggle! Some surprise inside...
-      </summary>
-      <div>😲😲😲😲😲</div>
-    </details>
-  </div>
-</details> -->
 
 <details>
-  <summary>Toggle me!</summary>
+  <summary>TypeScript Model</summary>
   <div>
     <Tabs className="unique-tabs">
-  <TabItem value="Apple">This is an apple 🍎</TabItem>
-  <TabItem value="Orange">This is an orange 🍊</TabItem>
-  <TabItem value="Banana">This is a banana 🍌</TabItem>
-</Tabs>
+      <TabItem value="Class">
+      ```ts
+      // `MyPreference` Class
+      export class MyPreference {
+        preferences!: Subscription;
+      }
+
+      // `Subscription` class
+      export class Subscription {
+        consent!: boolean;
+        email!: string;
+        daily_alert_status!: Status;
+        special_alert_status!: Status;
+        daily!: {
+          dual: SubscriptionList;
+          high_priority: SubscriptionList;
+          low_priority: SubscriptionList;
+        };
+        special?: {
+          dual: SubscriptionList;
+          high_priority: SubscriptionList;
+          low_priority: SubscriptionList;
+        };
+      }
+      ```
+      </TabItem>
+      <TabItem value="Interface">
+      ```ts
+      // `SubscriptionList` interface
+      export interface SubscriptionList {
+        filter: string;
+        query: string;
+        type: string;
+        status: boolean;
+      }
+
+      // `ProcessedList` interface
+      export interface ProcessedList extends SubscriptionList {
+        category: string;
+        subscription: string;
+        unique: string;
+        index: number;
+      }
+      ```
+      </TabItem>
+      <TabItem value="Enum">
+      ```ts
+      // `Status` enum
+      export enum Status {
+        OptedIn = 'OptedIn',
+        OptedOut = 'OptedOut',
+        ConsentNotGivenYet = 'ConsentNotGivenYet',
+      }
+      ```
+      </TabItem>
+    </Tabs>
   </div>
 </details>
 
