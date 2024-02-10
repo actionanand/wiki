@@ -2,6 +2,8 @@
 sidebar_position: 4
 ---
 
+import styles from '../../src/css/doc-bg-img-styles.module.css';
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -10,7 +12,7 @@ import TabItem from '@theme/TabItem';
 ### The Background Property
 ![image](https://github.com/actionanand/wiki/assets/46064269/509f5172-d6b3-4229-b05a-2bf9691e6188)
 
-<Tabs>
+<Tabs className="unique-tabs" defaultValue="background-short">
   <TabItem value="background" label="Background">
     ```css title="main.css" {2,3-8}
     #product-overview {
@@ -55,7 +57,7 @@ import TabItem from '@theme/TabItem';
 ### Linear & Radial gradient - Example
 
 <Tabs>
-  <TabItem value="linear" label="Linear Gradient">
+  <TabItem value="linear" label="Linear Gradient" attributes={{className: styles.redTab}}>
   ```css
   .background {
     background-image: linear-gradient(to bottom left, green, red);
@@ -64,7 +66,7 @@ import TabItem from '@theme/TabItem';
   }
   ```
   </TabItem>
-  <TabItem value="radial" label="Radial Gradient">
+  <TabItem value="radial" label="Radial Gradient" attributes={{className: styles.purpleTab}}>
   ```css
   .background {
     background-image: radial-gradient(red, rgb(49, 108, 49), purple);

@@ -249,7 +249,7 @@ import TabItem from '@theme/TabItem';
 
 ### Mixins
 
-<Tabs>
+<Tabs groupId="scss-mixins">
   <TabItem value="scss" label="SCSS">
   ```scss
   $dark-green: #0e4f1f;
@@ -284,7 +284,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-<Tabs>
+<Tabs groupId="scss-mixins">
   <TabItem value="scss" label="SCSS">
   ```scss
   $dark-green: #0e4f1f;
