@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
   <div>
     <Tabs className="unique-tabs">
       <TabItem value="Class">
-      ```ts
+      ```ts showLineNumbers
       // `MyPreference` Class
       export class MyPreference {
         preferences!: Subscription;
@@ -27,6 +27,7 @@ import TabItem from '@theme/TabItem';
         daily_alert_status!: Status;
         special_alert_status!: Status;
         daily!: {
+          // highlight-next-line
           dual: SubscriptionList;
           high_priority: SubscriptionList;
           low_priority: SubscriptionList;
@@ -40,7 +41,7 @@ import TabItem from '@theme/TabItem';
       ```
       </TabItem>
       <TabItem value="Interface">
-      ```ts
+      ```ts showLineNumbers
       // `SubscriptionList` interface
       export interface SubscriptionList {
         filter: string;
@@ -59,7 +60,7 @@ import TabItem from '@theme/TabItem';
       ```
       </TabItem>
       <TabItem value="Enum">
-      ```ts
+      ```ts showLineNumbers
       // `Status` enum
       export enum Status {
         OptedIn = 'OptedIn',
