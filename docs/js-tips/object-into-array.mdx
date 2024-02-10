@@ -1,0 +1,75 @@
+---
+sidebar_position: 1
+sidebar_label: 'Obj. Chain into Array'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Object Chain into Array
+
+
+<details>
+  <summary>TypeScript Model</summary>
+  <div>
+    <Tabs className="unique-tabs">
+      <TabItem value="Class">
+      ```ts
+      // `MyPreference` Class
+      export class MyPreference {
+        preferences!: Subscription;
+      }
+
+      // `Subscription` class
+      export class Subscription {
+        consent!: boolean;
+        email!: string;
+        daily_alert_status!: Status;
+        special_alert_status!: Status;
+        daily!: {
+          dual: SubscriptionList;
+          high_priority: SubscriptionList;
+          low_priority: SubscriptionList;
+        };
+        special?: {
+          dual: SubscriptionList;
+          high_priority: SubscriptionList;
+          low_priority: SubscriptionList;
+        };
+      }
+      ```
+      </TabItem>
+      <TabItem value="Interface">
+      ```ts
+      // `SubscriptionList` interface
+      export interface SubscriptionList {
+        filter: string;
+        query: string;
+        type: string;
+        status: boolean;
+      }
+
+      // `ProcessedList` interface
+      export interface ProcessedList extends SubscriptionList {
+        category: string;
+        subscription: string;
+        unique: string;
+        index: number;
+      }
+      ```
+      </TabItem>
+      <TabItem value="Enum">
+      ```ts
+      // `Status` enum
+      export enum Status {
+        OptedIn = 'OptedIn',
+        OptedOut = 'OptedOut',
+        ConsentNotGivenYet = 'ConsentNotGivenYet',
+      }
+      ```
+      </TabItem>
+    </Tabs>
+  </div>
+</details>
+
+[Object Chain into Array - GitHub](https://github.com/actionanand/js-helper-code/tree/main/src/obj-array)

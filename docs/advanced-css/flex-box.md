@@ -23,7 +23,7 @@ One of the exceptions of the above behaviour is **flexbox**. Applying the `z-ind
 
 <Tabs>
   <TabItem value="flex" label="Flex">
-  ```css
+  ```css showLineNumbers
   .flex-container {
     display: flex;
     // highlight-start
@@ -37,7 +37,7 @@ One of the exceptions of the above behaviour is **flexbox**. Applying the `z-ind
   ```
   </TabItem>
   <TabItem value="flex-short" label="Flex - Shorthand">
-    ```css
+    ```css showLineNumbers
     .flex-container {
       display: flex;
       // highlight-start
@@ -56,7 +56,7 @@ One of the exceptions of the above behaviour is **flexbox**. Applying the `z-ind
 
 <Tabs>
   <TabItem value="flex" label="Flex">
-  ```css {6,8-9,12}
+  ```css {6,8-9,12} showLineNumbers
   .item-6 {
     background: #d3c0b1;
     color: white;
@@ -75,7 +75,7 @@ One of the exceptions of the above behaviour is **flexbox**. Applying the `z-ind
   ```
   </TabItem>
   <TabItem value="flex-short" label="Flex - Shorthand">
-  ```css {6,8}
+  ```css {6,8} showLineNumbers
   .item-6 {
     background: #d3c0b1;
     color: white;
