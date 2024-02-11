@@ -79,6 +79,7 @@ const config: Config = {
       logo: {
         alt: 'AR\'s wiki Logo',
         src: 'img/logo.svg',
+        className: 'ar-navbar-logo',
       },
       items: [
         {
@@ -92,6 +93,8 @@ const config: Config = {
           href: 'https://github.com/actionanand/',
           label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },

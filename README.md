@@ -39,3 +39,7 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Resources
+
+* [Blue Light Bulb And Globe - Brand icon](https://www.iconpacks.net/free-icon/blue-light-bulb-and-globe-21601.html)
