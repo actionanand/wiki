@@ -78,3 +78,48 @@ sidebar_position: 1
   "terminal.integrated.env.linux": {}
 }
 ```
+
+### Proxy file in frontend (Angular, React, etc) - Sample
+
+```json
+{
+  "/sub-domain/api/*": {
+    "target": "http://api.dev.ar.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/sub-domain/api": "/api"
+    }
+  },
+  "/api/*": {
+    "target": "http://localhost:9000",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/sub-domain/api": "/api"
+    }
+  },
+    "/api": {
+    "target": "http://localhost:9000",
+    "secure": false
+  },
+
+  "/generate/*": {
+    "target": "http://localhost:9000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+  "/sub-domain/ar-external/*": {
+    "target": "http://localhost:9000",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/sub-domain/ar-external": "/ar-external"
+    }
+  }
+}
+```
