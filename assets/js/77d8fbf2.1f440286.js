@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwiki=self.webpackChunkwiki||[]).push([[1824],{9464:s=>{s.exports=JSON.parse('{"label":"vpn","permalink":"/wiki/blog/tags/vpn","allTagsPath":"/wiki/blog/tags","count":1,"unlisted":false}')}}]);
