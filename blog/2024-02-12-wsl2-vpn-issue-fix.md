@@ -3,7 +3,6 @@ slug: wsl2-and-cisco-vpn-issue-fix
 title: How to fix WSL2 & VPN issue
 authors: anand
 tags: [wsl,wsl2,vpn]
-sidebar_label: 'Sassy CSS 2'
 ---
 
 > How to fix WSL2 and Cisco Anyconnect VPN internet issue.
