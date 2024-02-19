@@ -41,6 +41,18 @@ To transform the code faster and more effectively for dynamic languages(JS), a n
 
 ![chicken or egg](./chromium-browser.png)
 
+### Sandbox
+
+A sandbox is used to **execute JavaScript in a browser**. A sandbox is a security mechanism that isolates code from the rest of the system. This means that JavaScript code running in a sandbox cannot access the user's files or other resources on the computer.
+
+Browsers use sandboxes to protect users from malicious JavaScript code. For example, if a website contains malicious JavaScript code, the sandbox will **prevent the code from accessing the user's files or other resources**.
+
+Sandboxes are also used to improve the performance of browsers. By **isolating JavaScript code from the rest of the system**, browsers can execute the code more efficiently.
+
+There are a number of different ways to sandbox JavaScript code in a browser. One common method is to use an iframe. An iframe is a HTML element that creates a sandboxed environment for executing JavaScript code.
+
+Another common method for sandboxing JavaScript code is to use a web worker. A web worker is a JavaScript script that runs in the background, separate from the main thread of the browser. This allows the JavaScript code to run without affecting the performance of the browser.
+
 ### JavaScript vs. Rendering Engine
 
 * JavaScript engine executes code, while the rendering engine is responsible for displaying the web pages.
