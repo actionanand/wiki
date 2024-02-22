@@ -118,6 +118,9 @@ Remediless, on all his race.</p>]]></content:encoded>
 <li>Each browser uses its own JavaScript and rendering engine.</li>
 <li>JavaScript engine runs JavaScript code, while the rendering engine interprets HTML, XML, CSS, etc.</li>
 </ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-code-is-parsed--compiled">How code is parsed &amp; compiled<a href="https://actionanand.github.io/wiki/blog/browser-engines#how-code-is-parsed--compiled" class="hash-link" aria-label="Direct link to How code is parsed &amp; compiled" title="Direct link to How code is parsed &amp; compiled">​</a></h3>
+<p>JavaScript Engines &amp; What They Do</p>
+<p><img decoding="async" loading="lazy" alt="JavaScript Engines" src="https://actionanand.github.io/wiki/assets/images/js-engines-f70bb6a1f5faf69dbbf236a4500372f0.png" width="1186" height="592" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="sources">Sources<a href="https://actionanand.github.io/wiki/blog/browser-engines#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources">​</a></h3>
 <ol>
 <li><a href="https://www.freecodecamp.org/news/javascript-under-the-hood-v8/" target="_blank" rel="noopener noreferrer">How JavaScript Works: Under the Hood of the V8 Engine</a></li>
