@@ -66,8 +66,8 @@ JavaScript Engines & What They Do
 ![JavaScript Engines](js-engines.png)
 
 ### Sources
-
+1. [JavaScript V8 Engine Explained - hacker noon](https://hackernoon.com/javascript-v8-engine-explained-3f940148d4ef)
 1. [How JavaScript Works: Under the Hood of the V8 Engine](https://www.freecodecamp.org/news/javascript-under-the-hood-v8/)
-2. [What are Web Standards and how does Web Browser work?](https://lyamkin.com/blog/what-are-web-standards-and-how-does-web-browser-work/)
-3. [Browser Engines: The Crux Of Cross Browser Compatibility](https://www.lambdatest.com/blog/browser-engines-the-crux-of-cross-browser-compatibility/)
-4. [Browser Engine and Types of Browser Engines](https://codinglap.com/browser-engine-and-types-of-browser-engines/)
+1. [What are Web Standards and how does Web Browser work?](https://lyamkin.com/blog/what-are-web-standards-and-how-does-web-browser-work/)
+1. [Browser Engines: The Crux Of Cross Browser Compatibility](https://www.lambdatest.com/blog/browser-engines-the-crux-of-cross-browser-compatibility/)
+1. [Browser Engine and Types of Browser Engines](https://codinglap.com/browser-engine-and-types-of-browser-engines/)
