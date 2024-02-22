@@ -59,6 +59,12 @@ Another common method for sandboxing JavaScript code is to use a web worker. A w
 * Each browser uses its own JavaScript and rendering engine.
 * JavaScript engine runs JavaScript code, while the rendering engine interprets HTML, XML, CSS, etc.
 
+### How code is parsed & compiled
+
+JavaScript Engines & What They Do
+
+![JavaScript Engines](js-engines.png)
+
 ### Sources
 
 1. [How JavaScript Works: Under the Hood of the V8 Engine](https://www.freecodecamp.org/news/javascript-under-the-hood-v8/)
