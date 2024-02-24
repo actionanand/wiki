@@ -11,7 +11,21 @@ import Highlight from '@site/src/components/Highlight';
 
 # JavaScript <Highlight color='#C0C0C0'>reduce()</Highlight> in depth
 
-<details>
+The <Highlight color='#C0C0C0'>reduce()</Highlight> method is an iterative method. It runs a **reducer** callback function over all elements in the array, in **ascending-index order**, and accumulates them into a single value.
+
+```js
+// Syntax
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
+```
+* <Highlight color='#C0C0C0'>callbackFn</Highlight> : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`.
+    * <Highlight color='#C0C0C0'>accumulator</Highlight> : The value resulting from the previous call to `callbackFn`. On the first call, its value is `initialValue` if the latter is specified; otherwise its value is `array[0]`.
+    * <Highlight color='#C0C0C0'>currentValue</Highlight> : The value of the current element. On the first call, its value is `array[0]` if `initialValue` is specified; otherwise its value is `array[1]`.
+    * <Highlight color='#C0C0C0'>currentIndex</Highlight> : The index position of `currentValue` in the array. On the first call, its value is `0` if `initialValue` is specified, otherwise `1`.
+    * <Highlight color='#C0C0C0'>array</Highlight> : The array `reduce()` was called upon.
+* <Highlight color='#C0C0C0'>initialValue</Highlight> - Optional : A value to which `accumulator` is initialized the first time the callback is called.
+
+{/* <details>
   <summary>TypeScript Model</summary>
   <div>
   <Tabs className="unique-tabs">
@@ -22,5 +36,71 @@ import Highlight from '@site/src/components/Highlight';
     </TabItem>
   </Tabs>
   </div>
+</details> */}
+
+<details>
+  <summary>How `reduce()` Work</summary>
+  <div>
+  <Tabs className="unique-tabs">
+    <TabItem value="Without initial value">
+    ```js
+    const array = [15, 16, 17, 18, 19];
+
+    function reducer(accumulator, currentValue, index) {
+      const returns = accumulator + currentValue;
+      console.log(
+        `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+      );
+      return returns;
+    }
+
+    array.reduce(reducer);
+
+    // Output
+    85
+    ```
+    </TabItem>
+
+    <TabItem value="Detail - w/o initial">
+
+    |             | **accumulator** | **currentValue** | **index** | **Return value** |
+    |-------------|-----------------|------------------|-----------|------------------|
+    | First call  | **15**          | **16**           | **1**     | 31               |
+    | Second call | 31              | **17**           | 2         | 48               |
+    | Third call  | 48              | **18**           | 3         | 66               |
+    | Fourth call | 66              | **19**           | 4         | 85               |
+
+    </TabItem>
+
+    <TabItem value="With initial value">
+    ```js
+    const array = [15, 16, 17, 18, 19];
+
+    array.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      10,
+    );
+
+    // Output
+    95
+    ```
+    </TabItem>
+
+    <TabItem value="Detail - w. initial">
+
+    |             | **accumulator** | **currentValue** | **index** | **Return value** |
+    |-------------|-----------------|------------------|-----------|------------------|
+    | First call  | **10**          | **15**           | **0**     | 25               |
+    | Second call | 25              | **16**           | 1         | 41               |
+    | Third call  | 41              | **17**           | 2         | 58               |
+    | Fourth call | 58              | **18**           | 3         | 76               |
+    | Fifth call  | 76              | **19**           | 4         | 95               |
+
+    </TabItem>
+  </Tabs>
+  </div>
 </details>
+
+
+
 
