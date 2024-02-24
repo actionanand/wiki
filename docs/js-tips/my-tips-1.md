@@ -5,35 +5,18 @@ sidebar_label: 'My Tips - 1'
 
 # My Tips - 1
 
-### Character Frequency
+### Logical operators
+All values in Javascript are either `truthy` or `falsy`.
 
-Converting `string` into the object with letters & its frequency
+:::tip
+`a && b` evaluates to the **first falsy** operand<br></br>
+`a || b` evaluates to the **first truthy** operand<br></br>
 
 ```js
-const freqMap = str => str.split('').reduce(
-  (map, char) => (map[char] ??= 0, map[char]++, map), {}
-);
-
-freqMap('anand');
-
-// Output
-{a: 2, n: 2, d: 1}
+console.log(1&&2&&3&&13) // will result 13 (last value)
+console.log(1||2||3||13) // will result 1(first value)
 ```
-The `??=` operator in JavaScript is the **nullish coalescing assignment operator**. It is a logical operator that **returns its right-hand side operand** when its **left-hand side operand** is `null` or `undefined`.
-
-```js showLineNumbers
-let x = null;
-x ??= 5;
-console.log(x); // 5
-
-let y = undefined;
-y ??= 10;
-console.log(y); // 10
-
-let z = 15;
-z ??= 20;
-console.log(z); // 15
-```
+:::
 
 ### Resources
 
