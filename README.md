@@ -43,6 +43,3 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 ### Resources
 
 * [Blue Light Bulb And Globe - Brand icon](https://www.iconpacks.net/free-icon/blue-light-bulb-and-globe-21601.html)
-
-* ![image](https://github.com/actionanand/wiki/assets/46064269/6f68243a-d262-44fc-8bc4-de349755ae6f)
-
