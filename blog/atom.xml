@@ -2,11 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://actionanand.github.io/wiki/blog</id>
     <title>AR's Wiki Blog</title>
-    <updated>2024-02-19T00:00:00.000Z</updated>
+    <updated>2024-02-29T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://actionanand.github.io/wiki/blog"/>
     <subtitle>AR's Wiki Blog</subtitle>
     <icon>https://actionanand.github.io/wiki/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[The Necessary IT Jargon Buster]]></title>
+        <id>https://actionanand.github.io/wiki/blog/computer-jargon</id>
+        <link href="https://actionanand.github.io/wiki/blog/computer-jargon"/>
+        <updated>2024-02-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[1. ES6 - ECMAScript 2015]]></summary>
+        <content type="html"><![CDATA[<ol>
+<li>ES6 - ECMAScript 2015</li>
+<li>ECMA - European Computer Manufacturer's Association</li>
+<li></li>
+</ol>
+<p>ECMA International  - An organization that creates standards for technologies.</p>
+<p>ECMAScript  - The specification defined in ECMA-262 for creating a general purpose scripting language.
+Synonym: ECMAScript specification</p>
+<p>ECMA-262  - This is a standard published by Ecma International. It contains the specification for a general purpose scripting language.</p>
+<p>While ECMA-262 is the name of the standard, it represents the scripting language specification ECMAScript.</p>
+<p>ECMAScript provides the rules, details, and guidelines that a scripting language must observe to be considered ECMAScript compliant.</p>
+<p>JavaScript
+A general purpose scripting language that conforms to the ECMAScript specification.</p>
+<p>By reading the <a href="https://ecma-international.org/publications-and-standards/standards/ecma-262/" target="_blank" rel="noopener noreferrer">ECMAScript</a> specification, you learn how to create a scripting language. By reading the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a> documentation, you learn how to use a scripting language.</p>
+<p>A JavaScript engine
+A program or interpreter that understands and executes JavaScript code.</p>
+<p>A JavaScript runtime
+The environment in which the JavaScript code runs and is interpreted by a JavaScript engine.The runtime provides the host objects that JavaScript can operate on and work with.</p>
+<p>Synonyms: Host environment</p>
+<p>ECMAScript 6
+It is the sixth edition of the ECMA-262 standard, and features major changes and improvements to the ECMAScript specification.</p>
+<p>Synonyms: ES6, ES2015, and ECMAScript 2015</p>
+<p>Babel
+A transpiler that can convert ES6 code to ES5 code.</p>
+<p>One more interesting tidbit</p>
+<p>A confusing bit of history is that JavaScript was created in 1996. It was then submitted to Ecma International in 1997 for standardization, which resulted in ECMAScript. At the same time, because JavaScript conformed to the ECMAScript specification, JavaScript is an example of an ECMAScript implementation.</p>
+<p>That leaves us with this fun fact: ECMAScript is based on JavaScript, and JavaScript is based on ECMAScript.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a href="https://actionanand.github.io/wiki/blog/computer-jargon#resources" class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources">​</a></h3>
+<ol>
+<li><a href="https://www.freecodecamp.org/news/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5/" target="_blank" rel="noopener noreferrer">What’s the difference between JavaScript and ECMAScript?</a></li>
+</ol>]]></content>
+        <author>
+            <name>Anand Raja</name>
+            <uri>https://github.com/actionanand</uri>
+        </author>
+        <category label="acronym" term="acronym"/>
+        <category label="abbreviation" term="abbreviation"/>
+        <category label="glossary" term="glossary"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Kuruntokai - Verse 02]]></title>
         <id>https://actionanand.github.io/wiki/blog/kuruntokai-verse-2</id>
