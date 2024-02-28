@@ -23,7 +23,7 @@ console.log(1||2||3||13) // will result 1(first value)
 
 ### Truthy and Falsy Values
 
-The following **7 values** are considered **falsy**
+The following **6 values** are considered **falsy**
 
 * `false` - boolean 
 * `0`, `-0` & `0n` - number 0, number -0 & bigint 0  
