@@ -25,19 +25,6 @@ reduce(callbackFn, initialValue)
     * <Highlight color='#C0C0C0'>array</Highlight> : The array `reduce()` was called upon.
 * <Highlight color='#C0C0C0'>initialValue</Highlight> - Optional : A value to which `accumulator` is initialized the first time the callback is called.
 
-{/* <details>
-  <summary>TypeScript Model</summary>
-  <div>
-  <Tabs className="unique-tabs">
-    <TabItem value="Class">
-    </TabItem>
-
-    <TabItem value="Class 2">
-    </TabItem>
-  </Tabs>
-  </div>
-</details> */}
-
 ### Working Logic:
 
 <details>
@@ -167,15 +154,27 @@ We can use the below logic to find how many of each item are in the collection (
 
 ```js showLineNumbers
 const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ];
+let max = 0; 
+let maxFruit = '';
 
-const count = fruitBasket.reduce( (tally, fruit) => {
+const fruitsMap = fruitBasket.reduce( (tally, fruit) => {
   // highlight-start
   tally[fruit] = (tally[fruit] || 0) + 1 ;
   return tally;
   // highlight-end
-} , {})
+} , {});
 
-count // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
+console.log(fruitsMap); // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
+
+for(let fruit in fruitsMap) {
+  if(fruitsMap[fruit] > max) {
+    // `fruitsMap[fruit]` will return its count from map
+    max = fruitsMap[fruit];
+    maxFruit = fruit;
+  }
+}
+
+console.log(`${maxFruit} - ${max}`); // cherry - 3
 ```
 
 * `tally[fruit]` in line number 4 (Right side of =) is similar to `tally.fruit`, where `tally` is object (accumulator)
@@ -204,18 +203,64 @@ fruitBasket.reduce((tally, fruit) => {
 
 Converting `string` into the object with letters & its frequency
 
-```js showLineNumbers
-const freqMap = str => str.split('').reduce(
-  // highlight-next-line
-  (map, char) => (map[char] ??= 0, map[char]++, map), 
-  {}
-);
+<Tabs>
+  <TabItem value="reduce" label="Using Reduce" default>
+  ```js showLineNumbers
+  const freqMap = str => str.split('').reduce(
+    // highlight-next-line
+    (map, char) => (map[char] ??= 0, map[char]++, map), 
+    {}
+  );
 
-freqMap('anand');
+  freqMap('anand');
 
-// Output
-{a: 2, n: 2, d: 1}
-```
+  // Output
+  {a: 2, n: 2, d: 1}
+  ```
+  </TabItem>
+  <TabItem value="for-of" label="Using For-of">
+  ```js showLineNumbers
+  const map = new Map();
+  const str = 'anand'.split(''); // const str = 'anand';
+
+  // highlight-start
+  for (const char of str) {
+    map[char] ??= 0;
+    map[char]++;
+  }
+  // highlight-end
+
+  console.log(map);
+
+  // Output
+  {a: 2, n: 2, d: 1}
+  ```
+  </TabItem>
+  <TabItem value="break-through" label="Break-through">
+  ```js
+  const map = new Map();
+  const str = 'anand';
+
+  // Create a map object and initialize it with the value 0 for each character in the string `str`.
+  for (const char of str) {
+    map[char] ??= 0;
+  }
+
+  console.log(map); // Map(0) {a: 0, n: 0, d: 0, size: 0}
+
+  // Increment the value of the map object for each character in the string `str`.
+  for (const char of str) {
+    map[char]++;
+  }
+
+  console.log(map); // Map(0) {a: 2, n: 2, d: 1, size: 0}
+
+  // Return the map object.
+  console.log(map);
+  ```
+  </TabItem>
+</Tabs>
+
 The `??=` operator in JavaScript is the **nullish coalescing assignment operator**. It is a logical operator that **returns its right-hand side operand** when its **left-hand side operand** is `null` or `undefined`.
 
 ```js showLineNumbers
