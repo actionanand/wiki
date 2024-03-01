@@ -218,6 +218,24 @@ Converting `string` into the object with letters & its frequency
   {a: 2, n: 2, d: 1}
   ```
   </TabItem>
+  <TabItem value="break" label="Break-through">
+  ```js showLineNumbers
+  const freqMap = str => str.split('').reduce(
+    // highlight-next-line
+    (map, char) => (map[char] ??= 0, map[char]++, console.log(map), map), 
+    {}
+  );
+
+  freqMap('anand');
+
+  // Output
+  {a: 1}
+  {a: 1, n: 1}
+  {a: 2, n: 1}
+  {a: 2, n: 2}
+  {a: 2, n: 2, d: 1}
+  ```
+  </TabItem>
   <TabItem value="for-of" label="Using For-of">
   ```js showLineNumbers
   const map = new Map();
