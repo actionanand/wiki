@@ -12,34 +12,20 @@
         <id>https://actionanand.github.io/wiki/blog/computer-jargon</id>
         <link href="https://actionanand.github.io/wiki/blog/computer-jargon"/>
         <updated>2024-02-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[1. ES6 - ECMAScript 2015]]></summary>
-        <content type="html"><![CDATA[<ol>
-<li>ES6 - ECMAScript 2015</li>
-<li>ECMA - European Computer Manufacturer's Association</li>
-<li></li>
-</ol>
-<p>ECMA International  - An organization that creates standards for technologies.</p>
-<p>ECMAScript  - The specification defined in ECMA-262 for creating a general purpose scripting language.
-Synonym: ECMAScript specification</p>
-<p>ECMA-262  - This is a standard published by Ecma International. It contains the specification for a general purpose scripting language.</p>
-<p>While ECMA-262 is the name of the standard, it represents the scripting language specification ECMAScript.</p>
-<p>ECMAScript provides the rules, details, and guidelines that a scripting language must observe to be considered ECMAScript compliant.</p>
-<p>JavaScript
-A general purpose scripting language that conforms to the ECMAScript specification.</p>
-<p>By reading the <a href="https://ecma-international.org/publications-and-standards/standards/ecma-262/" target="_blank" rel="noopener noreferrer">ECMAScript</a> specification, you learn how to create a scripting language. By reading the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a> documentation, you learn how to use a scripting language.</p>
-<p>A JavaScript engine
-A program or interpreter that understands and executes JavaScript code.</p>
-<p>A JavaScript runtime
-The environment in which the JavaScript code runs and is interpreted by a JavaScript engine.The runtime provides the host objects that JavaScript can operate on and work with.</p>
-<p>Synonyms: Host environment</p>
-<p>ECMAScript 6
-It is the sixth edition of the ECMA-262 standard, and features major changes and improvements to the ECMAScript specification.</p>
-<p>Synonyms: ES6, ES2015, and ECMAScript 2015</p>
-<p>Babel
-A transpiler that can convert ES6 code to ES5 code.</p>
-<p>One more interesting tidbit</p>
-<p>A confusing bit of history is that JavaScript was created in 1996. It was then submitted to Ecma International in 1997 for standardization, which resulted in ECMAScript. At the same time, because JavaScript conformed to the ECMAScript specification, JavaScript is an example of an ECMAScript implementation.</p>
-<p>That leaves us with this fun fact: ECMAScript is based on JavaScript, and JavaScript is based on ECMAScript.</p>
+        <summary type="html"><![CDATA[ECMA International  - An organization that creates standards for technologies.]]></summary>
+        <content type="html"><![CDATA[<p><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> ECMA International</span>  - An organization that creates standards for technologies.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>ECMAScript</div><div class="admonitionContent_BuS1"><p>The specification defined in <code>ECMA-262</code> for creating a general purpose scripting language.<br>
+<span style="background-color:#C0C0C0;border-radius:4px;color:#fff;padding:0.2rem;padding-top:0">Synonym</span> - ECMAScript specification</p></div></div>
+<p><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> ECMA-262</span>  - This is a standard published by <span style="color:#1877F2;font-weight:normal;text-decoration:none;font-style:italic;text-align:left">Ecma International</span>. It contains the specification for a general purpose scripting language. While ECMA-262 is the name of the standard, it represents the scripting language specification ECMAScript. ECMAScript provides the rules, details, and guidelines that a scripting language must observe to be considered ECMAScript compliant.</p>
+<p><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> JavaScript</span> - A general purpose scripting language that conforms to the ECMAScript specification.</p>
+<p>By reading the <a href="https://ecma-international.org/publications-and-standards/standards/ecma-262/" target="_blank" rel="noopener noreferrer">ECMAScript</a> specification, you learn <span style="color:#1877F2;font-weight:normal;text-decoration:none;font-style:italic;text-align:left">how to create a scripting language.</span> <br> By reading the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a> documentation, you learn <span style="color:#1877F2;font-weight:normal;text-decoration:none;font-style:italic;text-align:left">how to use a scripting language.</span></p>
+<p><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> JavaScript engine</span> - A program or interpreter that understands and executes JavaScript code.</p>
+<p><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> JavaScript runtime</span> - The environment in which the JavaScript code runs and is interpreted by a JavaScript engine. The runtime provides the host objects that JavaScript can operate on and work with.</p>
+<p><span style="background-color:#C0C0C0;border-radius:4px;color:#fff;padding:0.2rem;padding-top:0">Synonym</span> - Host environment</p>
+<p><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> ECMAScript 6</span> - It is the <span style="color:#1877F2;font-weight:normal;text-decoration:none;font-style:italic;text-align:left">sixth edition of the <strong>ECMA-262</strong> standard</span>, and features major changes and improvements to the ECMAScript specification.</p>
+<p><span style="background-color:#C0C0C0;border-radius:4px;color:#fff;padding:0.2rem;padding-top:0">Synonym</span> - ES6, ES2015, and ECMAScript 2015</p>
+<p><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left">Babel</span> - A transpiler that can convert <span style="color:#1877F2;font-weight:normal;text-decoration:none;font-style:italic;text-align:left">ES6 code to ES5 code</span>.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>One more interesting tidbit</div><div class="admonitionContent_BuS1"><p>A confusing bit of history is that JavaScript was created in 1996. It was then submitted to Ecma International in 1997 for standardization, which resulted in ECMAScript. At the same time, because JavaScript conformed to the ECMAScript specification, JavaScript is an example of an ECMAScript implementation.</p><p>That leaves us with this fun fact: <em><strong>ECMAScript is based on JavaScript</strong></em>, and <em><strong>JavaScript is based on ECMAScript</strong></em>.</p></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a href="https://actionanand.github.io/wiki/blog/computer-jargon#resources" class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources">​</a></h3>
 <ol>
 <li><a href="https://www.freecodecamp.org/news/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5/" target="_blank" rel="noopener noreferrer">What’s the difference between JavaScript and ECMAScript?</a></li>
