@@ -15,6 +15,7 @@ The specification defined in `ECMA-262` for creating a general purpose scripting
 :::
 
 <Highlight color='#800031' highlight='fg' fontWeight='bold'> ECMA-262</Highlight>  - This is a standard published by <Highlight color='#1877F2' highlight='fg' fontStyle='italic'>Ecma International</Highlight>. It contains the specification for a general purpose scripting language. While ECMA-262 is the name of the standard, it represents the scripting language specification ECMAScript. ECMAScript provides the rules, details, and guidelines that a scripting language must observe to be considered ECMAScript compliant.
+<!--truncate-->
 
 <Highlight color='#800031' highlight='fg' fontWeight='bold'> JavaScript</Highlight> - A general purpose scripting language that conforms to the ECMAScript specification.
 
