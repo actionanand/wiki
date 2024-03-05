@@ -299,6 +299,95 @@ In regular JavaScript functions, `arguments` object(array-like) can be used to a
   </TabItem>
 </Tabs>
 
+### avoiding `const self = this` using Arrow function
+
+<Tabs>
+  <TabItem value="self1" label="self - Sample 1" default>
+  ```js
+  function dummyFn()
+  {
+    // highlight-start
+    const self = this;
+    this.myName = 'dummyFn';
+    // highlight-end
+    console.log(this); // dummyFn {myName: 'dummyFn'}
+
+    setTimeout( function()
+    {
+      console.log(this); // Window {window: Window, self: Window, document: document, …}
+      // highlight-next-line
+      console.log('Hi, from - ' + self.myName); // Hi, from - dummyFn
+    }, 1000 );       
+  }
+
+  // highlight-next-line
+  new dummyFn();
+  ```
+  </TabItem>
+  <TabItem value="arrow1" label="Arrow - Sample 1">
+  ```js
+  function dummyFn()
+  {
+    // highlight-next-line
+    this.myName = 'dummyFn';
+    console.log(this); // dummyFn {myName: 'dummyFn'}
+
+    setTimeout(() => {
+      console.log(this); // dummyFn {myName: 'dummyFn'}
+      // highlight-next-line
+      console.log('Hi, from - ' + this.myName); // Hi, from - dummyFn
+    },1000 );       
+  }
+
+  // highlight-next-line
+  new dummyFn();
+  ```
+  </TabItem>
+  <TabItem value="self2" label="self - Sample 2" default>
+  ```js
+  function dummyFn()
+  {
+    // highlight-next-line
+    this.myName = 'dummyFn';
+    console.log(this); // Window {window: Window,..., myName: "dummyFn", …}
+
+    setTimeout( function()
+    {
+      console.log(this); // Window {window: Window,..., myName: "dummyFn", …}
+      // highlight-next-line
+      console.log('Hi, from - ' + this.myName);
+    }, 1000 );       
+  }
+
+  // highlight-next-line
+  dummyFn();
+  ```
+  </TabItem>
+  <TabItem value="arrow2" label="Arrow - Sample 2">
+  ```js
+  function dummyFn()
+  {
+    // highlight-next-line
+    this.myName = 'dummyFn';
+    console.log(this); // Window {window: Window,..., myName: "dummyFn", …}
+
+    setTimeout(() => {
+      console.log(this); // Window {window: Window,..., myName: "dummyFn", …}
+      // highlight-next-line
+      console.log('Hi, from - ' + this.myName); // Hi, from - dummyFn
+    },1000 );       
+  }
+
+  // highlight-next-line
+  dummyFn();
+  ```
+  </TabItem>
+</Tabs>
+
+If we want to do like the above(`self - Sample 1` tab), but want to avoid the usage of a variable like `self` by using `call()` or `apply()` instead. soon we can realize that we can't do it. Because `setTimeout()` is responsible for the invocation of the `lambda`, making it impossible for us to leverage these alternate invocation styles. If we still manage it, then we would have ended up creating some intermediary variable to hold a reference to the object. The only alternate option is using arrow function.
+
+A **JavaScript Lambda Function** is an anonymous function written without a name or a function definition. These functions are often referred to as **arrow function** because they use the **fat arrow** (=>) syntax to define the function.
+
 ### Understanding Call, Bind and Apply
 
 * The `bind()` Method
@@ -430,6 +519,7 @@ const counter = {
     this.count++;
   }
 }
+
 document.querySelector('.btn')
   .addEventListener('click', counter.incrementCounter.bind(counter));
 ```
