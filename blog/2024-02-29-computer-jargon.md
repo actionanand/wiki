@@ -23,13 +23,13 @@ By reading the [ECMAScript](https://ecma-international.org/publications-and-stan
 
 <Highlight color='#800031' highlight='fg' fontWeight='bold'> JavaScript engine</Highlight> - A program or interpreter that understands and executes JavaScript code.
 
-<Highlight color='#800031' highlight='fg' fontWeight='bold'> JavaScript runtime</Highlight> - The environment in which the JavaScript code runs and is interpreted by a JavaScript engine. The runtime provides the host objects that JavaScript can operate on and work with.
+<Highlight color='#800031' highlight='fg' fontWeight='bold'> JavaScript runtime</Highlight> - The environment in which the JavaScript code runs and is interpreted by a JavaScript engine. The runtime provides the host objects that JavaScript can operate on and work with. <br></br> <Highlight color='#C0C0C0'>Synonym</Highlight> - Host environment
 
-<Highlight color='#C0C0C0'>Synonym</Highlight> - Host environment
+<Highlight color='#800031' highlight='fg' fontWeight='bold'> ECMAScript 6</Highlight> - It is the <Highlight color='#1877F2' highlight='fg' fontStyle='italic'>sixth edition of the **ECMA-262** standard</Highlight>, and features major changes and improvements to the ECMAScript specification. <br></br> <Highlight color='#C0C0C0'>Synonym</Highlight> - ES6, ES2015, and ECMAScript 2015
 
-<Highlight color='#800031' highlight='fg' fontWeight='bold'> ECMAScript 6</Highlight> - It is the <Highlight color='#1877F2' highlight='fg' fontStyle='italic'>sixth edition of the **ECMA-262** standard</Highlight>, and features major changes and improvements to the ECMAScript specification.
+<Highlight color='#800031' highlight='fg' fontWeight='bold'> TC39 </Highlight> - The JavaScript language is advanced by the <Highlight color='#1877F2' highlight='fg' fontStyle='italic'> Ecma International Technical Committee 39 **([TC39](https://tc39.es/))**</Highlight>, which is a group that's part of the Ecma organization. It's responsible for adding new features to the JavaScript language itself. And you can explore [the current proposals](https://github.com/tc39/proposals) that are being discussed by that group - features that potentially make it into the core JavaScript language in the future.
 
-<Highlight color='#C0C0C0'>Synonym</Highlight> - ES6, ES2015, and ECMAScript 2015
+<Highlight color='#800031' highlight='fg' fontWeight='bold'> WHATWG </Highlight> - **[WHATWG](https://whatwg.org/) is a working group**, that works on browser APIs. If you're interested in learning more about the APIs that were/ are "managed" by this group, you can check this [site](https://spec.whatwg.org/).
 
 <Highlight color='#800031' highlight='fg' fontWeight='bold'>Babel</Highlight> - A transpiler that can convert <Highlight color='#1877F2' highlight='fg' fontStyle='italic'>ES6 code to ES5 code</Highlight>.
 
