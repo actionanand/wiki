@@ -147,6 +147,30 @@ Restart-Service LxssManager
 
 * [For more ...](https://gist.github.com/machuu/7663aa653828d81efbc2aaad6e3b1431)
 
+## Hot Reload not working
+
+### Fix for angular running on wsl2
+
+The issue is because of [inotify](https://man7.org/linux/man-pages/man7/inotify.7.html), the Linux API used by hot reload, is not supported in WSL2 on 9P filesystem drives (e.g. Windows drives mounted into WSL2). So you can move your files inside `/home/your_linux_user_name/` directory of wsl(linux). And changing wsl2 to wsl1 will also fix the issue. The below fix is for all javascript projects including react. Here I've mentioned as angular, as I work on that.
+
+    1. Open a terminal window.
+    2. Navigate to the directory of your Angular project.
+    3. Set the `CHOKIDAR_USEPOLLING` environment variable to `true` in env file. This will force Chokidar to use **polling** instead of watching for file changes.
+    4. Start the Angular development server.
+
+You can also achieve the same by firing the following command in wsl2 terminal inside the desired angular project as below:
+
+```bash
+export CHOKIDAR_USEPOLLING=true
+ng serve
+```
+
+`CHOKIDAR_USEPOLLING` is an environment variable that is used to enable a polling mechanism for file watching. This is useful in situations where the default file watching mechanism does not work properly, such as when using Docker or WSL.
+
+Once you have set `CHOKIDAR_USEPOLLING` to `true`, your Angular app will use a polling mechanism to watch for file changes. This means that it will periodically check for changes to your files, rather than relying on the operating system to notify it of changes.
+
+Using CHOKIDAR_USEPOLLING can help to improve the reliability of hot reloading in Angular apps. However, it can also have a negative impact on performance, so it is only recommended to use it if you are experiencing problems with hot reloading. And **CHOKIDAR_USEPOLLING** is only supported in **Node.js versions 10 and above**.
+
 ## Bonus
 
 ### Not able to download RAW files too?
