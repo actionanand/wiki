@@ -80,7 +80,9 @@ sidebar_position: 1
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true
   },
-  "terminal.integrated.env.linux": {}
+  "terminal.integrated.env.linux": {
+    // "terminal.integrated.fontFamily": "Roboto Mono"
+  }
 }
 ```
 
