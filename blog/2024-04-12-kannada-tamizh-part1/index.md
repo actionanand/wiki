@@ -79,7 +79,25 @@ tags: [tamil, tamizh, kannada]
 
 ### Subjective Pronouns
 
+| **English** | **Tamizh**   |     **Kannada** |
+|-------------|--------------|-----------------|
+| I           | Naan         | Naanu           |
+| We          | Naanga       | Naavu           |
+| You         | Nee / Neenga | Neenu / Neevu   |
+| He          | Avan         | Avanu / Avaru   |
+| She         | Aval         | Avalu / Avaru   |
+| This        | Adhu         | Adhu            |
+| That        | Idhu         | Idhu            |
+
 ### Possessive Pronouns
+
+| **English** | **Tamizh**         | **Kannada**                      |
+|-------------|--------------------|----------------------------------|
+| Mine        | Enadhu             | Nan'nadhu                        |
+| Ours        | Namadhu            | Nam'madhu                        |
+| Yours       | Unadhu / Ungaladhu | Nin'nadhu / Nim'madhu (Tam'madu) |
+| His         | Avanadhu           | Avandhu / Avardhu                |
+| Hers        | Avaladhu           | Avaldhu / Avardhu                |
 
 ### Nouns
 
