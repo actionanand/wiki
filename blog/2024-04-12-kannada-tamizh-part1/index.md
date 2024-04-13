@@ -101,7 +101,31 @@ tags: [tamil, tamizh, kannada]
 
 ### Nouns
 
+|       | **English** | **Tamizh** | **Kannada** |        | **English** |   **தமிழ்**  | **ಕನ್ನಡ** |
+|-------|:-----------:|:----------:|:-----------:|:------:|:-----------:|:-----------:|:--------:|
+| **1** | Breakfast   | Saapadu    | Thindi      | **9**  | Leg         | Kaal        | Kaalu    |
+| **2** | Lunch       | Saapadu    | Oota        | **10** | Nose        | Mooku       | Moogu    |
+| **3** | Dinner      | Saapadu    | Oota        | **11** | Truth       | Unmai/Nijam | Nijaa    |
+| **4** | Hunger      | Pasi       | Hasivu      | **12** | Lie         | Poi         | Sullu    |
+| **5** | Water       | Thanni     | Neeru       | **13** | Yes         | Aama        | Houdhu   |
+| **6** | Milk        | Paal       | Haalu       | **14** | No          | Illa        | Illa     |
+| **7** | Vehicle     | Vandi      | Gaadi       | **15** | Boy         | Payan       | Huduga   |
+| **8** | Hand        | Kai        | Kai         | **16** | Girl        | Ponnu       | Hudugi   |
+
 ### Verbs
+
+|        | **English** |     **Tamizh**     |      **Kannada**      |        | **English** |       **தமிழ்**       |        **ಕನ್ನಡ**       |
+|--------|:-----------:|:------------------:|:---------------------:|:------:|:-----------:|:--------------------:|:---------------------:|
+| **1**  | Is          | Iruku              | Idhe                  | **11** | Read        | Padi                 | Odhu                  |
+| **2**  | Know        | Theriyum           | Gothu                 | **12** | See         | Paaru/Paarunga       | Nodu/Nodi             |
+| **3**  | Don't know  | Theiyadhu          | Gothilla              | **13** | Take        | Edu/<br></br>Eduthukonga  | Tago/<br></br>Tagoli       |
+| **4**  | Want        | Venum              | Beku                  | **14** | Keep        | Vai/Vainga           | Irisiko/<br></br>Irisikoli |
+| **5**  | Don't want  | Vendam             | Beda                  | **15** | Put         | Podu/Podunga         | Haaku/Haaki           |
+| **6**  | Tell        | Sollu/<br></br>Sollunga | Helu/Heli             | **16** | Stop        | Nil                  | Nillu                 |
+| **7**  | Speak       | Pesu/<br></br>Pesunga   | Maathadu/<br></br>Maathadi | **17** | Give        | Kodu/Kodunga         | Kodu/Kodi             |
+| **8**  | Come        | Vaa/<br></br>Vaanga     | Baa/<br></br>Banni/Banri   | **18** | Sit         | Utkaru/<br></br>Utkarunga | Kuthko/<br></br>Kuthkoli   |
+| **9**  | Go          | Po/Ponga           | Hogu/Hogi             | **19** |             |                      |                       |
+| **10** | Listen      | Kelu/<br></br>Kelunga   | Kelu/Keli             | **20** |             |                      |                       |
 
 ### Preposition
 
