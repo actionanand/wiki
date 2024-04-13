@@ -1,11 +1,11 @@
 ---
-slug: Kannada-through-tamizh
-title: Kannada via Tamizh
+slug: Kannada-through-tamizh-part-1
+title: Kannada via Tamizh part-1
 authors: anand
 tags: [tamil, tamizh, kannada]
 ---
 
-import Highlight from '@site/src/components/Highlight';
+<!-- import Highlight from '@site/src/components/Highlight'; -->
 
 <!-- <Highlight color='#800031' highlight='fg' fontWeight='bold'> ECMA International</Highlight>  -->
 
@@ -65,6 +65,36 @@ import Highlight from '@site/src/components/Highlight';
 | Varusham                              | Varushaa           | Innaiku                           | Ivathu                 |
 | Nethu<br></br>(Yesterday)             | Ninne              | Naalaiku<br></br>(Tomorrow)        | Naale                 |
 | Mundhaanaal<br></br>(Day before yesterday) | Monne              | Naalanaal<br></br>(Day after tomorrow) | Naalithu<br></br>(Naaliddu) |
+
+### Interrogatives
+
+| **English** | **Tamizh** | **Kannada**     |
+|-------------|------------|-----------------|
+| What        | Yenna      | Yean'uu (Ēnu)   |
+| Why         | yean       | Yaake           |
+| When        | Eppo       | yawaga          |
+| Where       | Enga       | Elli            |
+| Who         | Yaar       | Yaaru           |
+| How         | Eppidi     | Hege            |
+
+### Subjective Pronouns
+
+### Possessive Pronouns
+
+### Nouns
+
+### Verbs
+
+### Preposition
+
+### Adjectives and adverbs
+An adjective is a word that **describes a noun**. In other words, it tells us more about a particular person, place, or thing.
+
+![chicken or egg](./adj_cupcake3.png)
+
+An adverb is a word that **describes a verb**. Just like adjectives, adverbs are used to add detail to a sentence. More specifically, adverbs tell us **how**, **when**, or **where** something happened.
+
+![chicken or egg](./adj_deeply.png)
 
 ### Resources
 
