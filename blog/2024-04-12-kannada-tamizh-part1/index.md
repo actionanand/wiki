@@ -129,6 +129,13 @@ tags: [tamil, tamizh, kannada]
 
 ### Preposition
 
+| **English** |   **Tamizh**  |  **Kannada** |
+|:-----------:|:-------------:|:------------:|
+| With        | Kooda         | Jothe        |
+| To          | Ku            | Ge           |
+| For         | Kaga          | Ge           |
+| From/To     | Irundhu/Varai | Indha/Varegu |
+
 ### Adjectives and adverbs
 An adjective is a word that **describes a noun**. In other words, it tells us more about a particular person, place, or thing.
 
@@ -137,6 +144,25 @@ An adjective is a word that **describes a noun**. In other words, it tells us mo
 An adverb is a word that **describes a verb**. Just like adjectives, adverbs are used to add detail to a sentence. More specifically, adverbs tell us **how**, **when**, or **where** something happened.
 
 ![chicken or egg](./adj_deeply.png)
+
+| **English** | **Tamizh** | **Kannada** |
+|:-----------:|:----------:|:-----------:|
+| Sure        | Kandippa   | Kanditta    |
+| Little      | Konjam     | Swalpa      |
+| Lot         | Romba      | Thumba      |
+| Far         | Dooram     | Doora       |
+| Near        | Kitta      | Hatra       |
+| More        | Adhigam    | Jasthi      |
+| Less        | Kammi      | Kadimi      |
+| Above       | Mela       | Mele        |
+| Below       | Kela       | Kelagade    |
+| Fast        | Vegam      | Bega        |
+| Slow        | Nidhanam   | Nidhana     |
+| Front       | Munnadi    | Mundhe      |
+| Back        | Pinnadi    | Hindhe      |
+| Here        | Inga       | Illi        |
+| There       | Anga       | Alli        |
+| Then        | Aprom      | Mathe       |
 
 ### Resources
 
