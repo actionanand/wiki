@@ -1,6 +1,6 @@
 ---
-slug: Kannada-through-tamizh-part-1
-title: Kannada via Tamizh part-1
+slug: Kannada-through-tamizh-part
+title: Kannada via Tamizh part
 authors: anand
 tags: [tamil, tamizh, kannada]
 ---
