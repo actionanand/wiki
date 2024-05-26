@@ -291,6 +291,7 @@ conda rename -n old_env new_env
 ### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Change 'base' environment permanently to a different environment 'myenv' at startup </Highlight>
 
 ```sh
+conda create --name myenv
 conda activate myenv
 echo "conda activate myenv" >> ~/.bashrc
 ```
