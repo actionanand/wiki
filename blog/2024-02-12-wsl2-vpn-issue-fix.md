@@ -205,17 +205,3 @@ Open the `/etc/hosts` file via nano or any editor in linux and mac and add the a
 ```bash
 sudo nano /etc/hosts
 ```
-
-### Some WSL commands for powershell
-
-1. Checking wsl version
-
-```powershell
-wsl -l -v
-```
-
-2. If version shows as 1 then, use the below command to switch as 2
-
-```powershell
-wsl --set-version <Ubuntu-distro-name> 2
-```

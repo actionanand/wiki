@@ -5,13 +5,11 @@ authors: anand
 tags: [wsl, conda, miniconda, anaconda, python, linux, ubuntu]
 ---
 
-<!-- import Highlight from '@site/src/components/Highlight'; -->
+import Highlight from '@site/src/components/Highlight';
 
-<!-- <Highlight color='#800031' highlight='fg' fontWeight='bold'> ECMA International</Highlight>  -->
+## <Highlight color='#800031' highlight='fg' fontWeight='bold'> WSL </Highlight>
 
-## WSL
-
-### Install WSL
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Install WSL </Highlight>
 
 Open PowerShell or Windows Command Prompt in **administrator** mode by right-clicking and selecting "Run as administrator", enter the `wsl --install` command, then restart your machine. This command only works if WSL is not installed at all.
 
@@ -20,7 +18,7 @@ Open PowerShell or Windows Command Prompt in **administrator** mode by right-cli
 ![wsl - windowsWindows Features](./wsl1.png)
 ![wsl - windowsWindows Features](./wsl2.png)
 
-### Change the default Linux distribution installed
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Change the default Linux distribution installed </Highlight>
 
 1. To install additional distributions, enter: `wsl --install -d <Distribution Name>`. Replace `<Distribution Name>` with the name of the distribution you would like to install.
 2. To see a list of available Linux distributions available for download through the online store, enter: `wsl --list --online` or `wsl -l -o`.
@@ -34,7 +32,7 @@ Open PowerShell or Windows Command Prompt in **administrator** mode by right-cli
 * If you are on earlier versions please see [the manual install page](https://learn.microsoft.com/en-us/windows/wsl/install-manual).
 
 
-### wsl1 and wsl2
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> wsl1 and wsl2 </Highlight>
 Fire the below commands in Powershell
 
 1. To see whether your Linux distribution is set to **WSL 1** or **WSL 2**, use the command: `wsl -l -v`.
@@ -42,7 +40,10 @@ Fire the below commands in Powershell
 3. To set the default Linux distribution used with the wsl command, enter: `wsl -s <DistributionName>` or `wsl --set-default <DistributionName>`, replacing `<DistributionName>` with the name of the Linux distribution you would like to use.
 4. For more basic commands for WSL, [you can visit](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
-### Checking Ubuntu Version 
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Comparing WSL Versions </Highlight>
+![wsl - windowsWindows Features](./wsl1-wsl2.webp)
+
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Checking Ubuntu Version </Highlight>
 Fire the below commands in ubuntu (WSL)
 
 1. `lsb_release` Command to Show Ubuntu Versio - Linux Standard Base(LSB)
@@ -64,7 +65,7 @@ Fire the below commands in ubuntu (WSL)
     neofetch
     ```
 
-### Setting up nodejs with nvm on WSL
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Setting up nodejs with nvm on WSL </Highlight>
 
 Install NVM via bash shell (WSL) as below:
 
@@ -120,7 +121,7 @@ Then we can use node as normally as below:
 ```
     - `npm run serve` or `yarn serve` or `yarn run serve` to execute `serve` command present inside the file. Other commands also follow the same way.
 
-## Miniconda
+## <Highlight color='#800031' highlight='fg' fontWeight='bold'> Miniconda </Highlight>
 
 Some of the popular virtual environment implementations for Python are:
     - [Virtualenv](https://www.youtube.com/watch?v=N5vscPTWKOk), [Conda](https://www.anaconda.com/), [pipenv](https://pipenv.pypa.io/en/latest/), [venv](https://docs.python.org/3/library/venv.html) and several others exist. However the most popular ones are Conda, Pipenv and venv as well. Specifically, Conda is popular amongst Data Scientists whereas pipenv is popular amongst software engineers.
@@ -128,7 +129,7 @@ Some of the popular virtual environment implementations for Python are:
 
 ![conda env](./conda.webp)
 
-### Install miniconda
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Install miniconda </Highlight>
 
 1. Download Miniconda Installer
 ```sh
@@ -165,7 +166,7 @@ conda info
 * `conda install package-name` to install a Python package. So, if you want to install pandas, you can run `conta install pandas`
 * to exit from the conda environment, `conda deactivate`
 
-### Create conda environment
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Create conda environment </Highlight>
 Conda centrally manages the environments you create, so, you don’t have to bother about creating a folder for specific environments yourself. You can either start by creating an empty environment or mention the python version and packages you need at the time of creation itself.
 
 * Create an empty environment
@@ -195,7 +196,7 @@ example
 conda create --name myenv python==3.7.5 pandas numpy
 ```
 
-### Activate the environment
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Activate the environment </Highlight>
 
 ```sh
 conda activate {env_name}
@@ -207,7 +208,7 @@ To deactivate whichever you are currently in, use:
 conda deactivate
 ```
 
-### Install more packages
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Install more packages </Highlight>
 
 Once activated you can install more packages using either `conda` or with `pip`.
 
@@ -226,7 +227,51 @@ or install multiple packages from `requirements.txt`.
 pip install -r requirements.txt
 ```
 
-### Check the list of packages and environments
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Channel in Conda </Highlight>
+A channel is the location where packages are stored remotely.
+When you install Conda for the first time, it comes with a channel called `default`. You can check that using the command below:
+
+```sh
+conda config --show channels
+```
+
+1. To install a package using the `default` channel, you use the `conda install` command followed by the `<package_name>`. That is: `conda install package-name`
+
+Although numerous packages can be installed from the `default` channel, it's possible to come across packages that are not accessible from it.
+
+In cases like this, you'd usually get the `"PackagesNotFoundError: The following channels are not available from current channels"` error message.
+
+2. How To Install a Package in Conda Using a Channel Name
+
+```sh
+conda install -c some-channel packagename
+# or
+conda install some-channel::packagename
+```
+
+examples
+```sh
+conda install -c conda-forge matplotlib
+conda install scipy --channel conda-forge --channel bioconda
+```
+You may specify multiple channels by passing the argument multiple time
+Priority decreases from left to right - the first argument is higher priority than the second.
+
+* The `-c` or `--channel` flag denotes the word channel.
+* `conda-forge` denotes the name of the channel where `matplotlib` was installed from.
+
+* Although we installed Matplotlib from `conda-forge`, conda-forge will not be added to our list of channels.
+* So if you run the `conda config --show channels` command, you'd only see the `default` channel.
+* You can add a channel to the list of channels using the `conda config --add channels channel-name` command. That is:
+```sh
+conda config --add channels conda-forge
+```
+
+The command above will add `conda-forge` to the list of Conda channels. This means that you don't have to specify the channel name if you are installing a package that is available from the `conda-forge` channel.
+
+Some of the channels are: [anaconda](https://anaconda.org/anaconda), [conda_forge](https://conda-forge.org/), [r](https://anaconda.org/r), [bioconda](https://bioconda.github.io/) and defaults
+
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Check the list of packages and environments </Highlight>
 
 * See list of environments
 ```sh
@@ -235,36 +280,49 @@ conda env list
 conda info --envs
 ```
 
-* Show list of packages in current environment
-
-```sh
-conda list
-```
-
-* See list of packages in specific environment
-
-```sh
-conda list -n myenv
-```
-
+* Show list of packages in current environment `conda list`
+* See list of packages in specific environment `conda list -n myenv`
 * Rename an existing environment
 
 ```sh
 conda rename -n old_env new_env
 ```
 
-### Change 'base' environment permanently to a different environment 'myenv' at startup
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Change 'base' environment permanently to a different environment 'myenv' at startup </Highlight>
 
 ```sh
 conda activate myenv
 echo "conda activate myenv" >> ~/.bashrc
 ```
 
-## SSH key in github
+## <Highlight color='#800031' highlight='fg' fontWeight='bold'> Generating a new SSH key </Highlight>
 
-## ubuntu remote login website and other through 
+1. Open Terminal
+2. Paste the text below, replacing the email used in the example with your GitHub email address
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+*Note*: If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+```sh
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+3. At the prompt, type a secure passphrase
+```bash
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+```
+4. Copy the SSH public key to your clipboard
+```sh
+cat ~/.ssh/id_ed25519.pub
+```
 
-### Resources
+If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don't add any newlines or whitespace.
 
-1. [Anaconda change 'base' environment permanently to a different environment 'myenv' to startup at terminal openings](https://askubuntu.com/questions/1335235/anaconda-change-base-environment-permanently-to-a-different-environment-myenv)
-2. 
+## <Highlight color='#800031' highlight='fg' fontWeight='bold'> Resources </Highlight>
+
+1. [How to Install Miniconda on Ubuntu 22.04](https://www.rosehosting.com/blog/how-to-install-miniconda-on-ubuntu-22-04/)
+2. [Conda create environment and everything you need to know to manage conda virtual environment](https://www.machinelearningplus.com/deployment/conda-create-environment-and-everything-you-need-to-know-to-manage-conda-virtual-environment/)
+3. [Anaconda change 'base' environment permanently to a different environment 'myenv' to startup at terminal openings](https://askubuntu.com/questions/1335235/anaconda-change-base-environment-permanently-to-a-different-environment-myenv)
+4. [Using default repositories - official](https://docs.anaconda.com/free/working-with-conda/reference/default-repositories/)
+5. [Explanation of different conda channels - stackoverflow](https://stackoverflow.com/questions/42309333/explanation-of-different-conda-channels)
+6. [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
