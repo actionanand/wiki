@@ -65,6 +65,16 @@ Fire the below commands in ubuntu (WSL)
     neofetch
     ```
 
+### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Checking CPU Information </Highlight>
+
+```sh
+lscpu
+# or
+cat /proc/cpuinfo
+```
+* Processor Architecture: `uname -m`
+* Processor Model: `lscpu | grep -i "Model name:" | cut -d':' -f2- -`
+
 ### <Highlight color='#004080' highlight='fg' fontWeight='bold'> Setting up nodejs with nvm on WSL </Highlight>
 
 Install NVM via bash shell (WSL) as below:
