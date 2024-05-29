@@ -2,7 +2,7 @@
 slug: wsl-and-miniconda
 title: WSL and Miniconda
 authors: anand
-tags: [wsl, conda, miniconda, anaconda, python, linux, ubuntu]
+tags: [wsl, conda, miniconda, anaconda, python, linux, ubuntu, bash]
 ---
 
 import Highlight from '@site/src/components/Highlight';
