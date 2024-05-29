@@ -1,6 +1,6 @@
 ---
 slug: git-branch-in-wsl-ubuntu
-title: Showing current branch in Linux/bash(WSL) Terminal
+title: Showing current git branch in Linux/bash(WSL) Terminal
 authors: anand
 tags: [wsl, linux, ubuntu, git, bash]
 ---
