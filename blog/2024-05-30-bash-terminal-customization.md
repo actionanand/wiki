@@ -239,7 +239,7 @@ conda activate wsl1
   </div>
 </details>
 
-2. edit the `.bashrc` file as shown below under **New Bashrc** tab using your editor such as nano, vi, vim, etc
+2. edit the `.bashrc` file as shown below under **New Bashrc** tab using your editor such as nano, vi, vim, etc and save
 
     ```sh
     nano ~/.bashrc
@@ -278,3 +278,35 @@ conda activate wsl1
     ```
   </TabItem>
 </Tabs>
+
+3. To apply the settings, it is necessary to reload the file. We can do this by restarting the terminal or simply reloading the configuration file as below:
+
+```sh
+source ~/.bashrc
+```
+
+### Values in PS1
+
+| **Code** | **Action**                                                         |
+|----------|--------------------------------------------------------------------|
+| \u       | User currently logged on the machine;                              |
+| \h       | Name of the machine (host), previously registered;                 |
+| \H       | Full machine name, previously registered;                          |
+| \w       | Full current working directory;                                    |
+| \W       | Minified current working directory, base name only (last segment); |
+
+### Color code
+
+|       Color       |     Code     |
+|-------------------|--------------|
+| Default (Reset)   | [\033[00m]   |
+| Red               | [\033[0;31m] |
+| Fluorescent Red   | [\033[1;31m] |
+| Green             | [\033[0;32m] |
+| Fluorescent Green | [\033[1;32m] |
+| Yellow            | [\033[0;33m] |
+| Blue              | [\033[0;34m] |
+| Magenta           | [\033[0;35m] |
+| Cyan              | [\033[0;36m] |
+| Gray              | [\033[0;37m] |
+| Strong White      | [\033[1;37m] |
