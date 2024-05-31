@@ -27,6 +27,7 @@ When we open up our terminal, chances are that it uses Bash as its UNIX shell en
 		#!/bin/bash
 		echo "Hello World"
 		```
+
 2. The <Highlight color='#25c2a0'> Z Shell </Highlight>, or <Highlight color='#25c2a0'> Zsh </Highlight> is also a UNIX shell that is very similar to Bash. Zsh is an extension of the Bourne shell with a lot of improvements. Zsh was released in 1990 by Paul Falstad, and it has some features that Bash, Korn Shell, and C Shell share.
 
     * The name zsh derives from the name of Yale professor **Z**hong **Sh**ao (then a teaching assistant at Princeton University) – Paul Falstad regarded Shao's login-id, <Highlight color='#25c2a0'> zsh </Highlight>, as a good name for a shell
