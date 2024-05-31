@@ -17,22 +17,22 @@ When we open up our terminal, chances are that it uses Bash as its UNIX shell en
 
 1. The <Highlight color='#25c2a0'> Bash </Highlight> Shell (or the **B**ourne **A**gain **Sh**ell) is a UNIX shell and command language. It was written by Brain Fox for the GNU Project as a free software replacement for the Bourne Shell (**sh**). 
 
-      * It was first released in 1989. Bash is one of the first programs that Linus Torvalds (the creator of Linux) ported to Linux.
+    * It was first released in 1989. Bash is one of the first programs that Linus Torvalds (the creator of Linux) ported to Linux.
 
-      * User configuration settings are in `.bashrc` (short for **bash** **r**ead **c**ommand).
+    * User configuration settings are in `.bashrc` (short for **bash** **r**ead **c**ommand).
 
-      * Something you should not get confused about is that Bash is also a programming language. So it's a "Shell", but you can also program behavior in Bash. For example:
+    * Something you should not get confused about is that Bash is also a programming language. So it's a "Shell", but you can also program behavior in Bash. For example:
 
-      ```sh
-      #!/bin/bash
-      echo "Hello World"
-      ```
+		```sh
+		#!/bin/bash
+		echo "Hello World"
+		```
 2. The <Highlight color='#25c2a0'> Z Shell </Highlight>, or <Highlight color='#25c2a0'> Zsh </Highlight> is also a UNIX shell that is very similar to Bash. Zsh is an extension of the Bourne shell with a lot of improvements. Zsh was released in 1990 by Paul Falstad, and it has some features that Bash, Korn Shell, and C Shell share.
 
-      * The name zsh derives from the name of Yale professor **Z**hong **Sh**ao (then a teaching assistant at Princeton University) – Paul Falstad regarded Shao's login-id, <Highlight color='#25c2a0'> zsh </Highlight>, as a good name for a shell
-      * macOS by default uses the Zsh Shell.
-      * Zshell Supports plugins and themes. Here's a [list of plugins](https://github.com/unixorn/awesome-zsh-plugins) available for Zsh.
-      * There are also frameworks built around the Z Shell. One of the most popular ones is [Oh My Zsh](https://ohmyz.sh/), which is a community driven, open-source framework for managing Zsh configuration.
+    * The name zsh derives from the name of Yale professor **Z**hong **Sh**ao (then a teaching assistant at Princeton University) – Paul Falstad regarded Shao's login-id, <Highlight color='#25c2a0'> zsh </Highlight>, as a good name for a shell
+    * macOS by default uses the Zsh Shell.
+    * Zshell Supports plugins and themes. Here's a [list of plugins](https://github.com/unixorn/awesome-zsh-plugins) available for Zsh.
+    * There are also frameworks built around the Z Shell. One of the most popular ones is [Oh My Zsh](https://ohmyz.sh/), which is a community driven, open-source framework for managing Zsh configuration.
 
 3. <Highlight color='#25c2a0'> Fish </Highlight>, the **F**riendly **I**nteractive **SH**ell, is a more recent addition to the world of shell environments. It prioritizes user-friendliness and simplicity, making it a great choice for newcomers to programming. It was created by Axel Liljencrantz in 2005.
 
@@ -40,42 +40,42 @@ When we open up our terminal, chances are that it uses Bash as its UNIX shell en
 
 1. Update the package source list and updates all the packages presently installed
 
-      ```sh
-      sudo apt update && sudo apt upgrade
-      ```
+		```sh
+		sudo apt update && sudo apt upgrade
+		```
 2. Install fish/zsh
 
-      ```sh
-      # install fish
-      sudo apt install fish
-      # install z shell
-      sudo apt install zsh
-      ```
+		```sh
+		# install fish
+		sudo apt install fish
+		# install z shell
+		sudo apt install zsh
+		```
 3. Verify the installed version of the shell
 
-      ```sh
-      zsh --version
-      # zsh 5.8.1 (x86_64-ubuntu-linux-gnu)
-      bash --version
-      # GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
-      fish --version
-      # fish, version 3.3.1
-      ```
+		```sh
+		zsh --version
+		# zsh 5.8.1 (x86_64-ubuntu-linux-gnu)
+		bash --version
+		# GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
+		fish --version
+		# fish, version 3.3.1
+		```
 
-      <Highlight color='#25c2a0'> GNU </Highlight> is a recursive acronym for <Highlight color='#004080' highlight='fg' fontWeight='bold'> GNU's Not Unix! </Highlight>
+    <Highlight color='#25c2a0'> GNU </Highlight> is a recursive acronym for <Highlight color='#004080' highlight='fg' fontWeight='bold'> GNU's Not Unix! </Highlight>
 
 4. Set fish or zsh or bash as your default shell.
 
-      ```sh
-      # for fish
-      chsh -s $(which fish)
-      # for zsh
-      chsh -s $(which zsh)
-      # for bash
-      chsh -s $(which bash)
-      ```
-      
-      Restart the terminal window and check the current shell by `echo $SHELL`.
+		```sh
+		# for fish
+		chsh -s $(which fish)
+		# for zsh
+		chsh -s $(which zsh)
+		# for bash
+		chsh -s $(which bash)
+		```
+		
+		Restart the terminal window and check the current shell by `echo $SHELL`.
 
 ## <Highlight color='#800031' highlight='fg' fontWeight='bold'> Current git branch name to bash shell in Ubuntu (WSL) </Highlight>
 
@@ -154,9 +154,9 @@ if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-# highlight-end
 fi
 unset color_prompt force_color_prompt
+# highlight-end
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -217,65 +217,61 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/actionannad/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/actionanand/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/actionannad/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/actionannad/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/actionanand/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/actionanand/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/actionannad/miniconda3/bin:$PATH"
+        export PATH="/home/actionanand/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-conda activate wsl1
+conda activate wsl2
 ```
   </div>
 </details>
 
 2. edit the `.bashrc` file as shown below under **New Bashrc** tab using your editor such as nano, vi, vim, etc and save
 
-    ```sh
-    nano ~/.bashrc
-    ```
+	```sh
+	nano ~/.bashrc
+	```
 
 <Tabs>
   <TabItem value="default" label="Default Bashrc" default>
-    ```sh
-    if [ "$color_prompt" = yes ]; then
-    # highlight-next-line
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    else
-    # highlight-next-line
-        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    fi
-    unset color_prompt force_color_prompt
-    ```
+```sh
+if [ "$color_prompt" = yes ]; then
+# highlight-next-line
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+# highlight-next-line
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+```
   </TabItem>
   <TabItem value="modified" label="New Bashrc">
-    ```bash
-    # highlight-start
-    # git branch info if present
-    parse_git_branch() {
-        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-    }
-    # highlight-end
+```bash
+# highlight-start
+# git branch info if present
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+# highlight-end
 
-    if [ "$color_prompt" = yes ]; then
-    # highlight-next-line
+if [ "$color_prompt" = yes ]; then
+# highlight-next-line
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[35m\]$(parse_git_branch)\[\033[36m\]\$\[\033[00m\] '
-    else
-    # highlight-next-line
+else
+# highlight-next-line
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
-    fi
-    unset color_prompt force_color_prompt
-    ```
+fi
+unset color_prompt force_color_prompt
+```
   </TabItem>
 </Tabs>
 
