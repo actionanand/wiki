@@ -54,9 +54,44 @@ import TabItem from '@theme/TabItem'
 | Ange Anand**in**/**adu** poonai irukkirathu. | Alli Ananda**na** bekku ide. | Anand **ki** billi vahan hai. | Anand **'s** cat is there. |
 | idu Anand**in**/**adu** car.                 | Idu Anand **avara** car.     | yah Anand **ki** car hai.     | This is Anand **'s** car.  |
 
+## <Highlight color='#800031' highlight='fg' fontWeight='bold'> Other useful sentences </Highlight>
 
-1. [Where is medical shop **nearby**?](https://www.instagram.com/p/C79UkOQyDnp/)
+* [Where is medical shop **nearby**?](https://www.instagram.com/p/C79UkOQyDnp/)
 
 | Tamizh                             | Kannada                         | Hindi                              |
 |------------------------------------|---------------------------------|------------------------------------|
 | **Pakkattula** Medical shop enga iruku | **Pakkadalli**/**hatradalli** medical shop ellide? | **Aas paas me** medical shop kaha hai? |
+
+|    | Tamizh                    | Kannada                           | Hindi                        | English                      |
+|----|---------------------------|-----------------------------------|------------------------------|------------------------------|
+| 1  | Enakku idellam pidikkathu | Nange idella ista aagalla         | Mujhe ye sab pasand nehi hai | I don't like all these       |
+| 2  | Mazhai Peyyuthu           | Male barthide                     | Baarish ho rahi hai          | It's raining                 |
+| 3  | Vera ethachum venuma?     | Bera enaadru beka?                | Kuchh aur chhaahiye?         | Do you need something else?  |
+| 4  | Bayappada vendaam         | Baya maadko beda/bedi             | Daro math                    | Don't get scared             |
+| 5  | Unga/un veedu enga iruku  | Nimma/Ninna mane ellide           | Appka ghar kaha hai          | Where's your house           |
+| 6  | Neenga/nee yaaru          | Neevu/neenu yaaru                 | App kaun hain                | Who're you                   |
+| 7  | oru nimisham, naan vaaren | Ondu nimisha, naanu bartha ideeni | Ek minute, mai aa raha hoon  | one minute, I'm coming       |
+| 8  | Innoru murai sollu        | Innomme helu                      | Phir ek baar bata            | Tell me once again           |
+| 9  | Avalavudaan               | Ashtey                            | Bas itna hi hai              | That's all                   |
+| 10 | Tholainthu po             | Tholagi hogu                      | Dhafaa ho ja                 | Get lost                     |
+| 11 | ₹50 ku kudukireengala?    | 50 ge koduthira?                  | ₹50 mein denge?              | Will you give it for ₹50?    |
+| 12 | Vaaya moodu               | Baai muchko                       | Chhup raho                   | Shut up                      |
+| 13 | Paithiyama unaku?         | Neenu huchchana?                  | Paagal ho kya?               | Are you mad?                 |
+| 14 | Iru/Irunga vaaren         | Thadi/Thadiri barthini            | Rukho aata hoon              | Wait, I'll come              |
+| 15 | Train vanthudicha?        | Train banthaa?                    | Train aa gayi kya?           | Train arrived?               |
+
+
+
+|    | Tamil                                                              | Kannada                                                         |    | Tamizh                                 | Kannada                                  |
+|----|--------------------------------------------------------------------|-----------------------------------------------------------------|----|----------------------------------------|------------------------------------------|
+| 1  | Vaanga poi Kaaikarigal eduthutu varalam                            | Baani hogi tarakarigalu tagondhu barona                         | 11 | Unga kitta c type charger irukka?      | Nimma hathra c type charger iddiya?      |
+| 2  | naan ippoluthu veetil illai                                        | Naanu ivaga mane alli illa                                      | 12 | Unga vayasu enna?                      | Nimma vayasu eshtu?                      |
+| 3  | Kandippa varanum                                                   | Kandithavaagi barukeku                                          | 13 | Naan Bangalore'ku 5 maniku poven       | naanu Bangalore'ge 5 gantege hogutthene  |
+| 4  | Naan veetila thaniya iruken                                        | Naanu mane alli obbane'idini                                    | 14 | Inge ukaralama?                        | naanu illi kulitukollabahuda?            |
+| 5  | Enakku kannada solli thaa/thaanga                                  | Nange Kannada heli kodu/kodi                                    | 15 | Train poyidicha?                       | train hoitha?                            |
+| 6  | Enakku payama iruku                                                | Nanage bhayavaguttide                                           | 16 | Enaku unnai pidichiruku                | naanu ninnannu istapaduthene             |
+| 7  | Nee enne parthutu iruka?                                           | Ninu En nodutta iddiya                                          | 17 | neenga ennai kalyanam pannikireengala? | Neevu nannannu maduveyaaguveyaa?         |
+| 8  | Parcel security kita koduthukittu ponga, naan apparama vaangikiren | Parcel security hathra kottubittu hogi, naanu aamele tagolthini | 18 | Paravaa illa                           | Paravagilla                              |
+| 9  | Onnum illai                                                        | Enu illa                                                        | 19 | seekiram vaa                           | Bega baa                                 |
+| 10 | Enaku Kovam varuthu                                                | Nange Kopa barthide                                             | 20 | Naan thoongukiren                      | naanu malguttidene                       |
+
