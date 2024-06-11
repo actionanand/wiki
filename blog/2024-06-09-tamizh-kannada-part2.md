@@ -12,9 +12,6 @@ import TabItem from '@theme/TabItem'
 
 <!-- ### <Highlight color='#004080' highlight='fg' fontWeight='bold'> sub tab </Highlight> -->
 
-
-<!--truncate-->
-
 ## <Highlight color='#800031' highlight='fg' fontWeight='bold'> Case (வேற்றுமை உருபுகள்) </Highlight>
 
 நன்னூலார் கருத்துப்படி எட்டு வேற்றுமைகளுமே உருபுகள் என்பதாம். அவை <Highlight color='#25c2a0'> பெயர், ஐ, ஆல், கு, இன், அது, கண், விளி </Highlight> என்பன ஆகும். For more, [1](https://www.tamilvu.org/courses/degree/c021/c0214/html/c0214441.htm), [2](https://dosa365.wordpress.com/2012/08/26/18/)
@@ -25,14 +22,19 @@ import TabItem from '@theme/TabItem'
 |----------------------------------|--------------------------------------|------------------------|
 | naan ungal**ai**/unn**ai** kathalikkiren | naanu nimm**annu**/ninn**annu** preetisteeni | mujhe tum **se** pyaar hai |
 
+<!--truncate-->
+
 2. Aal (By) - moolaka 
 
 | Tamizh                           | Kannada                        | English                   |
 |----------------------------------|--------------------------------|---------------------------|
-| Apple Anand **aal** saapidapattathu. | Sebu Anand **moolaka** tinaliyitu. | Apple was eaten **by** Anand. |
+| Apple Anand **aal** saapidapattathu. | Sebu Anand **moolaka** tinal'aythu. | Apple was eaten **by** Anand. |
+
+* Seb**annu** Raj tindaru
+* Seb**annu** Seema tindalu
 
 
-3. I gave this apple **to** Anand (I gave Anand this apple)
+3. I gave this mango **to** Anand (I gave Anand this mango)
 
 | Tamizh                                     | Kannada                                   | Hindi                          |
 |--------------------------------------------|-------------------------------------------|--------------------------------|
@@ -57,4 +59,4 @@ import TabItem from '@theme/TabItem'
 
 | Tamizh                             | Kannada                         | Hindi                              |
 |------------------------------------|---------------------------------|------------------------------------|
-| **Pakkattula** Medical shop enga iruku | **Pakkadalli** medical shop ellide? | **Aas paas me** medical shop kaha hai? |
+| **Pakkattula** Medical shop enga iruku | **Pakkadalli**/**hatradalli** medical shop ellide? | **Aas paas me** medical shop kaha hai? |
