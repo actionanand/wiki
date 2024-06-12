@@ -65,7 +65,7 @@ import TabItem from '@theme/TabItem'
 |    | Tamizh                    | Kannada                           | Hindi                        | English                      |
 |----|---------------------------|-----------------------------------|------------------------------|------------------------------|
 | 1  | Enakku idellam pidikkathu | Nange idella ista aagalla         | Mujhe ye sab pasand nehi hai | I don't like all these       |
-| 2  | Mazhai Peyyuthu           | Male barthide                     | Baarish ho rahi hai          | It's raining                 |
+| 2  | Mazhai Peyyuthu           | Male bartha'ide (barthide)        | Baarish ho rahi hai          | It's raining                 |
 | 3  | Vera ethachum venuma?     | Bera enaadru beka?                | Kuchh aur chhaahiye?         | Do you need something else?  |
 | 4  | Bayappada vendaam         | Baya maadko beda/bedi             | Daro math                    | Don't get scared             |
 | 5  | Unga/un veedu enga iruku  | Nimma/Ninna mane ellide           | Appka ghar kaha hai          | Where's your house           |
@@ -87,11 +87,14 @@ import TabItem from '@theme/TabItem'
 | 1  | Vaanga poi Kaaikarigal eduthutu varalam                            | Baani hogi tarakarigalu tagondhu barona                         | 11 | Unga kitta c type charger irukka?      | Nimma hathra c type charger iddiya?      |
 | 2  | naan ippoluthu veetil illai                                        | Naanu ivaga mane alli illa                                      | 12 | Unga vayasu enna?                      | Nimma vayasu eshtu?                      |
 | 3  | Kandippa varanum                                                   | Kandithavaagi barukeku                                          | 13 | Naan Bangalore'ku 5 maniku poven       | naanu Bangalore'ge 5 gantege hogutthene  |
-| 4  | Naan veetila thaniya iruken                                        | Naanu mane alli obbane'idini                                    | 14 | Inge ukaralama?                        | naanu illi kulitukollabahuda?            |
+| 4  | Naan veetila thaniya iruken                                        | Naanu mane alli obbane'idini                                    | 14 | Inge ukaralama?                        | naanu illi kulitukollabahuda (kuthko bahuda)?            |
 | 5  | Enakku kannada solli thaa/thaanga                                  | Nange Kannada heli kodu/kodi                                    | 15 | Train poyidicha?                       | train hoitha?                            |
-| 6  | Enakku payama iruku                                                | Nanage bhayavaguttide                                           | 16 | Enaku unnai pidichiruku                | naanu ninnannu istapaduthene             |
-| 7  | Nee enne parthutu iruka?                                           | Ninu En nodutta iddiya                                          | 17 | neenga ennai kalyanam pannikireengala? | Neevu nannannu maduveyaaguveyaa?         |
+| 6  | Enakku payama iruku                                                | Nanage bhayav'aguttide(aaguttide)                     | 16 | Enaku unnai pidichiruku                | naanu ninnannu istapaduthene             |
+| 7  | Nee enne parthutu iruka?                                           | Ninu En nodutta iddiya                                          | 17 | neenga ennai kalyanam pannikireengala? | Neevu nannannu maduve'(y)aaguveyaa?      |
 | 8  | Parcel security kita koduthukittu ponga, naan apparama vaangikiren | Parcel security hathra kottubittu hogi, naanu aamele tagolthini | 18 | Paravaa illa                           | Paravagilla                              |
 | 9  | Onnum illai                                                        | Enu illa                                                        | 19 | seekiram vaa                           | Bega baa                                 |
 | 10 | Enaku Kovam varuthu                                                | Nange Kopa barthide                                             | 20 | Naan thoongukiren                      | naanu malguttidene                       |
+| 21 | Naan idha edukalama? (Can I take it?)                              | naanu idu togo(l) bahuda                                             | 22 | Pranav kitta kelu/kelunga (Ask pranav)   | pranav ge kelu/keli                       |
+| 23 | Vaanga, saapidalam (come, let's eat)                              | barri, oota madonna                                             | 24 | Pranav kitta kelu/kelunga (Ask pranav)   | pranav ge kelu/keli                       |
+
 
