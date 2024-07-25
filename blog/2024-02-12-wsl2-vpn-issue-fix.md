@@ -206,6 +206,66 @@ Restart-Service LxssManager
 
 * [For more ...](https://gist.github.com/machuu/7663aa653828d81efbc2aaad6e3b1431)
 
+## Workaround (WSL1) - Simplified
+
+1. **Get all the available DNS/nameservers** after connecting to Cisco VPN Client & before connecting. The nameservers visible before connecting to Cisco client will change frequently. So you have to change that if you add. Or you can leave the nameservers before connecting to Cisco client. Use the below command at `powershell`
+
+```powershell
+Get-DnsClientServerAddress -AddressFamily IPv4 | Select-Object -ExpandProperty ServerAddresses
+```
+
+[For detail...](#dns-resolution)
+
+2. Disable `systemd-resolved` service
+
+```bash
+sudo systemctl disable systemd-resolved.service
+```
+
+3. Then stop that service
+
+```bash
+sudo systemctl stop systemd-resolved.service
+```
+
+4. Then remove `resolv.conf`
+
+```bash
+sudo rm /etc/resolv.conf
+```
+
+5. Add a manually created `resolv.conf` in `/etc/`
+
+```bash
+sudo vim /etc/resolv.conf
+```
+
+6. Add your prefered DNS server in `resolv.conf`.
+
+```sh title="/etc/resolv.conf" 
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+nameserver 8.8.4.4
+# Add nameservers got after connecting to cisco client
+nameserver 10.**.**.***
+```
+
+7. `Vi/Vim` editor commands
+
+Press `Esc` to enter the Command mode. Then type `:` to launch the prompt bar. After that use the below:
+  1. `w` to save changes to the file without exiting the editor
+  2. `wq` to write and quit the editor
+  3. type `w` and the new name (`testfile2`) as `:w testfile2`
+  4. `q!` to quit without saving
+
+Other usefull commands
+  1. Command Mode is the default mode you see when launching Vi or Vim. In Command Mode, you issue commands for tasks such as navigating the file, searching, replacing, deleting, copying, and pasting text.
+  2. For instance, press `x` to delete a character and `dd` to delete an entire line. Similarly, press `yy` to copy a line and `p` to paste.
+  3. To enter **Insert Mode** from Command Mode, press the `i` key (lowercase **i**)
+  4. To exit Insert Mode and return to Command Mode, press the `Esc` key
+
+
+
 ## Hot Reload not working
 
 ### Fix for angular running on wsl2
