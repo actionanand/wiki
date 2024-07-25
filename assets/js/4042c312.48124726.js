@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwiki=self.webpackChunkwiki||[]).push([[422],{40612:e=>{e.exports=JSON.parse('{"label":"poem","permalink":"/wiki/blog/tags/poem","allTagsPath":"/wiki/blog/tags","count":1,"unlisted":false}')}}]);
