@@ -88,7 +88,7 @@ sidebar_position: 1
 
 ### Proxy file in frontend (Angular, React, etc) - Sample
 
-```json
+```json title="proxy.json"
 {
   "/sub-domain/api/*": {
     "target": "http://api.dev.ar.com",
@@ -130,3 +130,33 @@ sidebar_position: 1
   }
 }
 ```
+
+```js title="proxy.config.js"
+var defaultTarget = 'http://localhost:3000';
+// '/api/v2/places' => 'http://localhost:3000/places'
+
+module.exports = [
+  {
+    context: ['/api/v2/*'],
+    target: defaultTarget,
+    secure: false,
+    logLevel: 'debug',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/api/v2/': '/',
+    },
+  },
+  {
+    context: ['/api/v2/**'],
+    target: defaultTarget,
+    secure: false,
+    logLevel: 'debug',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/api/v2/': '/',
+    },
+  },
+];
+```
+
+and update the `package.json` file in angular project as `"develop": "ng serve --port 5600 --proxy-config proxy.conf.js",`
