@@ -13,6 +13,8 @@ import TabItem from '@theme/TabItem'
 
 Generally, for security reasons, <Highlight highlight='lightBg' color='#D1FFBD'>browsers forbid requests that come in from cross-domain sources</Highlight>. However, <Highlight highlight='lightBg' color='#D1FFBD'>there could be cases where you want to overcome this</Highlight> and access cross-domain resources, and <Highlight highlight='lightBg' color='#D1FFBD'>CORS makes this possible</Highlight>.
 
+{/* truncate */}
+
 There is another concept known as **S**ame-**O**rigin **P**olicy (<Highlight color='#25c2a0'>SOP</Highlight>) which enables resource sharing on similar domains. The Same-Origin Policy was developed as a security mechanism for browsers to protect resources from malicious attacks. SOP allows resource sharing (data exchange) between two objects with the same origins.
 
 <Highlight color='#25c2a0'>CORS preflight</Highlight>: When a browser sends a request to a server, it first sends an HTTP Options request. This is called a CORS preflight request. The server then responds with a list of allowed methods and headers. If the browser is allowed to make the actual request, it sends the actual request. If not, it shows an error and does not continue to send the main request.
