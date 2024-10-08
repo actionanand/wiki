@@ -155,6 +155,11 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['scss','json','bash','powershell'],
     },
+    blog: {
+      sidebar: {
+        groupByYear: true,
+      },
+    },
   } satisfies Preset.ThemeConfig,
 };
 

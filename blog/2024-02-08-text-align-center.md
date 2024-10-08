@@ -23,6 +23,7 @@ So here's what we'll do instead:
 * Wrap the button in a `div`
 * Then, add an inline style declaration to the div, i.e. `<div style="text-align:center">`.
 
+{/* truncate */}
 
 <Tabs>
   <TabItem value="html" label="HTML">

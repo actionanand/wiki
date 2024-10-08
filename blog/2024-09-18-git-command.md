@@ -24,6 +24,7 @@ rm -rf .git
 ```sh
 git config --list
 ```
+{/* truncate */}
 
 Ref
 
