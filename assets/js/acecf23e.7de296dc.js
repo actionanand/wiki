@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwiki=self.webpackChunkwiki||[]).push([[6360],{81112:e=>{e.exports=JSON.parse('{"blogBasePath":"/wiki/blog","blogTitle":"Blog"}')}}]);
