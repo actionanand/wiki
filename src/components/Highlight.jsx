@@ -35,6 +35,20 @@ export default function Highlight({
         {children}
       </div>
     );
+  } else if (highlight === 'lightBg') {
+    return (
+      <span
+        style={{
+          backgroundColor: color,
+          borderRadius: '4px',
+          color: '#4B0082',
+          padding: '0.2rem',
+          paddingTop: '0',
+        }}
+      >
+        {children}
+      </span>
+    );
   } else {
     return (
       <span
