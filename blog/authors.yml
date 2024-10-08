@@ -3,9 +3,20 @@ anand:
   title: Senior Software Engineer
   url: https://github.com/actionanand
   image_url: https://github.com/actionanand.png
+  socials:
+    x: actionanand
+    linkedin: anand-ns
+    github: actionanand
+    newsletter: https://stackoverflow.com/users/10907720/anand-raja
+  description: Passionate web developer, who’s enthusiastic about writing clean and efficient codes and able to handle complex situation, keen to learn more & add value to the team.
+  page:
+    permalink: '/actionanand'
 
 anand-tech:
   name: Anand Techie
   title: Software Developer, Frontend
   url: https://github.com/AnandRaja-tech
   image_url: https://github.com/AnandRaja-tech.png
+  socials:
+    github: AnandRaja-tech
+  page: true
