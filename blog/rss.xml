@@ -4,10 +4,265 @@
         <title>AR's Wiki Blog</title>
         <link>https://actionanand.github.io/wiki/blog</link>
         <description>AR's Wiki Blog</description>
-        <lastBuildDate>Tue, 08 Oct 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 09 Oct 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Bash/Shell cheat sheet]]></title>
+            <link>https://actionanand.github.io/wiki/blog/bash-shell-commands</link>
+            <guid>https://actionanand.github.io/wiki/blog/bash-shell-commands</guid>
+            <pubDate>Wed, 09 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Shell cheat sheet]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="shell-cheat-sheet"><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left">Shell cheat sheet</span><a href="https://actionanand.github.io/wiki/blog/bash-shell-commands#shell-cheat-sheet" class="hash-link" aria-label="Direct link to shell-cheat-sheet" title="Direct link to shell-cheat-sheet">​</a></h2>
+<p>Being well-versed in the <span style="background-color:#D1FFBD;border-radius:4px;color:#4B0082;padding:0.2rem;padding-top:0">Bourne Again SHell (Bash Shell)</span> as a developer or Linux user can significantly boost productivity</p>
+<!-- -->
+<p>Check out the rest of the document to get more familiar with the command line concepts!</p>
+<p><strong>Quick note:</strong> Anything encased in [ ] means that it’s optional. Some commands can be used without options or specifying files.</p>
+<ol>
+<li>
+<p><code>cd</code> -&gt; By itself or with a tilde (~), this command will move the user to their home directory - cd(change directory)</p>
+<ul>
+<li><strong>cd ~[username]</strong> -&gt; This command will move the user to the home directory of the specified username, replace username by real username</li>
+<li><code>cd .</code> -&gt; This command will leave the user in the same directory they are currently in</li>
+<li><code>cd ..</code> -&gt; This command will move the user up one directory (previous)</li>
+<li><code>cd -</code> -&gt; This command will move the user to the previous directory</li>
+</ul>
+</li>
+<li>
+<p><code>history</code> —&gt; list your most recent commands</p>
+<ul>
+<li><code>history-5</code> -&gt; Display the last five commands.</li>
+<li><code>history-c</code> -&gt; Clear the history list.</li>
+<li><code>history-d 10 20</code> -&gt; Delete lines 10 to 20 from the history list.</li>
+<li><code>history | grep python3</code> -&gt; Get the recent commands from history that include python3 keyword</li>
+</ul>
+</li>
+<li>
+<p><code>ps</code> -&gt; Display active processes(current running processes on the system). You can determine your shell type also using the <strong>ps</strong> command</p>
+<ul>
+<li><code>ps -ef</code> -&gt; Display a list of all running processes</li>
+<li><code>ps -p PID</code> -&gt; Display a list of all processes for a specific process ID (PID), Replace PID by real PID (number)</li>
+<li>With the use of the <code>&amp;</code> symbol, we can pass a process into the background.</li>
+</ul>
+<p>For demonstration purposes, we will create a shell script name <strong>sleep</strong> with an infinite loop and will run it in the background.</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">ps</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">PID TTY          TIME CMD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token number" style="color:#36acaa">14</span><span class="token plain"> tty1     00:00:00 </span><span class="token function" style="color:#d73a49">bash</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># my shell is bash &amp; PID is 14</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token number" style="color:#36acaa">17955</span><span class="token plain"> tty1     00:00:00 </span><span class="token function" style="color:#d73a49">ps</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token number" style="color:#36acaa">14491</span><span class="token plain"> pts/0   00:00:00 </span><span class="token function" style="color:#d73a49">sleep</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">sleep</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># </span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">kill</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">14491</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># kill uses PID</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">killall</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">sleep</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic"># killall uses name</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><code>pwd</code> -&gt; Displays the present working directory. PWD stands for print working directory</p>
+</li>
+<li>
+<p><strong>ls [OPTIONS] [FILES]</strong> -&gt; The ls (list) command is used to list directories or files</p>
+<ul>
+<li><code>ls -a</code> -&gt; List all the files in the current directory including hidden files too</li>
+<li><code>ls -l</code> -&gt; Long listing of all the files and their size in the current directory</li>
+</ul>
+</li>
+<li>
+<p><strong>rm [OPTIONS]... FILE...</strong> -&gt; The rm (remove) command is used to delete files, directories or even symbolic links from your file system</p>
+<ul>
+<li><code>rm-i</code> -&gt;  Remove all the files in the directory but let the user confirm before deleting it.</li>
+<li><code>rm-r</code> -&gt; Remove non-empty directories including all the files within them.</li>
+<li><code>rm-f</code> -&gt; Remove files or directories without prompting even if they are write-protected — the f stands for force</li>
+<li>example: <code>rm -rf directoryName</code></li>
+</ul>
+</li>
+<li>
+<p><strong>mv [OPTIONS] SOURCE DESTINATION</strong></p>
+<ul>
+<li><strong>SOURCE</strong> can be one or more directories or files</li>
+<li><strong>DESTINATION</strong> can be a file (used for renaming files) or a directory (used for moving files and directories into other directories)</li>
+</ul>
+<p>The mv (move) command is used to move one or more directories or files from one location in the file system to another.</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Rename file</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">mv</span><span class="token plain"> file1.txt file2.txt</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Move a file into a different directory</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">mv</span><span class="token plain"> file1.txt anotherDir/</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>cp [OPTIONS] SOURCE... DESTINATION</strong></p>
+<ul>
+<li><strong>SOURCE</strong> may contain one or more directories or files</li>
+<li><strong>DESTINATION</strong> must be a single directory or file</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Copy files</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">cp</span><span class="token plain"> file1.txt file1_final.txt</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Copy directories (and preserve ownership)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">cp</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-Rp</span><span class="token plain"> myDir/ myDirBackup</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>mkdir [OPTION] [DIRECTORY]</strong></p>
+<ul>
+<li><strong>DIRECTORY</strong> can be one or more directories</li>
+</ul>
+</li>
+<li>
+<p><strong>touch [OPTIONS] [FILES]</strong></p>
+<ul>
+<li><code>touch -c file1.txt</code> -&gt; If file file1.txt already exists, then this command will update the file’s time stamps. Otherwise, it will do nothing.</li>
+<li><code>touch -a file1.txt</code> -&gt; Updates only the access time stamp of the file.</li>
+<li><code>touch -m file1.txt</code> -&gt; Updates only the modification time of the file.</li>
+</ul>
+<p>The touch command allows you to create new empty files or update the time stamp on existing files or directories. If you use touch with files that already exist, then the command will just update their time stamps. If the files do not exist, then this command will simply create them.</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Create a new file (file1.txt does not exist)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">touch</span><span class="token plain"> file1.txt</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Update the access time of the file (file1.txt already exists)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">touch</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-a</span><span class="token plain"> file1.txt</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><strong>cat [OPTIONS] [FILE_NAMES]</strong> -&gt; Cat is a very commonly used command that allows users to read concatenate or write file contents to the standard output.</p>
+<ul>
+<li><code>cat-n file1.txt</code> -&gt; Display the contents of the file file1.txt along with line numbers.</li>
+<li><code>cat-T file1.txt</code> -&gt; Display the contents of the file file1.txt and distinguish tabs and spaces (tabs will be displayed as ^I in the output)</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Display the content of file $HOME/.pip/pip.conf</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">cat</span><span class="token plain"> </span><span class="token environment constant" style="color:#36acaa">$HOME</span><span class="token plain">/.pip/pip.conf</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Append the content of file1.txt to file2.txt</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">cat</span><span class="token plain"> file1.txt </span><span class="token operator" style="color:#393A34">&gt;&gt;</span><span class="token plain"> file2.txt</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p>The <code>less</code> command lets you display the contents of a file one page at a time. Less won’t read the entire file when it is being called; thus, it leads to way faster load times.</p>
+<ul>
+<li><code>less-N file1.txt</code> -&gt; Display the content (first page) of the file <strong>file1.txt</strong> and show line numbers.</li>
+<li><code>less-X file1.txt</code> -&gt; By default, when you exit less, the content of the file will be cleared from the command line. If you want to exit but also keep the content of the file on the screen use the <code>-X</code> option.</li>
+</ul>
+</li>
+</ol>
+<p>The <code>more</code> command can also be used for displaying the content of a file in the command line. In contrast to <code>less</code>, this command loads the entire file at once, which is why <code>less</code> seems faster.</p>
+<ul>
+<li><code>more -p file1.txt</code> -&gt; Clear the command line screen and then display the content of file1.txt</li>
+<li><code>more +100 file1.txt</code> -&gt; Display the content of file1.txt starting from the 100th line onwards.</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Display the content of file $HOME/.pip/pip.conf</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">less</span><span class="token plain"> </span><span class="token environment constant" style="color:#36acaa">$HOME</span><span class="token plain">/.pip/pip.conf</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Display the content of file $HOME/.pip/pip.conf</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">more</span><span class="token plain"> </span><span class="token environment constant" style="color:#36acaa">$HOME</span><span class="token plain">/.pip/pip.conf</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ol start="13">
+<li>
+<p><strong>grep [OPTIONS] PATTERN [FILE...]</strong></p>
+<ul>
+<li>
+<p><strong>PATTERN</strong> is the search pattern.</p>
+</li>
+<li>
+<p><strong>FILE</strong> can be none to more input file names.
+The <code>grep</code> (global regular expression) command is useful when you wish to search for a particular string in files.</p>
+</li>
+<li>
+<p><code>grep-v Andrew employees.txt</code> -&gt; Invert match <strong>Andrew</strong> in <strong>employees.txt</strong>. In other words, display all the lines that do not match the pattern <strong>Andrew</strong>.</p>
+</li>
+<li>
+<p><code>grep-r Andrew dirName/</code> -&gt; Recursively search for pattern <strong>Andrew</strong> in all files in the specified directory dirName</p>
+</li>
+<li>
+<p><code>grep-i Andrew employees.txt</code> -&gt; Performs a case-insensitive search.</p>
+</li>
+</ul>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Search for `export` (case insensitive) in user profile</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">grep</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-i</span><span class="token plain"> </span><span class="token builtin class-name">export</span><span class="token plain"> ~/.bash_profile</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p>The <code>curl</code> command is used to download or upload data using protocols such as FTP, SFTP, HTTP and HTTPS.</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">curl</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-L</span><span class="token plain"> google.com</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p>The <code>which</code> command is used to identify and report the location of the provided executable. For instance, you may wish to see the location of the executable when calling <code>python3</code></p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">which</span><span class="token plain"> python3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">/usr/local/bin/python3</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>
+<p><code>top</code> -&gt; The <code>top</code> command is like a CLI version of the task manager in Windows. The <code>top</code> command can help you monitor running processes and the resources (such as memory) they are currently using.</p>
+<ul>
+<li><code>top -n 1</code> -&gt; Display a summary of system resource usage</li>
+<li><strong>top -u [username]</strong> -&gt; Display processes for that user <strong>username</strong>. Replace username by real username</li>
+<li><strong>top -p [PID]</strong> -&gt; replace PID by real PID. Find PID by running <code>ps</code></li>
+<li><code>top -o %MEM</code> -&gt; Sort processes by memory usage</li>
+</ul>
+</li>
+<li>
+<p><code>man</code> (Manual) -&gt; To access the manual pages for a specific command. It provides detailed information about the command, including its syntax, options, and examples.</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">man</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">ls</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li>Use <strong>arrow keys</strong> or the <strong>spacebar</strong> to navigate through the manual pages. Press <strong>q</strong> to exit the manual.</li>
+</ul>
+</li>
+<li>
+<p>The <code>uname</code> and <code>whoami</code> commands allow you to access some basic information that comes in handy when you work on multiple system</p>
+<ul>
+<li>
+<p>The <code>whoami</code> command in Linux returns the current user’s username. It stands for <strong>who am I?</strong> and it’s often used to determine the current user’s identity in shell scripts or the terminal.</p>
+</li>
+<li>
+<p>The <code>uname</code> command in Linux displays information about the system’s kernel, including the kernel name, hostname, kernel release, kernel version, and machine hardware name.</p>
+<ul>
+<li>Use <code>uname -s</code> to display the kernel name.</li>
+<li>Use <code>uname -n</code> to display the hostname.</li>
+<li>Use <code>uname -r</code> to display the kernel release.</li>
+<li>Use <code>uname -v</code> to display the kernel version.</li>
+<li>Use <code>uname -m</code> to display the machine hardware name.</li>
+<li>Use <code>uname -a</code> to display all.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>wget</code> -&gt; <strong>wget</strong> stands for web get. The wget is a free non-interactive file downloader command.</p>
+<ul>
+<li><strong>wget [URL]</strong> -&gt; to download single file</li>
+<li><strong>wget -O [fileName] [URL]</strong> -&gt; to store with a different file name</li>
+<li><strong>wget --limit-rate=[Number] [URL]</strong> -&gt; to specify download rate/speed</li>
+<li><strong>wget -c [URL]</strong> -&gt; to Continue Interrupted Downloads</li>
+<li><strong>wget -b [URL]</strong> -&gt; to download in background</li>
+</ul>
+</li>
+</ol>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">wget</span><span class="token plain"> https://wordpress.org/latest.zip</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">wget</span><span class="token plain"> google.com</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">wget</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-O</span><span class="token plain"> wordpress.zip https://wordpress.org/latest.zip</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">wget</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-P</span><span class="token plain"> documents/archives/ https://wordpress.org/latest.zip </span><span class="token comment" style="color:#999988;font-style:italic"># file will be saved at documents/archives/</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">wget</span><span class="token plain"> --limit-rate</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">500k https://wordpress.org/latest.zip</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ </span><span class="token function" style="color:#d73a49">wget</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-tries</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">100</span><span class="token plain"> https://wordpress.org/latest.zip </span><span class="token comment" style="color:#999988;font-style:italic"># `-tries` to set retrying attempts </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ol start="20">
+<li>
+<p>Package Managers in Linux: Ubuntu server uses <code>apt</code> package manager. And Fedora, Red Hat, Arch, or Centos machine, use different package manager.</p>
+<ul>
+<li>Debian and Debian-based distros -&gt; <strong>apt install [package name]</strong></li>
+<li>Arch and Arch-based distros -&gt; <strong>pacman -S [package name]</strong></li>
+<li>Red Hat and Red Hat-based distros -&gt; <strong>yum install [package name]</strong></li>
+<li>Fedora and CentOS -&gt; <strong>yum install [package name]</strong></li>
+</ul>
+</li>
+<li>
+<p>The <code>cal</code> command displays a well-presented calendar on the terminal</p>
+</li>
+</ol>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">cal</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">cal</span><span class="token plain"> March </span><span class="token number" style="color:#36acaa">2024</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ol start="22">
+<li>The <code>tar</code>, <code>zip</code>, and <code>unzip</code> commands<!-- -->
+<ul>
+<li>
+<p>The <code>tar</code> command in Linux is used to create and extract archived files. We can extract multiple different archive files using the <code>tar</code> command.</p>
+</li>
+<li>
+<p>To <strong>create an archive</strong>, we use the <code>-c</code> parameter, and to <strong>extract an archive</strong>, we use the <code>-x</code> parameter.</p>
+<ul>
+<li><strong>tar -cvf [archive name] [files separated by space]</strong> -&gt; to compress</li>
+<li><strong>tar -xvf [archive name]</strong> -&gt; to extract</li>
+<li><strong>zip [archive name] [file names separated by space]</strong> -&gt; to compress</li>
+<li><strong>unzip [archive name]</strong> -&gt; to extract</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">#Compress</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">tar</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-cvf</span><span class="token plain"> compress.tar new-file.txt new-file-2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">#Extract</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">tar</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-xvf</span><span class="token plain"> compress.tar</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">#Compress</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">zip</span><span class="token plain"> compress.zip new-file.txt new-file-2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">#Extract</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">unzip</span><span class="token plain"> compress.zip</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ol start="23">
+<li>The <code>alias</code> command</li>
+</ol>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token builtin class-name">alias</span><span class="token plain"> </span><span class="token assign-left variable" style="color:#36acaa">lsl</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">"ls -l"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ul>
+<li><code>lsl</code> will execute <code>ls -l</code></li>
+</ul>
+<ol start="24">
+<li>The <code>whereis</code> and <code>whatis</code> commands are used in Linux to search for information about programs and files.</li>
+</ol>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ </span><span class="token function" style="color:#d73a49">whereis</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">sudo</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo: /usr/bin/sudo /usr/lib/sudo /usr/share/man/man8/sudo.8.gz</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">anandraja@myhome:~$ whatis </span><span class="token function" style="color:#d73a49">sudo</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">sudo</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token number" style="color:#36acaa">8</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> - execute a </span><span class="token builtin class-name">command</span><span class="token plain"> as another user</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ol start="25">
+<li><code>passwd</code> -&gt; Change the password for the current user<!-- -->
+<ul>
+<li><strong>passwd [username]</strong> -&gt; Change the password for a specific user. Replace username by real username</li>
+<li><strong>passwd -f [username]</strong> -&gt; Force a user to change their password at the next login</li>
+<li><strong>passwd -e -n [days] -w [warndays] [username]</strong> -&gt; Replace <strong>days</strong> with the number of days before the password expires and <strong>warmdays</strong> with the number of days before the password expires that the user will be warned.</li>
+</ul>
+</li>
+</ol>]]></content:encoded>
+            <category>bash</category>
+            <category>shell</category>
+            <category>terminal</category>
+            <category>script</category>
+            <category>command</category>
+            <category>cli</category>
+            <category>unix</category>
+            <category>cheat sheet</category>
+        </item>
         <item>
             <title><![CDATA[Understanding and Resolving CORS Error]]></title>
             <link>https://actionanand.github.io/wiki/blog/what-is-cors-error</link>
@@ -90,12 +345,28 @@ Using a browser to test your CORS configuration might be a tedious task. You can
 </ol>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">git</span><span class="token plain"> config </span><span class="token parameter variable" style="color:#36acaa">--list</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <!-- -->
-<p>Ref</p>
+<ol start="3">
+<li>Drop all the changes</li>
+</ol>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">git</span><span class="token plain"> stash </span><span class="token parameter variable" style="color:#36acaa">-u</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">&amp;&amp;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">git</span><span class="token plain"> stash drop</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ol start="4">
+<li>
+<p>Apply all the changes(current  changes) after pulling latest changes from 'master' or same branch</p>
+<ul>
+<li><code>git stash</code> -&gt; stash the changes from working branch</li>
+<li><code>git pull</code> or <code>git pull origin master</code> -&gt; pull the changes from current or master branch</li>
+<li><code>git stash pop</code> -&gt; This will apply stashed changes back to working copy and remove the changes from stash unless you have conflicts. In case of conflicts, they will stay in stash so that you can start over if needed.</li>
+<li><code>git stash list</code> -&gt; if you need to see what is in your stash</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ref">Ref<a href="https://actionanand.github.io/wiki/blog/git-commands#ref" class="hash-link" aria-label="Direct link to Ref" title="Direct link to Ref">​</a></h2>
 <ol>
-<li><a href="https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/" target="_blank" rel="noopener noreferrer">https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/</a></li>
-<li><a href="https://www.freecodecamp.org/news/git-branching-commands-explained/" target="_blank" rel="noopener noreferrer">https://www.freecodecamp.org/news/git-branching-commands-explained/</a></li>
-<li><a href="https://github.com/joshnh/Git-Commands" target="_blank" rel="noopener noreferrer">https://github.com/joshnh/Git-Commands</a></li>
-<li><a href="https://www.nobledesktop.com/learn/git/git-branches" target="_blank" rel="noopener noreferrer">https://www.nobledesktop.com/learn/git/git-branches</a></li>
+<li><a href="https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/" target="_blank" rel="noopener noreferrer">10 Git Commands Every Developer Should Know</a></li>
+<li><a href="https://www.freecodecamp.org/news/git-branching-commands-explained/" target="_blank" rel="noopener noreferrer">Git Branching Commands Explained with Examples</a></li>
+<li><a href="https://github.com/joshnh/Git-Commands" target="_blank" rel="noopener noreferrer">git commands</a></li>
+<li><a href="https://www.nobledesktop.com/learn/git/git-branches" target="_blank" rel="noopener noreferrer">Git Branches: List, Create, Switch to, Merge, Push, &amp; Delete</a></li>
+<li><a href="https://stackoverflow.com/questions/12476239/git-stash-and-git-pull" target="_blank" rel="noopener noreferrer">git stash and git pull - Stack Overflow</a></li>
 </ol>]]></content:encoded>
             <category>git</category>
             <category>github</category>
@@ -799,9 +1070,7 @@ Remediless, on all his race.</p>]]></content:encoded>
 <li>Add your prefered DNS server in <code>resolv.conf</code>.</li>
 </ol>
 <div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_Ktv7">/etc/resolv.conf</div><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">nameserver </span><span class="token number" style="color:#36acaa">8.8</span><span class="token plain">.8.8</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nameserver </span><span class="token number" style="color:#36acaa">1.1</span><span class="token plain">.1.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nameserver </span><span class="token number" style="color:#36acaa">8.8</span><span class="token plain">.4.4</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Add nameservers got after connecting to cisco client</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nameserver </span><span class="token number" style="color:#36acaa">10</span><span class="token plain">.**.**.***</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<ol start="7">
-<li><code>Vi/Vim</code> editor commands</li>
-</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-vi-or-vim--editor-commands"><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> Vi or Vim </span> editor commands<a href="https://actionanand.github.io/wiki/blog/wsl2-and-cisco-vpn-issue-fix#-vi-or-vim--editor-commands" class="hash-link" aria-label="Direct link to -vi-or-vim--editor-commands" title="Direct link to -vi-or-vim--editor-commands">​</a></h2>
 <p>Press <code>Esc</code> to enter the Command mode. Then type <code>:</code> to launch the prompt bar. After that use the below:</p>
 <ol>
 <li><code>w</code> to save changes to the file without exiting the editor</li>
