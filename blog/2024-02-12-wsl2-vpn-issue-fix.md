@@ -4,6 +4,7 @@ title: How to fix WSL2 & VPN issue
 authors: anand
 tags: [wsl,wsl2,vpn,cisco AnyConnect]
 ---
+import Highlight from '@site/src/components/Highlight';
 
 > How to fix WSL2 and Cisco Anyconnect VPN internet issue.
 
@@ -250,7 +251,7 @@ nameserver 8.8.4.4
 nameserver 10.**.**.***
 ```
 
-7. `Vi/Vim` editor commands
+## <Highlight color='#800031' highlight='fg' fontWeight='bold'> Vi or Vim </Highlight> editor commands
 
 Press `Esc` to enter the Command mode. Then type `:` to launch the prompt bar. After that use the below:
   1. `w` to save changes to the file without exiting the editor
