@@ -9,7 +9,7 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
-  const ctaTitle = 'Jump into the knowledge Trek.'
+  const ctaTitle = 'Walk on the knowledge Trek'
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">

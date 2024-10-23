@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'AR\'s Wiki',
-  tagline: 'Knowledge is my Treasure!',
+  tagline: 'Treasure Trove of Knowledge!',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
