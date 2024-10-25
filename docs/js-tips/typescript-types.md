@@ -16,6 +16,7 @@ In TypeScript, you can define an object type where the keys are strings and the 
 
 ```ts
 interface StringObject {
+  // highlight-next-line
   [key: string]: string;
 }
 
