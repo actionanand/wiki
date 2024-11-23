@@ -159,4 +159,4 @@ module.exports = [
 ];
 ```
 
-and update the `package.json` file in angular project as `"develop": "ng serve --port 5600 --proxy-config proxy.conf.js",`
+and update the `package.json` file in angular project as `"develop": "ng serve --port 5600 --proxy-config proxy.config.js",`
