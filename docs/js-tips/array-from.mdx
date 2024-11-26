@@ -92,6 +92,7 @@ In the example above, the <Highlight color='#C0C0C0'>Array.from()</Highlight> me
 </Tabs>
 
 ### Sequence of Numbers with the `from()` Method
+(Creating Array with **N** elements, 1...N)
 
 
 <Tabs>
@@ -119,7 +120,7 @@ In the example above, the <Highlight color='#C0C0C0'>Array.from()</Highlight> me
   [1, 2, 3, 4, 5]
   ```
   </TabItem>
-  <TabItem value='sample-4' label='Traditional' default>
+  <TabItem value='sample-4' label='Traditional'>
   ```js
   const numberCount = [];
 
@@ -130,6 +131,31 @@ In the example above, the <Highlight color='#C0C0C0'>Array.from()</Highlight> me
   
   // Output
   [1, 2, 3, 4, 5 ]
+  ```
+  </TabItem>
+  <TabItem value='others' label='Others'>
+  ```js
+  Array.from(Array(10).keys());
+  // Using Spread Operator
+  [...Array(10).keys()];
+
+  // Output
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  [...Array(10).keys()].map(x => ++x);
+  Array.from(Array(10)).map((e, i) => i + 1);
+  Array.from(Array(10), (e, i) => i + 1);
+  // using Fill and Map
+  Array(10).fill().map((_, i) => i + 1);
+  // Output
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+  Array(3).fill();
+  // Output
+  [undefined, undefined, undefined]
+  Array(3).fill('*');
+  // Output
+  ['*', '*', '*']
   ```
   </TabItem>
 </Tabs>
