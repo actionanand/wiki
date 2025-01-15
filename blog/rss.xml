@@ -4,10 +4,37 @@
         <title>AR's Wiki Blog</title>
         <link>https://actionanand.github.io/wiki/blog</link>
         <description>AR's Wiki Blog</description>
-        <lastBuildDate>Thu, 05 Dec 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[HTML JS Quick Tips - part 1]]></title>
+            <link>https://actionanand.github.io/wiki/blog/html-js-quick-tips-part-1</link>
+            <guid>https://actionanand.github.io/wiki/blog/html-js-quick-tips-part-1</guid>
+            <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[How to copy a text from a website which prevents copying from UI?]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-how-to-copy-a-text-from-a-website-which-prevents-copying-from-ui-"><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left"> How to copy a text from a website which prevents copying from UI? </span><a href="https://actionanand.github.io/wiki/blog/html-js-quick-tips-part-1#-how-to-copy-a-text-from-a-website-which-prevents-copying-from-ui-" class="hash-link" aria-label="Direct link to -how-to-copy-a-text-from-a-website-which-prevents-copying-from-ui-" title="Direct link to -how-to-copy-a-text-from-a-website-which-prevents-copying-from-ui-">​</a></h2>
+<ol>
+<li>Click on select option (Arrow with dotted arrow) in element tab on the console of the browser.</li>
+<li>click on the UI text using select arrow as shown in the below image</li>
+<li>Selected element will be stored under the variable <code>$0</code>. You can see it in the below image.</li>
+</ol>
+<!-- -->
+<p><img decoding="async" loading="lazy" alt="console-js-html" src="https://actionanand.github.io/wiki/assets/images/html-js-hint-min-93db6ecd72aa756480844f792578a516.png" width="1511" height="887" class="img_ev3q"></p>
+<ol start="4">
+<li>You can type the variable <code>$0</code> in console tab. It'll display the selected html dom element in the console.</li>
+<li>Sometimes, the selected dom element may contains html element for space or new line as shown below;</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="console-js-html-after-select" src="https://actionanand.github.io/wiki/assets/images/console-js-min-cba76234a58f315ffef86605aefcb609.png" width="1338" height="725" class="img_ev3q"></p>
+<ol start="6">
+<li><code>$0.outerHTML</code> will convert html dom element into sanitized (string format) form. So <code>a = $0.outerHTML.toString()</code> is used</li>
+<li><code>const strippedStr = a.replace(/[\n]/g, " ");</code> will replace <code>\n</code> by one space character and store at a said variable.</li>
+</ol>]]></content:encoded>
+            <category>js</category>
+            <category>html</category>
+            <category>quick-tips</category>
+        </item>
         <item>
             <title><![CDATA[My Medical Chit-Chat - Part 1]]></title>
             <link>https://actionanand.github.io/wiki/blog/my-medical-chit-chat-part-1</link>
