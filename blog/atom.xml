@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://actionanand.github.io/wiki/blog</id>
     <title>AR's Wiki Blog</title>
-    <updated>2024-10-09T00:00:00.000Z</updated>
+    <updated>2024-12-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://actionanand.github.io/wiki/blog"/>
     <subtitle>AR's Wiki Blog</subtitle>
     <icon>https://actionanand.github.io/wiki/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[My Medical Chit-Chat - Part 1]]></title>
+        <id>https://actionanand.github.io/wiki/blog/my-medical-chit-chat-part-1</id>
+        <link href="https://actionanand.github.io/wiki/blog/my-medical-chit-chat-part-1"/>
+        <updated>2024-12-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Bacillus Clausii vs Lacticasei bacillus casei]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bacillus-clausii-vs-lacticasei-bacillus-casei"><span style="color:#800031;font-weight:bold;text-decoration:none;font-style:normal;text-align:left">Bacillus Clausii vs Lacticasei bacillus casei</span><a href="https://actionanand.github.io/wiki/blog/my-medical-chit-chat-part-1#bacillus-clausii-vs-lacticasei-bacillus-casei" class="hash-link" aria-label="Direct link to bacillus-clausii-vs-lacticasei-bacillus-casei" title="Direct link to bacillus-clausii-vs-lacticasei-bacillus-casei">​</a></h2>
+<p>While both <span style="background-color:#25c2a0;border-radius:4px;color:#fff;padding:0.2rem;padding-top:0"> Bacillus Clausii </span> and <span style="background-color:#25c2a0;border-radius:4px;color:#fff;padding:0.2rem;padding-top:0"> Lacticaseibacillus casei </span> (previously known as <span style="background-color:#C0C0C0;border-radius:4px;color:#fff;padding:0.2rem;padding-top:0"> Lactobacillus casei </span>) are considered probiotic bacteria, the key difference lies in their ability to form spores and the conditions they thrive in, with Bacillus Clausii being more <strong>resilient to harsh environments due to its ability to form spores</strong>, while Lacticaseibacillus casei is typically found in environments with lower pH levels and is associated with lactic acid production and Lacticaseibacillus casei does not form spores as well; making Bacillus Clausii potentially more suitable for situations where gut conditions are highly acidic, like after antibiotic use, and to treate acute diarrhea, while Lacticaseibacillus casei could be beneficial for general gut health maintenance.</p>
+]]></content>
+        <author>
+            <name>Anand Raja</name>
+            <uri>https://github.com/actionanand</uri>
+        </author>
+        <category label="medicine" term="medicine"/>
+        <category label="treatment" term="treatment"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Bash/Shell cheat sheet]]></title>
         <id>https://actionanand.github.io/wiki/blog/bash-shell-commands</id>
