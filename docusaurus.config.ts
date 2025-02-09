@@ -47,6 +47,17 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/actionanand/wiki/',
+          blogTitle: 'AR\'s Wiki',
+          blogDescription: 'Treasure Trove of Knowledge!',
+          // postsPerPage: 'ALL',
+          postsPerPage: 10,
+          blogSidebarTitle: 'Recent posts',
+          // blogSidebarCount: 'ALL',
+          blogSidebarCount: 7,
+          // Useful options to enforce blogging best practices
+          onInlineAuthors: 'ignore',
+          onUntruncatedBlogPosts: 'warn',
+          // onInlineTags: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',
