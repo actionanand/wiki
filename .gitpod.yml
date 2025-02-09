@@ -5,8 +5,8 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - name: Setup Docusaurus js with node ^20
-    before: nvm install v20.10.0
+  - name: Setup Docusaurus 5.7 with node ^22
+    before: nvm install v22.13.1
     init: yarn install && yarn run build
     command: yarn run start
 vscode:
