@@ -48,6 +48,13 @@ const config: Config = {
           editUrl:
             'https://github.com/actionanand/wiki/',
           onInlineAuthors: 'ignore',
+          blogTitle: 'AR\'s Wiki',
+          blogDescription: 'Treasure Trove of Knowledge!',
+          // postsPerPage: 'ALL',
+          postsPerPage: 10,
+          blogSidebarTitle: 'Recent posts',
+          // blogSidebarCount: 'ALL',
+          blogSidebarCount: 7,
         },
         theme: {
           customCss: './src/css/custom.css',
