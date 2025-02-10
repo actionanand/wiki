@@ -1,6 +1,6 @@
 ---
 slug: html-js-quick-tips-part-1
-title: HTML JS Quick Tips - part 1
+title: 'HTML & JS: Quick Tips - part 1'
 authors: anand
 tags: ['js', 'html', 'quick-tips']
 ---
