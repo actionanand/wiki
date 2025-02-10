@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwiki=self.webpackChunkwiki||[]).push([[5279],{82495:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/wiki/blog","page":1,"postsPerPage":10,"totalPages":2,"totalCount":16,"nextPage":"/wiki/blog/page/2","blogDescription":"Treasure Trove of Knowledge!","blogTitle":"AR\'s Wiki"}}')}}]);
