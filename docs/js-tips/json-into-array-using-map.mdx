@@ -1,0 +1,226 @@
+---
+sidebar_position: 8
+sidebar_label: 'JSON into Map'
+title: 'JSON into Map & Array'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import Highlight from '@site/src/components/Highlight';
+
+
+# JSON into Map & Array
+
+<details>
+  <summary>TypeScript Model</summary>
+  <div>
+    <Tabs>
+      <TabItem value="JSON">
+      ```ts
+      const animalFilters = {
+        appliedSearchFilters: [
+          {
+            filterKey: "animalType",
+            filterType: "CHAIN",
+            appliedOptions: [
+              {
+                optionName: "Dog",
+                optionId: "DOG",
+                optionValue: "dog",
+                optionGroupName: null,
+                count: 500,
+                children: null,
+                properties: null
+              },
+              {
+                optionName: "Cat",
+                optionId: "CAT",
+                optionValue: "cat",
+                optionGroupName: null,
+                count: 300,
+                children: null,
+                properties: null
+              },
+              {
+                optionName: "Horse",
+                optionId: "HORSE",
+                optionValue: "Horse",
+                optionGroupName: null,
+                count: 150,
+                children: null,
+                properties: null
+              }
+            ]
+          },
+          {
+            filterKey: "animalBreed",
+            filterType: "CHAIN",
+            appliedOptions: [
+              {
+                optionName: "Labrador",
+                optionId: null,
+                optionValue: "labrador",
+                optionGroupName: null,
+                count: 150,
+                children: null,
+                properties: null
+              },
+              {
+                optionName: "Persian",
+                optionId: null,
+                optionValue: "persian",
+                optionGroupName: null,
+                count: 100,
+                children: null,
+                properties: null
+              }
+            ]
+          },
+          {
+            filterKey: "animalStatus",
+            filterType: "BOOLEAN",
+            appliedOptions: [
+              {
+                optionId: "AVAILABLE",
+                optionName: "Available",
+                optionValue: "available"
+              },
+              {
+                optionId: "ADOPTED",
+                optionName: "Adopted",
+                optionValue: "adopted"
+              }
+            ]
+          }
+        ]
+      };
+      ```
+      </TabItem>
+
+      <TabItem value="Result 1">
+      ```typescript
+      // Output: [string, string[]][];
+      [
+        ["animalType", ["Dog", "Cat", "Horse"]],
+        ["animalBreed", ["Labrador", "Persian"]]
+      ]
+      ```
+      </TabItem>
+      
+      <TabItem value="Result 2">
+      ```TypeScript
+      // Output of resultArray2 - [string, string][];
+      [
+        ["animalType", "Animal Type: Dog; Cat; Horse"],
+        ["animalBreed", "Animal Breed: Labrador; Persian"],
+        ["animalStatus", "Animal Status: Available | Adopted"]
+      ]
+      ```
+      </TabItem>
+    </Tabs>
+  </div>
+</details>
+
+## `Map<string, string[]>`
+
+To convert the given object into the desired format using `Map<string, string[]>` in TypeScript and <br></br> skip the filters with `filterType` as `BOOLEAN`, <br></br> you can follow these steps:
+
+1. Create a new `Map<string, string[]>`.
+2. Iterate over the `appliedSearchFilters` array.
+3. For each filter, check if the `filterType` is not `BOOLEAN`.
+4. For each filter, extract the `filterKey` and the `optionName` values.
+5. Add these values to the map.
+
+```ts
+const resultMap1 = new Map<string, string[]>();
+
+animalFilters.appliedSearchFilters.forEach(filter => {
+  if (filter.filterType !== 'BOOLEAN') {
+    const key = filter.filterKey;
+    const values = filter.appliedOptions.map(option => option.optionName);
+    resultMap1.set(key, values);
+  }
+});
+
+// Convert the Map to the desired array format i.e) [string, string[]][];
+const resultArray1 = Array.from(resultMap1.entries());
+```
+
+```TypeScript
+console.log(resultMap1);
+// Output of resultMap1 - Map<string, string[]>;
+Map (2) {
+  "animalType" => ["Dog", "Cat", "Horse"],
+   "animalBreed" => ["Labrador", "Persian"]
+   }
+```
+
+```TypeScript
+console.log(resultArray1);
+// Output of resultArray1 - [string, string[]][];
+[
+  ["animalType", ["Dog", "Cat", "Horse"]],
+  ["animalBreed", ["Labrador", "Persian"]]
+]
+```
+
+## `Map<string, string>`
+
+To convert the given object into the desired format using `Map<string, string>` in TypeScript, <br></br> you can follow these steps:
+
+1. Create a new `Map<string, string>`.
+2. Iterate over the `appliedSearchFilters` array.
+3. Extract the `filterKey` and the `optionName` values.
+4. Format the values as required and add them to the map.
+
+```typescript
+const resultMap2 = new Map<string, string>();
+
+animalFilters.appliedSearchFilters.forEach(filter => {
+  const key = filter.filterKey;
+  const values = filter.appliedOptions.map(option => option.optionName).join('; ');
+
+  let formattedValue: string;
+
+  switch (key) {
+    case 'animalType':
+      formattedValue = `Animal Type: ${values}`;
+      break;
+    case 'animalBreed':
+      formattedValue = `Animal Breed: ${values}`;
+      break;
+    case 'animalStatus':
+      formattedValue = `Animal Status: ${values.replace('; ', ' | ')}`;
+      break;
+    default:
+      formattedValue = values;
+  }
+  resultMap2.set(key, formattedValue);
+});
+
+// Convert the Map to the desired array format i.e) [string, string][];
+const resultArray2 = Array.from(resultMap2.entries());
+
+console.log(resultArray2);
+```
+
+```TypeScript
+console.log(resultMap2);
+// Output of resultMap2 - Map<string, string>;
+Map (3) {
+  "animalType" => "Animal Type: Dog; Cat; Horse", 
+  "animalBreed" => "Animal Breed: Labrador; Persian", 
+  "animalStatus" => "Animal Status: Available | Adopted"
+  }
+```
+
+```TypeScript
+console.log(resultArray2);
+// Output of resultArray2 - [string, string][];
+[
+  ["animalType", "Animal Type: Dog; Cat; Horse"],
+  ["animalBreed", "Animal Breed: Labrador; Persian"],
+  ["animalStatus", "Animal Status: Available | Adopted"]
+]
+```
