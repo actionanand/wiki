@@ -535,7 +535,20 @@ you can **re-bind arrow functions**, but you just can't change the meaning of `t
 }).bind(undefined, 1, 2, 3)();
 ```
 
-### Resources
+## `Number()` vs `parseInt()` in Converting Strings
+
+1. `Number()`: Searches the entire string for numbers. If it finds anything other than numbers in string, it will return `NaN` (short for Not a Number).
+
+2. `parseInt()` / `parseFloat()`
+Returns the first number in the string & ignoring the rest. If there are no numbers at the beginning of the string, it will return `NaN`.
+
+```ts
+let a = "13cool6";
+console.log(Number(a)); // output 13
+console.log(parseInt(a)); // output NaN
+```
+
+## Resources
 
 1. [My Favorite JavaScript Tips and Tricks](https://blog.greenroots.info/my-favorite-javascript-tips-and-tricks)
 2. [Almighty `this`, Demystified](https://dillionmegida.com/p/this-demystified/)
