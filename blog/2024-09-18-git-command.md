@@ -296,6 +296,16 @@ git merge --squash feature-branch
 git pull origin master
 ```
 
+39. **Check the differences between the working directory and the staging area:**
+   ```sh
+   git diff
+   ```
+
+40. **Check the differences between the staging area and the last commit:**
+   ```sh
+   git diff --staged
+   ```
+
 #### Breakdown of git pull origin master
 
 1. **Fetch Changes:**
@@ -336,3 +346,4 @@ graph TD;
 6. [Git Merge vs. Rebase: Key Differences](https://dev.to/codeparrot/git-merge-vs-rebase-key-differences-1pb4)
 7. [How to Create Diagrams as Code with Mermaid, GitHub, and Visual Studio Code](https://www.freecodecamp.org/news/diagrams-as-code-with-mermaid-github-and-vs-code/)
 8. [Creating diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
+9. [The Ultimate Git Command Cheatsheet](https://dev.to/dipakahirav/the-ultimate-git-command-cheatsheet-l31)
