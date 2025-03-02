@@ -333,3 +333,6 @@ graph TD;
 3. [git commands](https://github.com/joshnh/Git-Commands)
 4. [Git Branches: List, Create, Switch to, Merge, Push, & Delete](https://www.nobledesktop.com/learn/git/git-branches)
 5. [git stash and git pull - Stack Overflow](https://stackoverflow.com/questions/12476239/git-stash-and-git-pull)
+6. [Git Merge vs. Rebase: Key Differences](https://dev.to/codeparrot/git-merge-vs-rebase-key-differences-1pb4)
+7. [How to Create Diagrams as Code with Mermaid, GitHub, and Visual Studio Code](https://www.freecodecamp.org/news/diagrams-as-code-with-mermaid-github-and-vs-code/)
+8. [Creating diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
