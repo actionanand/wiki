@@ -10,7 +10,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'
 
 
-<!-- ### <Highlight color='#004080' highlight='fg' fontWeight='bold'> sub tab </Highlight> -->
+## <Highlight color='#004080' highlight='fg' fontWeight='bold'> Useful Git Commands </Highlight>
 
 1. Uninitialize Git repository
 
@@ -311,6 +311,20 @@ git pull origin master
    ```sh
    git merge origin/master
    ```
+## <Highlight color='#004080' highlight='fg' fontWeight='bold'> Mermaid Diagram </Highlight>
+
+```mermaid
+%%{init: { 'theme': 'forest' } }%%
+graph TD;
+    A[AInitial Commit] --> B[Commit 1]
+    B --> C[Commit 2]
+    C --> D[Commit 3]
+    D --> E[Commit 4]
+    C --> G[Feature Branch Commit 1]
+    G --> H[Feature Branch Commit 2]
+    H --> I[Feature Branch Commit 3]
+    I --> E
+```
 
 ## Ref
 
