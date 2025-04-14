@@ -1,0 +1,80 @@
+---
+sidebar_position: 1
+sidebar_label: 'Know Your Angular - part 1'
+title: Know Your Angular Part 1
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+### 1. **ngcc (Angular Compatibility Compiler)**
+- **What it is**: `ngcc` is a tool introduced in Angular 9 to <Highlight color='#C0C0C0'>convert libraries compiled with the older **View Engine** to be compatible with the newer **Ivy**</Highlight> rendering engine.
+- **Why it's needed**: Many third-party Angular libraries were built using the View Engine. To ensure compatibility with Ivy (the default rendering engine from Angular 9 onward), `ngcc` processes these libraries during the build step.
+- **How it works**: When you install a library, `ngcc` runs automatically (e.g., during `npm install` or `ng build`) and updates the library's metadata and code to work with Ivy.
+- **Status**: ngcc was deprecated and <Highlight color='#C0C0C0'>removed in Angular version 16</Highlight> because View Engine support was removed.
+
+---
+
+### 2. **View Engine**
+- **What it is**: The **View Engine** was Angular's original rendering and compilation engine, used in versions prior to Angular 9. Angular Compiler (<Highlight color='#C0C0C0'>a**NG**ular **C**ompiler</Highlight> or `ngc`) is the tool that compiles angular programs and their libraries in view engine.
+- **How it works**: It compiles Angular templates into JavaScript code at runtime or ahead-of-time (AOT). However, it had limitations in terms of performance and bundle size.
+- **Status**: <Highlight color='#C0C0C0'>Deprecated as of Angular 12 and removed in Angular 13</Highlight>. Ivy is now the default and only rendering engine.
+
+---
+
+### 3. **Ivy**
+- **What it is**: **Ivy** is Angular's next-generation rendering and compilation engine, introduced as the default in Angular 9.
+- **Key Features**:
+  - **Smaller bundle sizes**: Ivy generates more efficient code, reducing the size of the final JavaScript bundles.
+  - **Faster compilation**: It improves build times and <Highlight color='#C0C0C0'>incremental builds</Highlight> (optimizes the build process by only rebuilding parts of a project that have changed since the last build).
+  - **Better debugging**: Ivy provides more readable error messages and stack traces.
+  - **Tree-shakable components**: Unused components are removed from the final bundle, further optimizing performance.
+  - **Dynamic loading**: Ivy allows for <Highlight color='#C0C0C0'>dynamic component loading without the need for a factory</Highlight> (In Angular, the `ComponentFactoryResolver` is a service that maps a component class to its corresponding `ComponentFactory` which is used to dynamically create instances of that component at runtime).
+- **Backward compatibility**: Ivy is designed to work seamlessly with applications and libraries built using the View Engine (via `ngcc`).
+
+### 4. **AOT vs JIT**
+- AOT(Ahead-of-Time Compilation) compiles Angular templates and components **at build time**, before the application is run in the browser.
+- JIT(Just-in-Time Compilation) compiles Angular templates and components **in the browser at runtime**, after the application is loaded.
+
+| Feature                | AOT (Ahead-of-Time)         | JIT (Just-in-Time)         |
+|------------------------|-----------------------------|----------------------------|
+| **Compilation Time**   | At build time              | At runtime (in the browser)|
+| **Bundle Size**        | Smaller                    | Larger (includes compiler) |
+| **Rendering Speed**    | Faster                     | Slower                     |
+| **Error Detection**    | At build time              | At runtime                 |
+| **Use Case**           | Production builds          | Development builds         |
+
+### 5. **Angular JS vs Angular**
+
+| Feature/Aspect            | **Angular (2+)**                                  | **AngularJS (1.x)**                          |
+|---------------------------|---------------------------------------------------|----------------------------------------------|
+| **Architecture**          | **Component-based** architecture                      | **MVC** (Model-View-Controller) architecture     |
+| **Language**              | Written in **TypeScript** (a superset of JavaScript) | Written in **JavaScript**                   |
+| **Mobile Support**        | Designed with mobile-first approach               | Not optimized for mobile development         |
+| **Performance**           | Faster due to Ahead-of-Time (AOT) compilation and Ivy engine | Slower due to two-way data binding and digest cycle |
+| **Data Binding**          | Supports **unidirectional** and **bidirectional** data binding | Primarily **two-way data binding**          |
+| **Dependency Injection**  | Built-in hierarchical dependency injection system | Limited dependency injection                 |
+| **Directives**            | Divided into **structural** (e.g., `*ngIf`, `*ngFor`) and **attribute** directives | All directives are combined into one type   |
+| **DOM Manipulation**      | Does not manipulate the DOM directly; uses a virtual DOM approach | Direct DOM manipulation                      |
+| **Tooling**               | Uses modern tools like **CLI**, **Webpack**, and **TypeScript** | Relies on older tools like **Grunt** or **Gulp** |
+| **Routing**               | Uses a powerful **@angular/router** module        | Uses AngularJS's own routing mechanism       |
+| **Testing**               | Easier to test with tools like **Jasmine**, **Karma**, and **Protractor** | Testing is more complex                      |
+| **Backward Compatibility**| Not backward compatible with AngularJS            | N/A                                          |
+| **Learning Curve**        | Steeper due to TypeScript and modern concepts     | Easier for beginners familiar with JavaScript |
+| **Release Year**          | Released in **2016**                              | Released in **2010**                         |
+| **Support**               | Actively maintained and updated                   | No longer actively maintained (deprecated)   |
+
+### 6. **Why is Angular 3 skipped?**
+
+- Angular is being developed in a **MonoRepo** it means a single repo for everything. `@angular/core`, `@angular/compiler`, `@angular/router` etc are in the same repo and may have their own versions.
+- The advantage of MonoRepo is, you don’t have to deal with the versioning of the code dependencies.
+
+| **Package**              | **Version**   |
+|--------------------------|---------------|
+| **@angular/core**        | 2.3.0      |
+| **@angular/compiler**    | 2.3.0      |
+| **@angular/router**      | **3.3.0**      |
+| **@angular/http**        | 2.3.0  |
+| **@angular/compiler-cli**| 2.3.0      |
+
+- Now the problem is with the `@angular/router` which is already in a <Highlight color='#C0C0C0'>3.X version</Highlight>. And that’s <Highlight color='#C0C0C0'>because of some active and huge developments on the router section, like route-preload</Highlight>.
+- Now releasing Angular as version 3, with its router on version 4 will create confusion. To avoid this confusion they decided to skip the version 3 and release with version 4.0.0, so that every major dependency in the MonoRepo are on the right track.

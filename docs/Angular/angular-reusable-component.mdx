@@ -1,0 +1,148 @@
+---
+sidebar_position: 3
+sidebar_label: 'Angular Reusable component'
+title: Angular Reusable component
+---
+
+import Highlight from '@site/src/components/Highlight';
+
+`ngTemplateOutlet` is a structural directive in Angular that allows you to dynamically render a template at runtime. It is often used when you want to reuse templates or render different templates based on some condition.
+
+`ngTemplateOutletContext` is used to pass data (context) to the dynamically rendered template.
+
+---
+
+### **Basic Syntax**
+```html
+<ng-container [ngTemplateOutlet]="templateRef; context: contextObject"></ng-container>
+```
+
+- **`templateRef`**: A reference to the template you want to render.
+- **`contextObject`**: An object that provides data to the template.
+
+---
+
+### **Example: Using `ngTemplateOutlet` and `ngTemplateOutletContext`**
+
+#### **HTML Template**
+```html
+<div>
+  <h3>Dynamic Template Example</h3>
+
+  <!-- Render the template dynamically -->
+  <ng-container [ngTemplateOutlet]="dynamicTemplate; context: { $implicit: 'Hello', name: 'Angular' }"></ng-container>
+
+  <!-- Define the template -->
+  <ng-template #dynamicTemplate let-message let-name="name">
+    <p>{{ message }}, {{ name }}!</p>
+  </ng-template>
+</div>
+```
+
+#### **Explanation**
+1. **`ngTemplateOutlet`**:
+   - Dynamically renders the `dynamicTemplate` template.
+
+2. **`ngTemplateOutletContext`**:
+   - Passes the context object `{ $implicit: 'Hello', name: 'Angular' }` to the template.
+   - `$implicit` is a special key that allows you to pass a default value to the template.
+
+3. **Template Variables**:
+   - `let-message`: Binds the `$implicit` value (`'Hello'`) to the `message` variable.
+   - `let-name="name"`: Binds the `name` property from the context object to the `name` variable.
+
+4. **Output**:
+   - The template renders as:
+     ```html
+     <p>Hello, Angular!</p>
+     ```
+
+---
+
+### **Advanced Example: Using `ngTemplateOutlet` in a Table**
+
+#### **HTML Template**
+```html
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">
+      <ng-container [ngTemplateOutlet]="nameTemplate; context: { $implicit: element.name }"></ng-container>
+    </td>
+  </ng-container>
+
+  <!-- Age Column -->
+  <ng-container matColumnDef="age">
+    <th mat-header-cell *matHeaderCellDef>Age</th>
+    <td mat-cell *matCellDef="let element">
+      <ng-container [ngTemplateOutlet]="ageTemplate; context: { $implicit: element.age }"></ng-container>
+    </td>
+  </ng-container>
+
+  <!-- Header and Row Definitions -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<!-- Templates -->
+<ng-template #nameTemplate let-name>
+  <strong>{{ name }}</strong>
+</ng-template>
+
+<ng-template #ageTemplate let-age>
+  <span *ngIf="age >= 18; else minor">Adult</span>
+  <ng-template #minor>Minor</ng-template>
+</ng-template>
+```
+
+#### **Component Class**
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  displayedColumns: string[] = ['name', 'age'];
+  dataSource = [
+    { name: 'John Doe', age: 25 },
+    { name: 'Jane Smith', age: 17 },
+    { name: 'Alice Johnson', age: 30 }
+  ];
+}
+```
+
+#### **Explanation**
+1. **Dynamic Templates**:
+   - The `nameTemplate` and `ageTemplate` are defined as reusable templates.
+   - These templates are dynamically rendered using `ngTemplateOutlet`.
+
+2. **Context Passing**:
+   - The `context` object is used to pass data (`name` and `age`) to the templates.
+
+3. **Conditional Rendering**:
+   - The `ageTemplate` uses an `*ngIf` directive to display "Adult" or "Minor" based on the age.
+
+4. **Output**:
+   - The table dynamically renders the `name` and `age` columns with custom templates.
+
+---
+
+### **Key Points**
+- **`ngTemplateOutlet`**:
+  - Dynamically renders a template.
+  - Useful for reusing templates or rendering templates conditionally.
+
+- **`ngTemplateOutletContext`**:
+  - Passes data to the dynamically rendered template.
+  - Use `$implicit` for default values or define custom keys.
+
+- **Use Cases**:
+  - Dynamic content rendering.
+  - Custom templates in tables or lists.
+  - Reusable templates for different components.
+
+This approach is especially useful in Angular Material tables (`mat-table`) for creating custom column templates.
