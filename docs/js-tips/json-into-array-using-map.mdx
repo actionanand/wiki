@@ -224,3 +224,48 @@ console.log(resultArray2);
   ["animalStatus", "Animal Status: Available | Adopted"]
 ]
 ```
+
+## <Highlight color='#C0C0C0'>Array of Arrays</Highlight> into <Highlight color='#C0C0C0'>Array of Objects</Highlight>
+
+```ts
+// Filter and map the array to include only the desired keys
+const convertedArray = inputArray
+  .filter(([key]) => key !== "fruitStatus" && key !== "fruitIsSeasonal")
+  .map(([key, value]) => ({ key, value }));
+```
+
+```ts
+// input
+
+const inputArray = [
+  ["fruitName", "Name: Apple"],
+  ["fruitColor", "Color: Red"],
+  ["fruitStatus", "Status: Fresh"],
+  ["fruitIsSeasonal", "IsSeasonal: true"]
+];
+
+// Output
+
+[
+  { key: "fruitName", value: "Name: Apple" },
+  { key: "fruitColor", value: "Color: Red" }
+]
+```
+
+```ts
+// input
+
+const inputArray = [
+  ["fruitName", ["Apple"]],
+  ["fruitColor", ["Red"]],
+  ["fruitStatus", ["Fresh"]],
+  ["fruitIsSeasonal", ["true"]]
+];
+
+// Output
+
+[
+  { key: "fruitName", value: ["Apple"] },
+  { key: "fruitColor", value: ["Red"] }
+]
+```
