@@ -21,6 +21,7 @@ reverseString('hello');
 ```js
 function reverseString(str) {
   let newString = '';
+  // iterate from the end
   for (let i = str.length - 1; i >= 0; i--) {
     newString += str[i]; // str[0] = 'h'
   }
