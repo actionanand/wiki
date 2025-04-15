@@ -233,3 +233,104 @@ function generateFibonacciSequence(limit) {
 }
 ```
 
+## Swap two numbers
+
+### Swap two numbers using a Temporary Variable
+
+```js
+function swapNumbers(a, b) {
+  let temp = a;
+  a = b;
+  b = temp;
+  return [a, b];
+}
+
+// Example usage
+let [x, y] = swapNumbers(5, 10);
+console.log(x, y); // Output: 10, 5
+```
+
+### Swap two numbers using Arithmetic Operations
+
+```js
+function swapNumbers(a, b) {
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  return [a, b];
+}
+
+// Example usage
+let [x, y] = swapNumbers(5, 10);
+console.log(x, y); // Output: 10, 5
+```
+
+### Swap two numbers using Array Destructuring
+
+```js
+function swapNumbers(a, b) {
+  [a, b] = [b, a];
+  return [a, b];
+}
+
+// Example usage
+let [x, y] = swapNumbers(5, 10);
+console.log(x, y); // Output: 10, 5
+```
+
+### Swap two numbers  using Binory operator
+
+```js
+let a = 5; // Binary: 0101
+let b = 3; // Binary: 0011
+
+// Swapping using XOR
+a = a ^ b; // a becomes 0101 ^ 0011 = 0110 (6 in decimal)
+b = a ^ b; // b becomes 0110 ^ 0011 = 0101 (5 in decimal)
+a = a ^ b; // a becomes 0110 ^ 0101 = 0011 (3 in decimal)
+
+console.log(`After swapping: a = ${a}, b = ${b}`);
+```
+
+## Add two complex numbers
+
+```js
+function addComplexNumbers(c1, c2) {
+  return {
+    real: c1.real + c2.real,
+    imaginary: c1.imaginary + c2.imaginary
+  };
+}
+
+// Example usage
+const complex1 = { real: 3, imaginary: 4 }; // 3 + 4i
+const complex2 = { real: 1, imaginary: 2 }; // 1 + 2i
+
+const result = addComplexNumbers(complex1, complex2);
+console.log(`${result.real} + ${result.imaginary}i`); // Output: 4 + 6i
+```
+
+### Complex number format
+
+```js
+function parseComplexNumber(input) {
+  // Remove spaces and split the input into parts
+  // highlight-next-line
+  const parts = input.replace(/\s+/g, '').split('+');
+  /*
+  \s: Matches any whitespace character, including spaces, tabs, and line breaks.
+  +: Matches one or more occurrences of the preceding pattern (\s in this case).
+  */
+  
+  // Extract the real and imaginary parts
+  const real = parseInt(parts[0]);
+  const imaginary = parseInt(parts[1].replace('i', ''));
+
+  return { real, imaginary };
+}
+
+// Example usage
+const input = "3 + 4i";
+const result = parseComplexNumber(input);
+console.log(result); // Output: { real: 3, imaginary: 4 }
+```
