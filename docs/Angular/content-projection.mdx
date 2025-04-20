@@ -1,0 +1,112 @@
+---
+sidebar_position: 4
+sidebar_label: 'Content Projection'
+title: Content Projection in Angular
+---
+
+Content projection in Angular is a pattern that allows you to insert or project content from a parent component into a child component. It enables developers to create reusable and flexible components by allowing the parent to control what content is displayed inside the child component.
+
+### How It Works:
+1. **`<ng-content>` Directive**: The `ng-content` directive is used in the child component's template to define where the projected content will be inserted.
+2. **Parent-Child Relationship**: The parent component provides the content, and the child component determines where and how to display it.
+
+### Example:
+
+#### Child Component (`child.component.html`):
+```html
+<div class="child-container">
+  <h2>Child Component</h2>
+  <ng-content></ng-content> <!-- Content from the parent will be projected here -->
+</div>
+```
+
+#### Parent Component (`parent.component.html`):
+```html
+<app-child>
+  <p>This is projected content from the parent component.</p>
+</app-child>
+```
+
+#### Result:
+The rendered output will look like this:
+```html
+<div class="child-container">
+  <h2>Child Component</h2>
+  <p>This is projected content from the parent component.</p>
+</div>
+```
+
+### Advanced Content Projection:
+1. **Multiple Projections**: You can use multiple `<ng-content>` tags with `select` attributes to project specific parts of the content.
+2. **Default Content**: If no content is provided by the parent, you can include default content in the child component.
+
+#### Example of Multiple Projections:
+```html
+<!-- Child Component -->
+<div>
+  <header>
+    <ng-content select="[header]"></ng-content>
+  </header>
+  <main>
+    <ng-content></ng-content>
+  </main>
+</div>
+
+<!-- Parent Component -->
+<app-child>
+  <div header>Header Content</div>
+  <p>Main Content</p>
+</app-child>
+```
+
+### Use Cases:
+- Creating reusable UI components like modals, tabs, or cards.
+- Allowing flexibility in how components are used by their parent components.
+
+## Aliasing `ngProjectAs`
+
+Considering the following component:
+
+```ts
+@Component({
+  selector: "app-card",
+  template: `
+    <div class="card">
+      <div class="card-header">
+        <ng-content select="app-card-title" />
+      </div>
+      <div class="card-body">
+        <ng-content select="app-card-body" />
+      </div>
+      <div class="card-footer">
+        <ng-content select="app-card-footer" />
+      </div>
+    </div>
+  `,
+})
+export class Card {}
+```
+
+The named slots have changed to `app-card-title`, `app-card-body`, and `app-card-footer`. This means that the consumers would have to use `<app-card-title />` for the `card-header` projection slot and so on.
+
+This, in a sense, allows the consumers to use the `Card` component more correctly but it is also more strict. Sometimes, you might want to render more elements than just `<app-card-title />` for the header slot. This is where `ngProjectAs` comes in
+
+```ts
+<app-card>
+  <app-card-title>Card Title</app-card-title>
+</app-card>
+
+// along with `app-card-title` html selector (card title component) we have to use <i></i> html selector also.
+// If we're not using `ngProjectAs`, other than <app-card-title></app-card-title> could have not been considered.
+<app-card>
+  <ng-container ngProjectAs="app-card-title">
+    <app-card-title>Card Title</app-card-title>
+    <i>some_icon</i>
+  </ng-contaier>
+</app-card>
+```
+
+
+### Resources
+
+1. [Angular Content Projection](https://nartc.me/blog/angular-content-projection/)
