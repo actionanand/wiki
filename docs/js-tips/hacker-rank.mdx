@@ -1,0 +1,439 @@
+---
+sidebar_position: 13
+sidebar_label: 'Hacker Rank part-1'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Hacker Rank - Part 1
+
+## Number of duplicates
+
+Write a TypeScript function that takes three arrays (`names`, `prices`, and `weights`) as input, where each index represents an item with its name, price, and weight. The function should determine the number of unique duplicate items based on the combination of name, price, and weight. For example, given the inputs:
+
+```ts
+const names = ['apple', 'mango', 'apple', 'banana', 'apple'];
+const prices = [20, 20, 30, 30, 30];
+const weights = [1, 3, 1, 3, 1];
+```
+
+The function should return `1` because the combination of `name[2]`, `price[2]`, `weight[2]` and `name[4]`, `price[4]`, `weight[4]` is a duplicate. Implement the function and explain how it works.
+
+| Index | Name   | Price | Weight |
+|-------|--------|-------|--------|
+| 0     | apple  | 20    | 1      |
+| 1     | mango  | 20    | 3      |
+| **2**     | **apple**  | **30**    | **1**      |
+| 3     | banana | 30    | 3      |
+| **4**     | **apple**  | **30**    | **1**      |
+
+<Tabs>
+  <TabItem value="own" label="My Idea" default>
+    ```ts
+    function findDuplicates(names: string[], prices: number[], weights: number[]): number {
+      const arr: string[] = [];
+
+      names.forEach((el, i) => {
+        prices.forEach((rs, j) => {
+          weights.forEach((kg, k) => {
+            if (i === j && i === k) {
+              arr.push(`${names[i]}-${prices[j]}-${weights[k]}`);
+            }
+          });
+        });
+      });
+
+      // the total time complexity of the above nested loops is: O(n³).
+
+      const dupl = arr.filter((value, i) => arr.indexOf(value) !== i);
+
+      // The `filter` method runs in O(n²) because for each element, it performs an `indexOf` operation
+
+      return dupl.length;
+    }
+    ```
+  </TabItem>
+  <TabItem value="set" label="Optimized Code">
+    ```ts
+    function findDuplicates(names: string[], prices: number[], weights: number[]): number {
+      const seen = new Set<string>(); // To track unique combinations
+      const duplicates = new Set<string>(); // To track duplicates
+
+      names.forEach((_, i) => {
+        // Create a unique key for each combination of name, price, and weight
+        const key = `${names[i]}-${prices[i]}-${weights[i]}`;
+
+        if (seen.has(key)) {
+          // If the key is already in the set, it's a duplicate
+          duplicates.add(key);
+        } else {
+          // Otherwise, add it to the seen set
+          seen.add(key);
+        }
+      });
+
+      return duplicates.size; // Return the number of unique duplicate combinations
+    }
+    ```
+  </TabItem>
+</Tabs>
+
+### **Comparison with Original Code**
+| Feature                  | Original Code                  | Optimized Code                  |
+|--------------------------|---------------------------------|---------------------------------|
+| **Time Complexity**      | **O(n³ + n²)**                 | **O(n)**                       |
+| **Space Complexity**     | **O(n)** (due to `arr`)        | **O(n)** (due to `Set`)        |
+| **Duplicate Detection**  | Uses `filter` and `indexOf`    | Uses `Set` for constant-time checks |
+| **Readability**          | More complex with nested loops | Simplified with a single loop  |
+
+* [Big O Cheat Sheet – Time Complexity Chart](https://www.freecodecamp.org/news/big-o-cheat-sheet-time-complexity-chart/)
+
+## Minimum number of recommendation engines required
+
+This problem is about determining the **minimum number of recommendation engines** required to process overlapping user sessions on an online streaming platform. Each session has a start and end time, and each session requires exactly one recommendation engine. The goal is to calculate how many engines are needed to handle all sessions without conflicts.
+
+---
+
+### **Problem Explanation**
+1. **Input**:
+   - A 2D array `sessionTimings` of size `n x 2`, where each element represents `[startTime, endTime]` of a session.
+   - Example:
+     ```ts
+     const sessionTimings = [
+       [1, 4], // Session 1: Starts at time 1, ends at time 4
+       [2, 5], // Session 2: Starts at time 2, ends at time 5
+       [7, 9], // Session 3: Starts at time 7, ends at time 9
+     ];
+     ```
+
+2. **Output**:
+   - The minimum number of recommendation engines required to process all sessions.
+   - Example:
+     - For the above input, the output is `2` because:
+       - Session 1 and Session 2 overlap, so two engines are needed.
+       - Session 3 does not overlap with the others, so only one engine is needed for it.
+
+3. **Key Constraints**:
+   - Each session requires exactly one recommendation engine.
+   - If two or more sessions overlap, they cannot share the same engine.
+
+---
+
+### **Approach to Solve the Problem**
+To solve this problem, we need to determine the maximum number of overlapping sessions at any point in time. This will tell us the minimum number of engines required.
+
+#### **Steps**:
+1. **Separate Start and End Times**:
+   - Extract all start times and end times from the input array.
+   - Sort both arrays in ascending order.
+
+2. **Use Two Pointers**:
+   - Use two pointers (`startPointer` and `endPointer`) to iterate through the sorted start and end times.
+   - Keep track of the number of active sessions (`activeSessions`) at any given time.
+
+3. **Count Overlaps**:
+   - If a session starts before the previous session ends (`startTime < endTime`), increment the `activeSessions` count.
+   - If a session ends (`startTime >= endTime`), decrement the `activeSessions` count.
+
+4. **Track Maximum Overlaps**:
+   - Keep track of the maximum value of `activeSessions` during the iteration. This value represents the minimum number of recommendation engines required.
+
+---
+
+### **Example Walkthrough**
+#### Input:
+```ts
+const sessionTimings = [
+  [1, 4],
+  [2, 5],
+  [7, 9],
+  [3, 6],
+];
+```
+
+#### Steps:
+1. **Extract and Sort Start and End Times**:
+   - Start times: `[1, 2, 3, 7]`
+   - End times: `[4, 5, 6, 9]`
+
+2. **Iterate Using Two Pointers**:
+   - Initialize `activeSessions = 0` and `maxEngines = 0`.
+   - Compare `startTimes[startPointer]` with `endTimes[endPointer]`:
+     - At `startTime = 1`: Increment `activeSessions` to `1`. Update `maxEngines = 1`.
+     - At `startTime = 2`: Increment `activeSessions` to `2`. Update `maxEngines = 2`.
+     - At `startTime = 3`: Increment `activeSessions` to `3`. Update `maxEngines = 3`.
+     - At `endTime = 4`: Decrement `activeSessions` to `2`.
+     - At `endTime = 5`: Decrement `activeSessions` to `1`.
+     - At `startTime = 7`: Increment `activeSessions` to `2`.
+     - At `endTime = 6`: Decrement `activeSessions` to `1`.
+
+3. **Result**:
+   - The maximum value of `activeSessions` is `3`, so `3` recommendation engines are required.
+
+---
+
+### **Code Implementation**
+Here is the TypeScript implementation:
+
+```ts
+function minRecommendationEngines(sessions: number[][]): number {
+  if (sessions.length === 0) {
+    return 0;
+  }
+
+  // Separate start and end times into two arrays
+  const startTimes = sessions.map(session => session[0]).sort((a, b) => a - b);
+  const endTimes = sessions.map(session => session[1]).sort((a, b) => a - b);
+
+  let enginesRequired = 0;
+  let activeSessions = 0;
+  let startPointer = 0;
+  let endPointer = 0;
+
+  // Iterate through all start times
+  while (startPointer < startTimes.length) {
+    if (startTimes[startPointer] < endTimes[endPointer]) {
+      // A new session starts before the current session ends
+      activeSessions++;
+      enginesRequired = Math.max(enginesRequired, activeSessions);
+      startPointer++;
+    } else {
+      // A session ends
+      activeSessions--;
+      endPointer++;
+    }
+  }
+
+  return enginesRequired;
+}
+
+// Example usage
+const sessions = [
+  [1, 4],
+  [2, 5],
+  [7, 9],
+  [3, 6],
+];
+console.log(minRecommendationEngines(sessions)); // Output: 3
+```
+
+---
+
+### **Key Points**
+1. **Sorting**:
+   - Sorting the start and end times ensures that we process sessions in chronological order.
+
+2. **Two Pointers**:
+   - The two-pointer technique efficiently tracks overlapping sessions without needing nested loops.
+
+3. **Time Complexity**:
+   - Sorting the start and end times: `O(n log n)`.
+   - Iterating through the sessions: `O(n)`.
+   - Overall complexity: `O(n log n)`.
+
+4. **Space Complexity**:
+   - Storing start and end times: `O(n)`.
+
+---
+
+### **Conclusion**
+This approach efficiently calculates the minimum number of recommendation engines required by determining the maximum number of overlapping sessions at any point in time. It uses sorting and the two-pointer technique to achieve optimal performance.
+
+## FizzBuzz
+
+<Tabs>
+  <TabItem value="custom" label="Traditional">
+  ```ts
+  function fizzBuzz(n: number): void {
+    for (let i = 1; i <= n; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+      } else if (i % 3 === 0) {
+        console.log("Fizz");
+      } else if (i % 5 === 0) {
+        console.log("Buzz");
+      } else {
+        console.log(i);
+      }
+    }
+  }
+
+  // Example usage
+  fizzBuzz(15);
+  ```
+  </TabItem>
+  <TabItem value="own" label="My Idea" default>
+  ```ts
+  function fizzBuzz(n: number): void {
+    Array.from({ length: n }, (_, i) => {
+      const index = i + 1; // Adjust index to start from 1
+      if (index % 3 === 0 && index % 5 === 0) {
+        console.log('FizzBuzz');
+      } else if (index % 3 === 0) {
+        console.log('Fizz');
+      } else if (index % 5 === 0) {
+        console.log('Buzz');
+      } else {
+        console.log(index);
+      }
+    });
+  }
+
+  fizzBuzz(15);
+  ```
+  </TabItem>
+  <TabItem value="without" label="Without %">
+  ```ts
+  function fizzBuzzWithoutMod(n: number): void {
+    let fizz = 3; // Counter for "Fizz"
+    let buzz = 5; // Counter for "Buzz"
+
+    for (let i = 1; i <= n; i++) {
+      let output = "";
+
+      if (fizz === 0 && buzz === 0) {
+        output = "FizzBuzz";
+        fizz = 3; // Reset Fizz counter
+        buzz = 5; // Reset Buzz counter
+      } else if (fizz === 0) {
+        output = "Fizz";
+        fizz = 3; // Reset Fizz counter
+      } else if (buzz === 0) {
+        output = "Buzz";
+        buzz = 5; // Reset Buzz counter
+      } else {
+        output = i.toString();
+      }
+
+      console.log(output);
+
+      fizz--; // Decrement Fizz counter
+      buzz--; // Decrement Buzz counter
+    }
+  }
+
+  // Example usage
+  fizzBuzzWithoutMod(15);
+  ```
+  </TabItem>
+</Tabs>
+
+---
+
+### **Explanation**
+1. **Input**:
+   - The function takes an integer `n` as input, which represents the range of numbers to process (from `1` to `n`).
+
+2. **Logic**:
+   - For each number `i` from `1` to `n`:
+     - If `i` is divisible by both `3` and `5`, print `"FizzBuzz"`.
+     - If `i` is divisible by `3` only, print `"Fizz"`.
+     - If `i` is divisible by `5` only, print `"Buzz"`.
+     - Otherwise, print the number `i`.
+
+3. **Output**:
+   - For `n = 15`, the output will be:
+     ```
+     1
+     2
+     Fizz
+     4
+     Buzz
+     Fizz
+     7
+     8
+     Fizz
+     Buzz
+     11
+     Fizz
+     13
+     14
+     FizzBuzz
+     ```
+
+---
+
+### **Time Complexity**
+- The loop runs from `1` to `n`, so the time complexity is **O(n)**.
+
+### **Space Complexity**
+- The function uses constant space, so the space complexity is **O(1)**.---
+
+### **Time Complexity**
+- The loop runs from `1` to `n`, so the time complexity is **O(n)**.
+
+### **Space Complexity**
+- The function uses constant space, so the space complexity is **O(1)**.
+
+
+## FizzBuzz using bitmask
+
+This code implements the **FizzBuzz** logic using a **bitmask** (`mask`) and a predefined array of words (`words`). Here's how it works:
+
+---
+
+### **Key Components**
+1. **`words` Array**:
+   ```ts
+   const words = [undefined, 'Fizz', 'Buzz', 'FizzBuzz'];
+   ```
+   - This array maps the values `1`, `2`, and `3` to `"Fizz"`, `"Buzz"`, and `"FizzBuzz"`, respectively.
+   - `undefined` is used for numbers that are not divisible by `3` or `5`.
+
+2. **`mask`**:
+   ```ts
+   let mask = 810092048; // Binary: 11 00 00 01 00 10 01 00 00 01 10 00 01 00 00
+   ```
+   - The `mask` is a 30-bit binary number that encodes the FizzBuzz pattern for numbers from `1` to `15`.
+   - Each pair of bits (`00`, `01`, `10`, `11`) represents:
+     - `00`: A number that is neither divisible by `3` nor `5`.
+     - `01`: A number divisible by `3` (Fizz).
+     - `10`: A number divisible by `5` (Buzz).
+     - `11`: A number divisible by both `3` and `5` (FizzBuzz).
+
+3. **Bitwise Operations**:
+   - **Extracting the Current Value**:
+     ```ts
+     const c = mask & 3;
+     ```
+     - The `& 3` operation extracts the last two bits of the `mask` (the current FizzBuzz value).
+   - **Updating the Mask**:
+     ```ts
+     mask = (mask >> 2) | (c << 28);
+     ```
+     - The `mask` is shifted right by 2 bits (`>> 2`) to process the next value.
+     - The extracted value (`c`) is shifted left by 28 bits (`c << 28`) and added back to the mask to maintain the circular pattern.
+
+4. **Logic**:
+   - If `c` is `1`, `2`, or `3`, the corresponding word (`Fizz`, `Buzz`, or `FizzBuzz`) is printed.
+   - If `c` is `0`, the current number (`i`) is printed.
+
+---
+
+### **How It Works**
+1. The `mask` encodes the FizzBuzz pattern for numbers from `1` to `15`.
+2. The loop iterates from `1` to `100`.
+3. For each number:
+   - The last two bits of the `mask` determine whether to print `"Fizz"`, `"Buzz"`, `"FizzBuzz"`, or the number itself.
+   - The `mask` is updated to maintain the circular FizzBuzz pattern.
+
+---
+
+This pattern repeats every 15 numbers, so the output for numbers from `1` to `100` will follow the same FizzBuzz logic.
+
+---
+
+### **Advantages**
+1. **Efficient**:
+   - The FizzBuzz logic is precomputed and encoded in the `mask`, reducing the need for modulus operations (`%`).
+2. **Compact**:
+   - The use of bitwise operations makes the implementation concise and avoids repetitive conditionals.
+
+---
+
+### **Time Complexity**
+- The loop runs from `1` to `100`, so the time complexity is **O(n)**, where `n` is the range of numbers.
+
+### **Space Complexity**
+- The space complexity is **O(1)**, as the `mask` and `words` array use constant space.
