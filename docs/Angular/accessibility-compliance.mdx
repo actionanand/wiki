@@ -4,11 +4,33 @@ sidebar_label: 'Accessibility Compliance'
 title: Frontend Accessibility Compliance 
 ---
 
-To implement **WCAG (Web Content Accessibility Guidelines)** principles (**POUR**) and **ARIA (Accessible Rich Internet Applications)** in an Angular application, you can follow these best practices:
+### **What is Accessibility (a11y)?**
+Accessibility refers to designing and developing websites, applications, and tools in a way that they can be used by everyone, including people with disabilities. This includes considerations for users with visual, auditory, motor, or cognitive impairments.
+
+**a11y** is a numeronym for **"accessibility"**. The number **11** represents the 11 letters between the first letter "a" and the last letter "y" in the word "accessibility."
+
+### **Why is Accessibility Important?**
+- Ensures inclusivity for all users.
+- Improves usability for everyone, not just users with disabilities.
+- Often required by laws and regulations (e.g., WCAG, ADA, Section 508).
+
+### **Key Aspects of Accessibility (a11y):**
+1. **Perceivable**: Content must be presented in ways users can perceive (e.g., text alternatives for images).
+2. **Operable**: Users must be able to interact with the interface (e.g., keyboard navigation).
+3. **Understandable**: Content and interface must be easy to understand.
+4. **Robust**: Content must work across various devices, browsers, and assistive technologies.
+
+### **Standards and Guidelines:**
+- **WCAG (Web Content Accessibility Guidelines)**: A set of guidelines for making web content accessible.
+- **ARIA (Accessible Rich Internet Applications)**: Attributes to enhance accessibility for dynamic content and user interface components.
 
 ---
 
+To implement **WCAG (Web Content Accessibility Guidelines)** principles (**POUR**) and **ARIA (Accessible Rich Internet Applications)** in an Angular application, you can follow these best practices:
+
 ## **WCAG Principles (POUR)** in Angular
+
+The correct pronunciation of **WCAG** is typically **"W-C-A-G"**, where each letter is pronounced individually: **"double-u see ay gee"**. However, some people pronounce it as **"wi-kag"** or **"double-yu-kag"**, but the most widely accepted pronunciation is spelling out the letters: **"W-C-A-G"**.
 
 ### 1. **Perceivable**
    - Ensure that content is presented in ways that users can perceive.
@@ -188,9 +210,10 @@ To implement **WCAG (Web Content Accessibility Guidelines)** principles (**POUR*
    Use tools like `eslint-plugin-jsx-a11y` or `axe` to identify accessibility issues.
 
 3. **Accessibility Testing Tools**:
-   - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+   - [Lighthouse](https://developers.google.com/web/tools/lighthouse) (built into Chrome DevTools)
    - [axe DevTools](https://www.deque.com/axe/devtools/)
-   - [NVDA](https://www.nvaccess.org/)
+   - [NVDA](https://www.nvaccess.org/) (screen reader)
+   - [WAVE](https://wave.webaim.org/) (Web Accessibility Evaluation Tool)
 
 ---
 
@@ -222,4 +245,3 @@ It looks like this:
 ```
 
 By adding `attr` in front of the attribute name you want to bind dynamically, you're "telling" Angular that it shouldn't try to find a property with the specified name but instead bind the respective attribute - in the example above, the `aria-valuenow` and `aria-valuemax` attributes would be bound dynamically.
-
