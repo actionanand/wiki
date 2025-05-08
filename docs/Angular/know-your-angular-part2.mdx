@@ -6,3 +6,73 @@ title: Know Your Angular Part 2
 
 import Highlight from '@site/src/components/Highlight';
 
+## Making HTTP Requests and managing different HTTP codes
+
+Use Angular's `HttpClient` to make HTTP requests. Here's an example of a GET request that handles different HTTP status codes, including **202 Accepted**:
+
+#### Example Service:
+```typescript
+// my-service.service.ts
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class MyService {
+  private apiUrl = 'https://api.example.com/data'; // Replace with your API URL
+
+  constructor(private http: HttpClient) {}
+
+  getData(): Observable<any> {
+    return this.http.get(this.apiUrl, { observe: 'response' }).pipe(
+      tap((response) => {
+        if (response.status === 202) {
+          console.log('Request accepted but processing is not complete.');
+        }
+      }),
+      map((response) => response.body), // Extract the response body
+      catchError(this.handleError) // Handle errors
+    );
+  }
+
+  private handleError(error: HttpErrorResponse): Observable<never> {
+    let errorMessage = 'An unknown error occurred!';
+    if (error.error instanceof ErrorEvent) {
+      // Client-side error
+      errorMessage = `Client-side error: ${error.error.message}`;
+    } else {
+      // Server-side error
+      switch (error.status) {
+        case 400:
+          errorMessage = 'Bad Request';
+          break;
+        case 401:
+          errorMessage = 'Unauthorized';
+          break;
+        case 403:
+          errorMessage = 'Forbidden';
+          break;
+        case 404:
+          errorMessage = 'Not Found';
+          break;
+        case 500:
+          errorMessage = 'Internal Server Error';
+          break;
+        case 202:
+          errorMessage = 'Request Accepted but not yet processed.';
+          break;
+        default:
+          errorMessage = `Unexpected error: ${error.status}`;
+      }
+    }
+    console.error(errorMessage);
+    return throwError(() => new Error(errorMessage));
+  }
+}
+```
+
+---
+
