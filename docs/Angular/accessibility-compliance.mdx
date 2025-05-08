@@ -1,0 +1,225 @@
+---
+sidebar_position: 5
+sidebar_label: 'Accessibility Compliance'
+title: Frontend Accessibility Compliance 
+---
+
+To implement **WCAG (Web Content Accessibility Guidelines)** principles (**POUR**) and **ARIA (Accessible Rich Internet Applications)** in an Angular application, you can follow these best practices:
+
+---
+
+## **WCAG Principles (POUR)** in Angular
+
+### 1. **Perceivable**
+   - Ensure that content is presented in ways that users can perceive.
+
+#### Implementation in Angular:
+- **Text Alternatives for Images**:
+  Use the `alt` attribute for images.
+  ```html
+  <img src="logo.png" alt="Company Logo">
+  ```
+
+- **ARIA Roles and Labels**:
+  Use ARIA attributes to provide additional context for screen readers.
+  ```html
+  <button aria-label="Submit Form">Submit</button>
+  ```
+
+- **Angular Material Accessibility**:
+  Angular Material components are designed with accessibility in mind.
+  ```html
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="Enter your username">
+  </mat-form-field>
+  ```
+
+- **Color Contrast**:
+  Ensure sufficient contrast between text and background colors. Use tools like [Contrast Checker](https://webaim.org/resources/contrastchecker/) to verify.
+
+---
+
+### 2. **Operable**
+   - Ensure that users can interact with the interface using a keyboard or other assistive technologies.
+
+#### Implementation in Angular:
+- **Keyboard Navigation**:
+  Ensure all interactive elements are focusable and navigable using the `tab` key.
+  ```html
+  <button tabindex="0">Click Me</button>
+  ```
+
+- **Focus Management**:
+  Use Angular's `Renderer2` or `@angular/cdk/a11y` to manage focus dynamically.
+  ```typescript
+  import { FocusMonitor } from '@angular/cdk/a11y';
+
+  constructor(private focusMonitor: FocusMonitor) {}
+
+  ngAfterViewInit() {
+    this.focusMonitor.focusVia(this.buttonElement, 'keyboard');
+  }
+  ```
+
+- **Skip Links**:
+  Provide a "Skip to Content" link for keyboard users.
+  ```html
+  <a href="#main-content" class="skip-link">Skip to Content</a>
+  <div id="main-content">
+    <!-- Main content here -->
+  </div>
+  ```
+
+- **Avoid Time Limits**:
+  Avoid or provide options to extend time limits for user interactions.
+
+---
+
+### 3. **Understandable**
+   - Ensure that the interface is easy to understand and operate.
+
+#### Implementation in Angular:
+- **Form Validation with Clear Error Messages**:
+  Use Angular's reactive forms and provide descriptive error messages.
+  ```html
+  <form [formGroup]="form">
+    <input formControlName="email" placeholder="Email">
+    <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+      <p>Email is required and must be valid.</p>
+    </div>
+  </form>
+  ```
+
+- **Consistent Navigation**:
+  Use Angular's `RouterModule` to maintain consistent navigation patterns.
+  ```typescript
+  const routes: Routes = [
+    { path: 'home', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+  ];
+  ```
+
+- **Readable Content**:
+  Use simple language and avoid jargon. Provide tooltips or help text where necessary.
+  ```html
+  <button matTooltip="Click to submit the form">Submit</button>
+  ```
+
+---
+
+### 4. **Robust**
+   - Ensure that the application works well across different browsers, devices, and assistive technologies.
+
+#### Implementation in Angular:
+- **Semantic HTML**:
+  Use semantic HTML elements to ensure compatibility with assistive technologies.
+  ```html
+  <header>
+    <h1>Welcome to Our Website</h1>
+  </header>
+  ```
+
+- **Responsive Design**:
+  Use Angular's `@angular/flex-layout` or CSS media queries to ensure responsiveness.
+  ```html
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="50%">Content</div>
+  </div>
+  ```
+
+- **Testing with Assistive Technologies**:
+  Test your application with screen readers (e.g., NVDA, JAWS) and browser accessibility tools.
+
+- **Use ARIA Attributes**:
+  Ensure compatibility with assistive technologies by using ARIA attributes where necessary.
+  ```html
+  <div role="alert" aria-live="polite">Form submitted successfully!</div>
+  ```
+
+---
+
+## **ARIA (Accessible Rich Internet Applications)** in Angular
+
+### Common ARIA Attributes:
+1. **`aria-label`**:
+   Provides a label for an element.
+   ```html
+   <button aria-label="Close">X</button>
+   ```
+
+2. **`aria-labelledby`**:
+   Links an element to another element that provides its label.
+   ```html
+   <div id="dialog-title">Dialog Title</div>
+   <div role="dialog" aria-labelledby="dialog-title">
+     Dialog content here.
+   </div>
+   ```
+
+3. **`aria-live`**:
+   Announces dynamic content changes to screen readers.
+   ```html
+   <div role="alert" aria-live="polite">Your changes have been saved.</div>
+   ```
+
+4. **`role`**:
+   Defines the role of an element (e.g., `button`, `alert`, `dialog`).
+   ```html
+   <div role="dialog">This is a dialog</div>
+   ```
+
+5. **`aria-hidden`**:
+   Hides elements from assistive technologies.
+   ```html
+   <div aria-hidden="true">This content is hidden</div>
+   ```
+
+---
+
+## Tools for Accessibility in Angular:
+1. **Angular CDK Accessibility**:
+   Use the `@angular/cdk/a11y` package for managing focus, keyboard shortcuts, and more.
+   ```typescript
+   import { FocusMonitor } from '@angular/cdk/a11y';
+   ```
+
+2. **Linting for Accessibility**:
+   Use tools like `eslint-plugin-jsx-a11y` or `axe` to identify accessibility issues.
+
+3. **Accessibility Testing Tools**:
+   - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+   - [axe DevTools](https://www.deque.com/axe/devtools/)
+   - [NVDA](https://www.nvaccess.org/)
+
+---
+
+By following these guidelines and leveraging Angular's built-in tools and libraries, you can ensure your application adheres to WCAG's **POUR** principles and provides an accessible experience for all users.
+
+## **Property Binding**
+
+you were introduced to **Property Binding** - a key Angular feature that allows you to bind element properties to dynamic values.
+
+For example, `<img [src]="someSrc">` binds the `src` property of the underlying [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) DOM object to the value stored in `someSrc`.
+
+Whilst it might look like you're binding the src attribute of the `<img>` tag, you're actually NOT doing that. Instead, property binding really targets the underlying DOM object property (in this case a property that's also called `src`) and binds that.
+
+This might look like a subtle detail (and often it indeed doesn't matter) but it's important to understand this difference between element attributes and property. [This article](https://jakearchibald.com/2024/attributes-vs-properties/) can help with understanding this difference.
+
+Whilst it won't make a difference in Angular apps in many cases, it DOES matter if you're trying to set attributes on elements dynamically. Attributes which don't have an equally-named underlying property.
+
+For example, when binding [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), you can't target an underlying DOM object property.
+
+Since "Property Binding" wants to target properties (and not attributes), that can be a problem. That's why Angular offers a slight variation of the "Property Binding" syntax that does allow you to bind attributes to dynamic values.
+
+It looks like this:
+
+```ts
+<div 
+  role="progressbar" 
+  [attr.aria-valuenow]="currentVal" 
+  [attr.aria-valuemax]="maxVal">...</div>
+```
+
+By adding `attr` in front of the attribute name you want to bind dynamically, you're "telling" Angular that it shouldn't try to find a property with the specified name but instead bind the respective attribute - in the example above, the `aria-valuenow` and `aria-valuemax` attributes would be bound dynamically.
+
